@@ -1,0 +1,40 @@
+@media (orientation: landscape) {
+  .modelBanner {
+    height: 100vh;
+    background: url("../../assets/img/model_img/2892138_low50pc.jpg") no-repeat center center;
+    background-size: cover;
+    .branding {
+      display: inline-block;
+      width: 30%;
+      padding-top: 30vh;
+      float: left;
+      margin-left: 5em;
+      -webkit-animation: rotateOnY 7.5s infinite linear;
+      animation: rotateOnY 7.5s infinite linear;
+    }
+  }
+}
+
+@media (orientation: portrait) {
+  .modelBanner {
+    width: 100vw;
+    height: 100vh;
+    background: url("../../assets/img/model_img/2892138_low50pc.jpg") no-repeat center center;
+    background-size: cover;
+  }
+  .branding {
+    display: inline-block;
+    width: 50%;
+    float: left;
+    padding-top: 65vh;
+    margin-left: 15px;
+    vertical-align: middle;
+    -webkit-animation: rotateOnY 7.5s infinite linear;
+    animation: rotateOnY 7.5s infinite linear;
+  }
+  @media screen and (min-width: 768px) {
+    .branding {
+      padding-top: 60vh;
+    }
+  }
+}
