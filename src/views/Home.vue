@@ -3,8 +3,9 @@
     <div class="section w-100">
       <Banner />
     </div>
-    <div class="">
+    <div class="section w-100">
       <AboutSection />
+      <ExampleSection />
     </div>
     <div class="section"></div>
   </div>
@@ -12,10 +13,12 @@
 <script>
 import Banner from "../components/HomeElements/Banner.vue";
 import AboutSection from "../components/HomeElements/AboutSection.vue";
+import ExampleSection from "../components/HomeElements/ExampleSection.vue";
 export default {
   components: {
     Banner,
     AboutSection,
+    ExampleSection,
   },
   data() {
     return {};
