@@ -1,13 +1,13 @@
 <template>
   <footer>
-    <b-container class="pb-3">
-      <p class="h2 text-light text-center">CONTACT</p>
-      <hr class="bg-light mb-5">
+    <b-container fluid class="pb-3">
+      <p class="h2 text-light text-center">CONTACT US</p>
+      <hr class="bg-light mb-5" />
       <b-row
         class="
           d-flex
           flex-row flex-wrap
-          justify-content-center
+          justify-content-stretch
           align-content-center
         "
       >
@@ -40,8 +40,22 @@
             mb-4 mb-lg-0
           "
         >
-          <p>Address:<br /><a class="text-light" href="https://g.page/wonderluststudio?share" target="_blank">175 Orford Lane, Warrington, WA2 7BA</a></p>
-          <p>Phone:<br /><a class="text-light" href="tel:+447985292757" target="_blank">+44-7985-292-757</a></p>
+          <p>
+            Address:<br /><a
+              class="text-light"
+              href="https://g.page/wonderluststudio?share"
+              target="_blank"
+              >175 Orford Lane, Warrington, WA2 7BA</a
+            >
+          </p>
+          <p>
+            Phone:<br /><a
+              class="text-light"
+              href="tel:+447985292757"
+              target="_blank"
+              >+44-7985-292-757</a
+            >
+          </p>
           <p>
             Business hours:<br />
             Sun-Mon: Appointments Only<br />Tue-Fri: 10 AM - 6 PM<br />Sat: 10
@@ -51,7 +65,9 @@
         <b-col
           class="d-flex flex-column justify-content-around align-items-center"
         >
-        <p class="text-white text-center">We’re social. Are you?<br />You can find us on:</p>
+          <p class="text-white text-center">
+            We’re social. Are you?<br />You can find us on:
+          </p>
           <a
             href="https://www.instagram.com/wonderlust_studio/"
             target="_blank"

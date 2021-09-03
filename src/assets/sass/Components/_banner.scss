@@ -1,8 +1,17 @@
 @media (orientation: landscape) {
   .modelBanner {
     height: 100vh;
-    background: url("../../assets/img/model_img/2892138_low50pc.jpg") no-repeat center center;
+    background-image: url("../../assets/img/model_img/2892138_low50pc.jpg"),
+      url("../../assets/img/model_img/botox_img.jpg");
+    // background: no-repeat center center;
+    background-position: center;
+    background-repeat: no-repeat;
     background-size: cover;
+    -webkit-transition: background-image 500ms linear;
+    -moz-transition: background-image 500ms linear;
+    -ms-transition: background-image 500ms linear;
+    -o-transition: background-image 500ms linear;
+    transition: background-image 500ms linear;
     .branding {
       display: inline-block;
       width: 30%;

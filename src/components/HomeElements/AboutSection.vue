@@ -1,7 +1,7 @@
 <template>
   <b-container
     fluid
-    class="bg-white d-flex flex-row flex-wrap justify-content-center m-0 p-0"
+    class="shadow-lg bg-white d-flex flex-row flex-wrap justify-content-center m-0 p-0"
     id="About"
   >
     <h1
@@ -22,7 +22,7 @@
       <b-list-group-item class="h5 m-0 pt-0 bg-transparent border border-0"
         >a beauty salon, that beautifies your face...</b-list-group-item
       >
-      <b-list-group-item class="h4 m-0 p-0 pt-3 bg-transparent border border-0"
+      <b-list-group-item class="h4 m-0 p-0 pt-5 bg-transparent border border-0"
         >Here we know beauty.</b-list-group-item
       >
       <b-list-group-item class="h3 m-0 bg-transparent border border-0"
@@ -33,11 +33,11 @@
   </b-container>
 </template>
 <script>
-import Fact from "../../assets/img/etc/fact_stamp_transparentbg.png";
+import FactImage from "../../assets/img/etc/fact_stamp_transparentbg.png";
 export default {
   data() {
     return {
-      Fact: Fact,
+      Fact: FactImage,
     };
   },
 };
