@@ -9,10 +9,30 @@ import router from './router'
 /* Importing plugins and styles */
 import './assets/sass/style.scss'
 import { IconsPlugin } from 'bootstrap-vue'
+import Vue2TouchEvents from 'vue2-touch-events'
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faUserSecret } from '@fortawesome/free-solid-svg-icons'
+import { faFontAwesome } from '@fortawesome/free-brands-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+/* Mixins */
+import { baseMixin } from './mixins/baseMixin'
 
+library.add(faUserSecret)
+library.add(faFontAwesome)
 Vue.use(IconsPlugin)
+Vue.use(Vue2TouchEvents, {
+  disableClick: false,
+  touchClass: '',
+  tapTolerance: 30,
+  touchHoldTolerance: 400,
+  swipeTolerance: 60,
+  longTapTimeInterval: 400,
+  namespace: 'touch'
+})
+Vue.component('font-awesome-icon', FontAwesomeIcon)
 Vue.config.productionTip = false
 
+Vue.mixin(baseMixin)
 new Vue({
   el: '#app',
   router,

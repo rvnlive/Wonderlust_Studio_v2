@@ -1,0 +1,57 @@
+@mixin aesthetic {
+  background: url("~../img/model_img/botox_img--low50pc.jpg") center;
+  background-size: cover;
+  margin: 0 auto;
+  border: 1px solid rgba(199, 199, 199, 0.801);
+  box-shadow: 0px 0px 10px 7px #2f323375;
+  -webkit-transition: background 250ms ease-in-out;
+  transition: background 250ms ease-in-out;
+}
+@mixin biotricologia {
+  background: url("~../img/model_img/biotricologia.jpg") center;
+  background-size: cover;
+  margin: 0 auto;
+  border: 1px solid rgba(199, 199, 199, 0.801);
+  box-shadow: 0px 0px 10px 7px #2f323375;
+  -webkit-transition: background 250ms ease-in-out;
+  transition: background 250ms ease-in-out;
+}
+@mixin browlash {
+  background: url("~../img/model_img/brow_model-large.jpg");
+  background-size: cover;
+  background-position-x: 65%;
+  margin: 0 auto;
+  border: 1px solid rgba(199, 199, 199, 0.801);
+  box-shadow: 0px 0px 10px 7px #2f323375;
+  -webkit-transition: background 250ms ease-in-out;
+  transition: background 250ms ease-in-out;
+}
+@mixin facial {
+  background: url("~../img/model_img/facials_low50pc.jpg");
+  background-size: cover;
+  background-position-x: 75%;
+  margin: 0 auto;
+  border: 1px solid rgba(199, 199, 199, 0.801);
+  box-shadow: 0px 0px 10px 7px #2f323375;
+  -webkit-transition: background 250ms ease-in-out;
+  transition: background 250ms ease-in-out;
+}
+@mixin hair {
+  background: url("~../img/model_img/2892138_low50pc.jpg") center;
+  background-size: cover;
+  margin: 0 auto;
+  border: 1px solid rgba(199, 199, 199, 0.801);
+  box-shadow: 0px 0px 10px 7px #2f323375;
+  -webkit-transition: background 250ms ease-in-out;
+  transition: background 250ms ease-in-out;
+}
+@mixin nail {
+  background: url("~../img/model_img/nail_img--low50pc.jpg");
+  background-size: cover;
+  background-position-x: 75%;
+  margin: 0 auto;
+  border: 1px solid rgba(199, 199, 199, 0.801);
+  box-shadow: 0px 0px 10px 7px #2f323375;
+  -webkit-transition: background 250ms ease-in-out;
+  transition: background 250ms ease-in-out;
+}

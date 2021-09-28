@@ -1,49 +1,93 @@
-@media (orientation: landscape) {
-  .modelBanner {
-    height: 100vh;
-    background-image: url("../../assets/img/model_img/2892138_low50pc.jpg"),
-      url("../../assets/img/model_img/botox_img.jpg");
-    // background: no-repeat center center;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    -webkit-transition: background-image 500ms linear;
-    -moz-transition: background-image 500ms linear;
-    -ms-transition: background-image 500ms linear;
-    -o-transition: background-image 500ms linear;
-    transition: background-image 500ms linear;
-    .branding {
-      display: inline-block;
-      width: 30%;
-      padding-top: 30vh;
-      float: left;
-      margin-left: 5em;
-      -webkit-animation: rotateOnY 7.5s infinite linear;
-      animation: rotateOnY 7.5s infinite linear;
+.topper {
+  width: 100vw;
+  height: 85vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  .wsBanner {
+    display: inline-block;
+    position: absolute;
+    margin: 0 auto;
+    height: 75vh;
+    border-radius: 15px;
+    // transform: translateX(-50%);
+    transition: all 500ms ease;
+    &__background--hair {
+      @include hair;
+    }
+    &__background--aesthetic {
+      @include aesthetic;
+    }
+    &__background--biotricologia {
+      @include biotricologia;
+    }
+    &__background--browlash {
+      @include browlash;
+    }
+    &__background--nail {
+      @include nail;
+    }
+    &__background--facial {
+      @include facial;
+    }
+    &__header {
+      position: relative;
+      height: 65vh;
+      max-width: 85vw;
+      padding: 15px;
+      border-radius: 15px;
+    }
+    &__body {
+      box-sizing: border-box;
+    }
+    &__watermark {
+      &--dark {
+        position: absolute;
+        bottom: 0px;
+        left: 10px;
+        &::after {
+          content: attr(data-sectionName);
+          color: rgba(0, 0, 0, 0.726);
+          font-size: 7vw;
+          font-weight: 500;
+          text-transform: uppercase;
+        }
+      }
+      &--light {
+        position: absolute;
+        bottom: 0px;
+        left: 10px;
+        &::after {
+          content: attr(data-sectionName);
+          color: rgba(255, 255, 255, 0.836);
+          font-size: 7vw;
+          font-weight: 500;
+          text-transform: uppercase;
+        }
+      }
+    }
+    &__logo {
+      width: 150px;
+      height: auto;
     }
   }
 }
 
-@media (orientation: portrait) {
-  .modelBanner {
-    width: 100vw;
-    height: 100vh;
-    background: url("../../assets/img/model_img/2892138_low50pc.jpg") no-repeat center center;
-    background-size: cover;
-  }
-  .branding {
-    display: inline-block;
-    width: 50%;
-    float: left;
-    padding-top: 65vh;
-    margin-left: 15px;
-    vertical-align: middle;
-    -webkit-animation: rotateOnY 7.5s infinite linear;
-    animation: rotateOnY 7.5s infinite linear;
-  }
-  @media screen and (min-width: 768px) {
-    .branding {
-      padding-top: 60vh;
+.wsBanners-placeholder {
+  display: flex;
+  flex-direction: row;
+  &__item {
+    opacity: 0.3;
+    background-color: rgb(0, 0, 0);
+    height: 5px;
+    border-radius: 5px;
+    transition: opacity 0.2s ease-in-out;
+    &--active {
+      opacity: 1;
+      box-shadow: 0px 0px 10px 5px #2f323375;
     }
+  }
+  .slider-icon {
+    margin-top: -5px;
   }
 }

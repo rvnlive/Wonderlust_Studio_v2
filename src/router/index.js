@@ -3,7 +3,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 
 // Importing pages
-import Home from '../views/Home'
+import Hair from '../views/Hair'
 
 // Importing Vuex
 // import store from '../store'
@@ -12,53 +12,118 @@ Vue.use(VueRouter)
 
 // Creating routes
 const router = new VueRouter({
-  scrollBehavior () {
-    return window.scrollTo({ top: 0, behavior: 'smooth' })
-  },
   mode: 'history',
   routes: [
-    {
-      path: '/',
-      name: 'Home',
-      component: Home,
+    { // Hair
+      path: '/Hair',
+      name: 'Hair',
+      component: Hair,
       meta: {
-        title: 'WS - Home',
+        title: 'WS - Hair',
         meta: [
           {
             name: 'description',
-            content: 'Wonderlust Studio\'s home page.'
+            content: 'Hairstyling at Wonderlust Studio.'
           },
           {
             property: 'og:description',
-            content: 'Wonderlust Studio\'s home page.'
+            content: 'Hairstyling at Wonderlust Studio.'
           }
         ]
       }
-    }
-    // ,{
-    //   path: '/',
-    //   name: 'Home',
-    //   // Lazy-loaded when the route is visited.
-    //   component: () => import(/* webpackChunkName: "Home" */ '../views/Home'),
-    //   meta: {
-    //     title: 'Home',
-    //     meta: [
-    //       {
-    //         name: 'description',
-    //         content: 'Groupomania\'s home page.'
-    //       },
-    //       {
-    //         property: 'og:description',
-    //         content: 'Groupomania\'s home page.'
-    //       },
-    //       {
-    //         requiresAuth: true
-    //       }
-    //     ]
-    //   }
-    // },
-    // // Otherwise redirect to home
-    // { path: '*', redirect: '/' }
+    },
+    { // Aesthetics
+      path: '/Aesthetic',
+      name: 'Aesthetics',
+      component: () => import(/* webpackPrefetch: true */ '../views/Aesthetics'),
+      meta: {
+        title: 'WS - Aesthetics',
+        meta: [
+          {
+            name: 'description',
+            content: 'Aesthetics at Wonderlust Studio.'
+          },
+          {
+            property: 'og:description',
+            content: 'Aesthetics at Wonderlust Studio.'
+          }
+        ]
+      }
+    },
+    { // Biotricologia
+      path: '/Biotricologia',
+      name: 'Biotricologia',
+      component: () => import(/* webpackPrefetch: true */ '../views/Biotricologia'),
+      meta: {
+        title: 'WS - Biotricologia',
+        meta: [
+          {
+            name: 'description',
+            content: 'Biotricologia at Wonderlust Studio.'
+          },
+          {
+            property: 'og:description',
+            content: 'Biotricologia at Wonderlust Studio.'
+          }
+        ]
+      }
+    },
+    { // Brows & Lashes
+      path: '/Browlash',
+      name: 'Brows N Lashes',
+      component: () => import(/* webpackPrefetch: true */ '../views/BrowLash'),
+      meta: {
+        title: 'WS - Brows N Lashes',
+        meta: [
+          {
+            name: 'description',
+            content: 'Brows and Lashes at Wonderlust Studio.'
+          },
+          {
+            property: 'og:description',
+            content: 'Brows and Lashes at Wonderlust Studio.'
+          }
+        ]
+      }
+    },
+    { // Nails
+      path: '/Nail',
+      name: 'Nails',
+      component: () => import(/* webpackPrefetch: true */ '../views/Nail'),
+      meta: {
+        title: 'WS - Nails',
+        meta: [
+          {
+            name: 'description',
+            content: 'Nails at Wonderlust Studio.'
+          },
+          {
+            property: 'og:description',
+            content: 'Nails at Wonderlust Studio.'
+          }
+        ]
+      }
+    },
+    { // Facials
+      path: '/Facial',
+      name: 'Facials',
+      component: () => import(/* webpackPrefetch: true */ '../views/Facials'),
+      meta: {
+        title: 'WS - Facials',
+        meta: [
+          {
+            name: 'description',
+            content: 'Facials at Wonderlust Studio.'
+          },
+          {
+            property: 'og:description',
+            content: 'Facials at Wonderlust Studio.'
+          }
+        ]
+      }
+    },
+    // Otherwise redirect to home
+    { path: '*', redirect: '/Hair' }
   ]
 })
 
