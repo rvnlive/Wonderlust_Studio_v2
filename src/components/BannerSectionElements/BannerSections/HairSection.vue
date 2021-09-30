@@ -117,6 +117,7 @@ export default {
   max-width: 80vw;
   transition: all 300ms ease-in-out;
   .img-description-layer {
+    box-sizing: border-box;
     position: absolute;
     top: 0;
     bottom: 0;
@@ -134,6 +135,7 @@ export default {
     transition: all 300ms ease-in-out;
   }
   .img {
+    box-sizing: border-box;
     outline: 2px solid white;
     outline-offset: -8px;
     filter: blur(0px);
@@ -143,6 +145,7 @@ export default {
   }
   &:hover {
     .img-description-layer {
+      box-sizing: border-box;
       visibility: visible;
       opacity: 1;
       outline: 4px solid white;
@@ -151,6 +154,7 @@ export default {
       transition: all 300ms ease-in-out;
     }
     .img {
+      box-sizing: border-box;
       outline: 0;
       filter: blur(4px);
       border-radius: 25px;
