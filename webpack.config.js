@@ -1,8 +1,5 @@
 module.exports = {
   devtool: 'source-map', // any "source-map"-like devtool is possible
-  output: {
-    publicPath: 'auto',
-  },
   module: {
     rules: [
       {

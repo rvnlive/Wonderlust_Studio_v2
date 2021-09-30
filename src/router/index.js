@@ -12,6 +12,7 @@ Vue.use(VueRouter)
 
 // Creating routes
 const router = new VueRouter({
+  base: '/',
   mode: 'history',
   routes: [
     { // Hair
