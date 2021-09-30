@@ -16,6 +16,8 @@
 
 // Main style
 html {
+  box-sizing: border-box;
+  overflow: hidden;
   body {
     // overflow: hidden;
     font-family: "Glory", Helvetica, Arial, sans-serif;

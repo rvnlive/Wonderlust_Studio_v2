@@ -7,7 +7,6 @@
         </transition>
         <!-- <NavPlaceholders /> -->
       </div>
-      <ScrollToTop />
     </b-container>
   </div>
 </template>
@@ -16,7 +15,6 @@
 // Plugins
 
 // Components
-import ScrollToTop from "./Helpers/ScrollToTop.vue";
 // import NavPlaceholders from "./components/MainElements/NavPlaceholders.vue";
 
 // Page Elements
@@ -28,7 +26,6 @@ export default {
     // Plugins [
     // ]
     // Components [
-    ScrollToTop,
     // NavPlaceholders
     // LoadingComponent,
     // ]
