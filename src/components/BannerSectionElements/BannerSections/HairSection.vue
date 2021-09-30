@@ -1,5 +1,6 @@
 <template>
   <b-container fluid class="m-0 p-0">
+    <hr class="bg-secondary w-75 m-0 ml-auto mr-auto mb-4" />
     <b-row
       class="m-0 p-0"
       v-for="(services, index) in Services[0]"
@@ -7,8 +8,7 @@
     >
       <b-col
         sm="4"
-        class="img-wrapper m-0 p-0"
-        align-self="stretch"
+        class="img-wrapper m-0 p-0 mb-4 ml-auto mr-auto"
         v-for="(service, index) of services"
         :key="index"
       >
@@ -30,7 +30,7 @@
     >
       <b-col
         sm="4"
-        class="img-wrapper m-0 p-0"
+        class="img-wrapper m-0 p-0 mb-4 ml-auto mr-auto"
         align-self="stretch"
         v-for="(service, index) of services"
         :key="index"
@@ -42,13 +42,18 @@
         </div>
       </b-col>
     </b-row>
+    <ScrollToTop />
   </b-container>
 </template>
 <script>
 import TestImage from "../../../assets/img/test_images/test_image_1.jpg";
 import BrowExample from "../../../assets/img/service_examples/brow_example.png";
 import LashExample from "../../../assets/img/service_examples/lashlift_example.jpg";
+import ScrollToTop from "../../../Helpers/ScrollToTop.vue";
 export default {
+  components: {
+    ScrollToTop,
+  },
   data() {
     return {
       Services: [
@@ -107,9 +112,9 @@ export default {
 </script>
 <style lang="scss">
 .img-wrapper {
-  position: relative;
+  scroll-behavior: smooth;
   height: auto;
-  width: auto;
+  max-width: 80vw;
   transition: all 300ms ease-in-out;
   .img-description-layer {
     position: absolute;
@@ -125,12 +130,15 @@ export default {
     justify-content: center;
     outline: 4px solid white;
     outline-offset: -12px;
+    border-radius: 25px;
     transition: all 300ms ease-in-out;
   }
   .img {
     outline: 2px solid white;
     outline-offset: -8px;
     filter: blur(0px);
+    border-radius: 25px;
+    box-shadow: 0px 0px 10px 5px #8a919275;
     transition: all 300ms ease-in-out;
   }
   &:hover {
@@ -139,10 +147,13 @@ export default {
       opacity: 1;
       outline: 4px solid white;
       outline-offset: -24px;
+      border-radius: 50px;
       transition: all 300ms ease-in-out;
     }
     .img {
-      filter: blur(6px);
+      outline: 0;
+      filter: blur(4px);
+      border-radius: 25px;
       transition: all 300ms ease-in-out;
     }
   }
