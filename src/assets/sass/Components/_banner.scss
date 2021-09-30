@@ -79,7 +79,7 @@
   }
   .wsRotate {
     overflow: hidden;
-    // height: 65px;
+    height: 65px;
     width: 100vw;
     &-words {
       animation: wordRotate 5s cubic-bezier(0.23, 1, 0.32, 1.2) infinite;
