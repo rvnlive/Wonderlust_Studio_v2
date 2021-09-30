@@ -141,15 +141,15 @@ export const baseMixin = {
         close() {
             this.$refs.visibleDetails.close()
         },
-        smooth() {
-            document.body.style.scrollBehavior = "smooth";
-            document.body.style.transition = "all 1000ms ease-in";
-            window.setTimeout(function () {
-                document.body.style.transition = "";
-            }, 3000);
-        },
+        // smooth() {
+        //     document.body.style.scrollBehavior = "smooth";
+        //     document.body.style.transition = "all 1000ms ease-in";
+        //     window.setTimeout(function () {
+        //         document.body.style.transition = "";
+        //     }, 3000);
+        // },
     },
     mounted() {
-        this.setBackground();
+        this.setBackground()
     },
 }

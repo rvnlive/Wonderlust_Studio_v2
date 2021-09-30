@@ -1,6 +1,6 @@
 <template>
   <b-container fluid class="m-0 p-0">
-    <hr class="bg-secondary w-75 m-0 ml-auto mr-auto mb-4" />
+    <hr class="bg-light m-0 ml-3 mr-3 mb-4" />
     <b-row
       class="m-0 p-0"
       v-for="(services, index) in Services[0]"
@@ -51,6 +51,7 @@ import BrowExample from "../../../assets/img/service_examples/brow_example.png";
 import LashExample from "../../../assets/img/service_examples/lashlift_example.jpg";
 import ScrollToTop from "../../../Helpers/ScrollToTop.vue";
 export default {
+  mixins: ['baseMixin'],
   components: {
     ScrollToTop,
   },
@@ -112,9 +113,8 @@ export default {
 </script>
 <style lang="scss">
 .img-wrapper {
-  scroll-behavior: smooth;
   height: auto;
-  max-width: 80vw;
+  max-width: 65vw;
   transition: all 300ms ease-in-out;
   .img-description-layer {
     box-sizing: border-box;

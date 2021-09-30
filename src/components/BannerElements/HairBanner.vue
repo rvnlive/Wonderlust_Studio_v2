@@ -64,7 +64,6 @@ export default {
   },
   methods: {},
   mounted() {
-    this.smooth();
   },
 };
 </script>
