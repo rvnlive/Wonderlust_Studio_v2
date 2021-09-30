@@ -15,6 +15,24 @@ const router = new VueRouter({
   mode: 'history',
   routes: [
     { // Hair
+      path: '/',
+      name: 'Hair',
+      component: Hair,
+      meta: {
+        title: 'WS - Hair',
+        meta: [
+          {
+            name: 'description',
+            content: 'Hairstyling at Wonderlust Studio.'
+          },
+          {
+            property: 'og:description',
+            content: 'Hairstyling at Wonderlust Studio.'
+          }
+        ]
+      }
+    },
+    { // Hair
       path: '/Hair',
       name: 'Hair',
       component: Hair,
