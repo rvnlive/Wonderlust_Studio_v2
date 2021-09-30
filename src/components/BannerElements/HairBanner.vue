@@ -5,7 +5,10 @@
         class="wsBanner__header wsBanner__background--hair"
         aria-label="Girl with a white hair, shaped eyebrows and lifted lashes."
       >
-        <div class="wsBanner__watermark--dark" data-sectionName="#HairStyling"></div>
+        <div
+          class="wsBanner__watermark--dark"
+          data-sectionName="#HairStyling"
+        ></div>
         <b-img
           :src="logoBlack"
           alt="Wonderlust Studio"
@@ -13,31 +16,19 @@
         />
       </div>
     </span>
-    <b-container fluid class="wsBanner__body">
+    <NavPlaceholders />
+    <b-container fluid class="wsBanner__body m-0 p-0">
       <button
-        v-b-toggle.main-collapse
+        @click="open"
         variant="transparent"
-        class="w-100 pt-2 bg-transparent border-0"
-        @click="
-          collapseOpen();
-          scrollTo();
-        "
-        v-if="isDetailsVisible === false"
+        class="bg-transparent border-0"
       >
         <span class="pulse-ring--light">Show Details</span>
       </button>
-      <button
-        v-b-toggle.main-collapse
-        variant="transparent"
-        class="w-100 pt-2 bg-transparent border-0"
-        @click="collapseClosed()"
-        v-else
-      >
-        <span class="pulse-ring--light">Hide Details</span>
-      </button>
-      <hr class="bg-light mt-5 embossed--dark" />
-      <BannerElement :isDetailsVisible="isDetailsVisible" />
     </b-container>
+    <vue-bottom-sheet ref="visibleDetails" max-height="90%" @opened="smooth">
+      <BannerElement />
+    </vue-bottom-sheet>
   </div>
 </template>
 
@@ -47,12 +38,14 @@ const BannerElement = () => ({
     /* webpackPrefetch: true */ "../BannerSectionElements/HairSectionElements.vue"
   ),
 });
+import NavPlaceholders from "../MainElements/NavPlaceholders.vue";
 
 export default {
   props: ["logoBlack"],
   mixins: ["baseMixin"],
   components: {
     BannerElement,
+    NavPlaceholders,
   },
   data() {
     return {

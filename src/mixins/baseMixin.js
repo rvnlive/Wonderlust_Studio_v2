@@ -113,27 +113,40 @@ export const baseMixin = {
                 this.$router.push("/Nail");
             }
         },
-        collapseOpen() {
-            this.isDetailsVisible = true;
-            document.body.style.scrollBehavior = "auto"
-            document.body.style.transition = "all 1000ms ease-in"
+        // collapseOpen() {
+        //     this.isDetailsVisible = true;
+        //     document.body.style.scrollBehavior = "auto"
+        //     document.body.style.transition = "all 1000ms ease-in"
+        //     window.setTimeout(function () {
+        //         document.body.style.transition = ""
+        //     }, 3000)
+        // },
+        // collapseClosed() {
+        //     this.isDetailsVisible = false;
+        // },
+        // scrollTo() {
+        //     if (this.collapseOpen) {
+        //         window.setTimeout(function () {
+        //             const element = document.getElementById("main-collapse");
+        //             element.scrollIntoView({
+        //                 // block: "nearest"
+        //                 inline: "start"
+        //             });
+        //         }, 200);
+        //     }
+        // },
+        open() {
+            this.$refs.visibleDetails.open()
+        },
+        close() {
+            this.$refs.visibleDetails.close()
+        },
+        smooth() {
+            document.body.style.scrollBehavior = "smooth";
+            document.body.style.transition = "all 1000ms ease-in";
             window.setTimeout(function () {
-                document.body.style.transition = ""
-            }, 3000)
-        },
-        collapseClosed() {
-            this.isDetailsVisible = false;
-        },
-        scrollTo() {
-            if (this.collapseOpen) {
-                window.setTimeout(function () {
-                    const element = document.getElementById("main-collapse");
-                    element.scrollIntoView({
-                        // block: "nearest"
-                        inline: "start"
-                    });
-                }, 200);
-            }
+                document.body.style.transition = "";
+            }, 3000);
         },
     },
     mounted() {

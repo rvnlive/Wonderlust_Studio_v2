@@ -1,5 +1,5 @@
 <template>
-  <b-container fluid class="shadow-lg m-0 p-0">
+  <b-container fluid class="m-0 p-0">
     <b-row
       class="m-0 p-0"
       v-for="(services, index) in Services[0]"
