@@ -129,15 +129,11 @@ export default {
     display: flex;
     align-items: center;
     justify-content: center;
-    outline: 4px solid white;
-    outline-offset: -12px;
     border-radius: 25px;
     transition: all 300ms ease-in-out;
   }
   .img {
     box-sizing: border-box;
-    outline: 2px solid white;
-    outline-offset: -8px;
     filter: blur(0px);
     border-radius: 25px;
     box-shadow: 0px 0px 10px 5px #8a919275;
@@ -148,14 +144,11 @@ export default {
       box-sizing: border-box;
       visibility: visible;
       opacity: 1;
-      outline: 4px solid white;
-      outline-offset: -24px;
       border-radius: 50px;
       transition: all 300ms ease-in-out;
     }
     .img {
       box-sizing: border-box;
-      outline: 0;
       filter: blur(4px);
       border-radius: 25px;
       transition: all 300ms ease-in-out;
