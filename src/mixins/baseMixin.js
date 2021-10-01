@@ -145,6 +145,7 @@ export const baseMixin = {
             document.body.style.scrollBehavior = "smooth";
             const panX = document.querySelector('.bottom-sheet__content')
             panX.style.touchAction = "pan-y"
+            panX.style.scrollBehavior = "smooth"
         },
     },
     mounted() {
