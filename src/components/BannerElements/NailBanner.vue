@@ -1,6 +1,8 @@
 <template>
   <div class="wsBanner wsBanner--nail">
+    <wsLoading v-if="isLoading" />
     <span
+      v-else
       v-touch:swipe.left="toLeft"
       v-touch:swipe.right="toRight"
       v-touch:swipe.top="open"
@@ -9,10 +11,7 @@
         class="wsBanner__header wsBanner__background--nail"
         aria-label="A woman with needles near her face, before aesthetic therapy."
       >
-        <div
-          class="wsBanner__watermark--dark"
-          data-sectionName="#Nails"
-        ></div>
+        <div class="wsBanner__watermark--dark" data-sectionName="#Nails"></div>
         <b-img
           :src="logoBlack"
           alt="Wonderlust Studio"

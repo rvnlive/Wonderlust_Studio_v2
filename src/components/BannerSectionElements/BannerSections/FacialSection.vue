@@ -1,7 +1,6 @@
 <template>
   <div>
-    <wsLoading v-if="isLoading" />
-    <b-container v-else fluid class="m-0 p-0">
+    <b-container fluid class="m-0 p-0">
       <hr class="bg-light m-0 ml-3 mr-3 mb-4" />
 
       <b-row

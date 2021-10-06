@@ -1,6 +1,8 @@
 <template>
   <div class="wsBanner wsBanner--browlash">
+    <wsLoading v-if="isLoading" />
     <span
+      v-else
       v-touch:swipe.left="toLeft"
       v-touch:swipe.right="toRight"
       v-touch:swipe.top="open"

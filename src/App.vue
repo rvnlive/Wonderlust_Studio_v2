@@ -1,11 +1,9 @@
 <template>
   <div id="app">
-    <b-container class="m-0 p-0 text-center">
-      <div class="topper">
+    <b-container class="m-0 p-0 topper text-center">
         <transition name="slide-fade">
           <router-view :logoBlack="logoBlack" :logoWhite="logoWhite" />
         </transition>
-      </div>
     </b-container>
   </div>
 </template>
