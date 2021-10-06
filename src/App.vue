@@ -1,37 +1,22 @@
 <template>
   <div id="app">
     <b-container class="m-0 p-0 text-center">
-      <div class="topper m-0 p-0">
+      <div class="topper">
         <transition name="slide-fade">
           <router-view :logoBlack="logoBlack" :logoWhite="logoWhite" />
         </transition>
-        <!-- <NavPlaceholders /> -->
       </div>
     </b-container>
   </div>
 </template>
 
 <script>
-// Plugins
-
-// Components
-// import NavPlaceholders from "./components/MainElements/NavPlaceholders.vue";
-
 // Page Elements
 import LogoBlack from "./assets/img/ws_brand/logo_transparent_black.png";
 import LogoWhite from "./assets/img/ws_brand/logo_transparent_white.png";
 export default {
   name: "App",
-  components: {
-    // Plugins [
-    // ]
-    // Components [
-    // NavPlaceholders
-    // LoadingComponent,
-    // ]
-    // Page Elements [
-    // ]
-  },
+  components: {},
   data() {
     return {
       logoBlack: LogoBlack,

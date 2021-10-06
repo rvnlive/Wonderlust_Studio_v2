@@ -1,8 +1,18 @@
 <template>
   <div class="wsBanner wsBanner--aesthetic">
-    <span v-touch:swipe.left="toLeft" v-touch:swipe.right="toRight">
-      <div class="wsBanner__header wsBanner__background--aesthetic">
-        <div class="wsBanner__watermark--dark" data-sectionName="#Aesthetics"></div>
+    <span
+      v-touch:swipe.left="toLeft"
+      v-touch:swipe.right="toRight"
+      v-touch:swipe.top="open"
+    >
+      <div
+        class="wsBanner__header wsBanner__background--aesthetic"
+        aria-label="A woman with needles near her face, before aesthetic therapy."
+      >
+        <div
+          class="wsBanner__watermark--dark"
+          data-sectionName="#Aesthetics"
+        ></div>
         <b-img
           :src="logoBlack"
           alt="Wonderlust Studio"
@@ -10,52 +20,21 @@
         />
       </div>
     </span>
-    <b-container fluid class="wsBanner__body">
-      <button
-        v-b-toggle.main-collapse
-        variant="transparent"
-        class="w-100 pt-2 bg-transparent border-0"
-        @click="
-          collapseOpen();
-          scrollTo();
-        "
-        v-if="isDetailsVisible === false"
-      >
-        <span class="pulse-ring--light">Details</span>
-      </button>
-      <button
-        v-b-toggle.main-collapse
-        variant="transparent"
-        class="w-100 pt-2 bg-transparent border-0"
-        @click="collapseClosed()"
-        v-else
-      >
-        <span class="pulse-ring--dark">Details</span>
-      </button>
-      <hr class="bg-light mt-5 embossed--dark" />
-      <!-- <BannerElement :isDetailsVisible="isDetailsVisible" /> -->
-    </b-container>
+    <wsNavigationPlaceholders />
+    <wsNavigationDirectionTip />
+    <wsBottomSheet v-model="isDetailsVisible">
+      <wsBannerElement v-if="isDetailsVisible === true" />
+    </wsBottomSheet>
   </div>
 </template>
 
 <script>
-// Page Elements
-// const BannerElement = () => ({
-//   component: import(
-//     /* webpackPrefetch: true */ "../SectionElements/AestheticSectionElements.vue"
-//   )
-// });
-
 export default {
   props: ["logoBlack"],
   mixins: ["baseMixin"],
-  components: {
-    // BannerElement,
-  },
+  components: {},
   data() {
-    return {
-      isDetailsVisible: false,
-    };
+    return {};
   },
   computed: {},
   methods: {},
