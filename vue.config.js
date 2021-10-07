@@ -1,13 +1,11 @@
+const CompressionWebpackPlugin = require('compression-webpack-plugin');
 module.exports = {
   publicPath: './',
-  // pluginOptions: {
-  //   compression:{
-  //     gzip: {
-  //       filename: '[file].gz[query]',
-  //       algorithm: 'gzip',
-  //       include: /\.(js|css|html|svg|json)(\?.*)?$/i,
-  //       minRatio: 0.8,
-  //     }
-  //   }
-  // }
+  productionSourceMap: false,
+  configureWebpack: config => {
+    config.plugins.push(new CompressionWebpackPlugin({
+      filename: '[path][name].gz',
+      test: /\.(js|css)$/i
+    }));
+  }
 }
