@@ -8,7 +8,7 @@ import router from './router'
 
 /* Importing plugins and styles */
 import './assets/sass/style.scss'
-import { IconsPlugin } from 'bootstrap-vue'
+// import { IconsPlugin } from 'bootstrap-vue'
 import Vue2TouchEvents from 'vue2-touch-events'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faUserSecret } from '@fortawesome/free-solid-svg-icons'
@@ -19,7 +19,7 @@ import { baseMixin } from './mixins/baseMixin'
 
 library.add(faUserSecret)
 library.add(faFontAwesome)
-Vue.use(IconsPlugin)
+// Vue.use(IconsPlugin)
 Vue.use(Vue2TouchEvents, {
   disableClick: false,
   touchClass: '',
