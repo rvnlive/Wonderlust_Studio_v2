@@ -14,7 +14,7 @@
           v-for="(service, index) of services"
           :key="index"
         >
-          <b-img-lazy
+          <b-img
             class="img w-100 h-100"
             :src="service.image"
             :alt="service.alt"
@@ -37,7 +37,7 @@
           v-for="(service, index) of services"
           :key="index"
         >
-          <b-img-lazy
+          <b-img
             class="img w-100"
             :src="service.image"
             :alt="service.alt"
