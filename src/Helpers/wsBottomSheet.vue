@@ -71,11 +71,11 @@ export default {
     isFullscreen: Boolean,
     height: {
       type: String,
-      default: "85%",
+      default: "80vh",
     },
     maxHeight: {
       type: String,
-      default: "90%",
+      default: "85vh",
     },
     width: {
       type: String,
