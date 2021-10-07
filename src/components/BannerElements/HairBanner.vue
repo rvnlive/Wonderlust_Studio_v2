@@ -1,6 +1,6 @@
 <template>
-  <div class="wsBanner wsBanner--hair">
-    <span v-touch:swipe.left="toLeft" v-touch:swipe.top="open">
+  <div class="wsBanner wsBanner--hair" v-touch:swipe.top="open">
+    <span v-touch:swipe.left="toLeft" v-touch:swipe.right="toRight">
       <wsLoading v-if="isLoading" />
       <div
         v-else

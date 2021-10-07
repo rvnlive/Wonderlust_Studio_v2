@@ -4,24 +4,18 @@
 <script>
 export default {
   name: "wsComponentLoading",
-  data() {
-    return {};
-  },
-  computed: {},
-  methods: {},
-  mounted() {},
 };
 </script>
 <style scoped>
 .loader {
   color: #292929a6;
-  font-size: 90px;
+  font-size: 3em;
   text-indent: -9999em;
   overflow: hidden;
   width: 1em;
   height: 1em;
   border-radius: 50%;
-  margin: 72px auto;
+  margin: 31vh auto;
   position: relative;
   -webkit-transform: translateZ(0);
   -ms-transform: translateZ(0);

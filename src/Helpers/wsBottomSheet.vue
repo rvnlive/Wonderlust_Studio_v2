@@ -1,5 +1,11 @@
 <template>
-  <div @mousemove="whenMouseMove">
+  <div
+    @touchstart="whenTouchStart"
+    @touchend="whenTouchEnd"
+    @mousedown="whenMouseDown"
+    @mousemove="whenMouseMove"
+    @mouseup="whenMouseUp"
+  >
     <div v-show="bottomSheet">
       <div
         @click="close()"
@@ -11,7 +17,6 @@
         ]"
         :style="{ backgroundColor: overlayColor }"
       />
-
       <div
         :class="['bottom-sheet_main', animate ? `opened` : `closed`]"
         :style="[
@@ -27,16 +32,11 @@
             height: isFullscreen ? '100%' : 'auto',
           },
         ]"
-        @touchstart="whenTouchStart"
-        @touchmove="whenTouchMove"
-        @touchend="whenTouchEnd"
       >
-        <div
-          class="bottom-sheet_main__handle"
-          @mousedown="whenMouseDown"
-          @mouseup="whenMouseUp"
-        />
-        <div class="bottom-sheet_main__content">
+        <b-container fluid v-touch:swipe.bottom="close">
+          <div class="bottom-sheet_main__handle" />
+        </b-container>
+        <div class="bottom-sheet_main__content" ref="bottomSheetMainContent">
           <!-- For components -->
           <slot></slot>
           <!-- being imported and displayed -->
@@ -56,7 +56,7 @@ export default {
       top: true,
       position: 0,
 
-      topY: null,
+      topY: 0,
       startY: 0,
       moveY: 0,
       currentY: 0,
@@ -152,11 +152,6 @@ export default {
     },
   },
   methods: {
-    isIphone() {
-      let iPhone = /iPhone/.test(navigator.userAgent) && !window.MSStream;
-      let aspect = window.screen.width / window.screen.height;
-      return iPhone && aspect.toFixed(3) === "0.462";
-    },
     whenMouseDown(event) {
       this.startY = event.pageY;
       this.down = true;
@@ -182,17 +177,20 @@ export default {
     },
     open() {
       this.animate = true;
+      document
+        .querySelector(`.bottom-sheet_main__content`)
+        .scrollIntoView(true);
       document.body.classList.add("opened");
       this.$emit("onChange", true);
     },
     onClose() {
       this.down = false;
-      this.topY = null;
-      document.querySelector(`.bottom-sheet_main`).scrollIntoView(true);
+      this.topY = 0;
       this.startY = 0;
       this.moveY = 0;
       this.currentY = 0;
       document.body.classList.remove("opened");
+      document.body.classList.add("closed");
       this.$emit("onChange", false);
     },
     close() {
@@ -202,7 +200,7 @@ export default {
     scrollHandler() {
       const content = document.querySelector(`.bottom-sheet_main__content`);
       const bounding = content.getBoundingClientRect().y;
-      if (this.topY === null) {
+      if (this.topY === 0) {
         this.topY = bounding;
       }
       if (bounding >= this.topY) {
@@ -214,16 +212,16 @@ export default {
     whenTouchStart(event) {
       this.startY = event.touches[0].pageY;
     },
-    whenTouchMove(event) {
-      if (this.top) {
-        this.moveY = -1 * (event.touches[0].pageY - this.startY);
-        this.currentY = this.moveY + "px";
-        if (this.moveY > 0) {
-          this.moveY = 0;
-          this.currentY = this.moveY + "px";
-        }
-      }
-    },
+    // whenTouchMove(event) {
+    //   if (this.top) {
+    //     this.moveY = -1 * (event.touches[0].pageY - this.startY);
+    //     this.currentY = this.moveY + "px";
+    //     if (this.moveY > 0) {
+    //       this.moveY = 0;
+    //       this.currentY = this.moveY + "px";
+    //     }
+    //   }
+    // },
     whenTouchEnd() {
       if (this.moveY < (-1 * window.outerHeight) / 8) {
         this.close();
@@ -239,7 +237,7 @@ export default {
 // BottomSheet
 .bottom-sheet {
   &_overlay {
-    z-index: 1;
+    z-index: 999;
     position: fixed;
     height: 100vh;
     width: 100vw;
@@ -262,7 +260,8 @@ export default {
     }
   }
   &_main {
-    z-index: 2;
+    box-sizing: border-box;
+    z-index: 9999;
     display: block;
     position: fixed;
     height: var(height);
@@ -281,16 +280,17 @@ export default {
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
     &__handle {
-      display: block;
-      position: sticky;
+      display: inline-block;
+      position: sticky fixed;
       width: 50px;
       height: 3px;
       border-radius: 14px;
-      margin: 0.5em auto 0 auto;
+      margin: 1em auto 0 auto;
       cursor: pointer;
       background: rgba(0, 0, 0, 0.3);
     }
     &__content {
+      box-sizing: border-box;
       width: 100%;
       height: 100%;
       padding: 2vh 2vw;

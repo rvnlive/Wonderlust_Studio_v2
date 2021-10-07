@@ -1,6 +1,7 @@
 /* MainBanner Start */
 @mixin aesthetic {
-  background: url("~../img/model_img/botox_img--low50pc.jpg") center;
+  background: url("~../img/model_img/botox_img--low50pc.jpg");
+  background-position-x: 47%;
   background-size: cover;
   margin: 0 auto;
   border: 2px solid rgba(255, 255, 255);

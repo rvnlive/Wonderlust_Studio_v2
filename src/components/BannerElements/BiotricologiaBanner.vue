@@ -1,12 +1,7 @@
 <template>
-  <div class="wsBanner wsBanner--biotricologia">
+  <div class="wsBanner wsBanner--biotricologia" v-touch:swipe.top="open">
     <wsLoading v-if="isLoading" />
-    <span
-      v-else
-      v-touch:swipe.left="toLeft"
-      v-touch:swipe.right="toRight"
-      v-touch:swipe.top="open"
-    >
+    <span v-else v-touch:swipe.left="toLeft" v-touch:swipe.right="toRight">
       <div
         class="wsBanner__header wsBanner__background--biotricologia"
         aria-label="A woman with hair mask on her scalp, during biotricologia treatment."

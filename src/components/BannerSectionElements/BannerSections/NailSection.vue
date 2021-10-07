@@ -14,7 +14,9 @@
           v-for="(service, index) of services"
           :key="index"
         >
-          <b-img
+        <wsLoading v-if="isLoading" />
+          <b-img-lazy
+          v-else
             class="img w-100 h-100"
             :src="service.image"
             :alt="service.alt"
@@ -37,7 +39,9 @@
           v-for="(service, index) of services"
           :key="index"
         >
-          <b-img
+        <wsLoading v-if="isLoading" />
+          <b-img-lazy
+          v-else
             class="img w-100"
             :src="service.image"
             :alt="service.alt"

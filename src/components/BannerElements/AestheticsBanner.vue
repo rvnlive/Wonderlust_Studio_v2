@@ -1,12 +1,7 @@
 <template>
-  <div class="wsBanner wsBanner--aesthetic">
+  <div class="wsBanner wsBanner--aesthetic" v-touch:swipe.top="open">
     <wsLoading v-if="isLoading" />
-    <span
-      v-else
-      v-touch:swipe.left="toLeft"
-      v-touch:swipe.right="toRight"
-      v-touch:swipe.top="open"
-    >
+    <span v-else v-touch:swipe.left="toLeft" v-touch:swipe.right="toRight">
       <div
         class="wsBanner__header wsBanner__background--aesthetic"
         aria-label="A woman with needles near her face, before aesthetic therapy."
