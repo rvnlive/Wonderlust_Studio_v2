@@ -28,18 +28,18 @@
             borderRadius: borderRadius,
             backgroundColor: modalColor,
           },
-          {
-            height: isFullscreen ? '100%' : 'auto',
-          },
         ]"
       >
+        <!-- Close on swipe down -->
         <b-container fluid v-touch:swipe.bottom="close">
+          <!-- Handle bar -->
           <div class="bottom-sheet_main__handle" />
+          <!-- Horizontal separator -->
+          <hr class="bg-light m-0 ml-3 mr-3 mt-2" />
         </b-container>
         <div class="bottom-sheet_main__content" ref="bottomSheetMainContent">
-          <!-- For components -->
+          <!-- For components being imported and displayed -->
           <slot></slot>
-          <!-- being imported and displayed -->
         </div>
       </div>
     </div>
@@ -68,7 +68,6 @@ export default {
   },
   props: {
     bottomSheet: Boolean,
-    isFullscreen: Boolean,
     height: {
       type: String,
       default: "80vh",

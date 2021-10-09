@@ -1,0 +1,20 @@
+.wsWrapper {
+  height: 60vh;
+  margin-top: 1em;
+  padding-top: 3em;
+}
+
+.wsButton {
+  margin-left: 10px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px #a5a5a5, -5px -5px 10px #ffffff;
+}
+
+.wsLogo {
+  display: block;
+  margin: 0 auto;
+  min-width: 250px;
+  width: 50vw;
+  max-width: 450px;
+  @include wsNeumorphism--bottom-left;
+}

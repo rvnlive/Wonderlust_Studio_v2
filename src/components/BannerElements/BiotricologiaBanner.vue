@@ -15,10 +15,10 @@
           alt="Wonderlust Studio"
           class="wsBanner__logo wsBanner__will-animate"
         />
+        <wsNavigationPlaceholders />
+        <wsNavigationDirectionTip />
       </div>
     </span>
-    <wsNavigationPlaceholders />
-    <wsNavigationDirectionTip />
     <wsBottomSheet v-model="isDetailsVisible">
       <wsBannerElement v-if="isDetailsVisible === true" />
     </wsBottomSheet>

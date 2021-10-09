@@ -1,8 +1,9 @@
 <template>
   <div class="wsBanner wsBanner--aesthetic" v-touch:swipe.top="open">
-    <wsLoading v-if="isLoading" />
-    <span v-else v-touch:swipe.left="toLeft" v-touch:swipe.right="toRight">
+    <span v-touch:swipe.left="toLeft" v-touch:swipe.right="toRight">
+      <wsLoading v-if="isLoading" />
       <div
+        v-else
         class="wsBanner__header wsBanner__background--aesthetic"
         aria-label="A woman with needles near her face, before aesthetic therapy."
       >
@@ -15,10 +16,10 @@
           alt="Wonderlust Studio"
           class="wsBanner__logo wsBanner__will-animate"
         />
+        <wsNavigationPlaceholders />
+        <wsNavigationDirectionTip />
       </div>
     </span>
-    <wsNavigationPlaceholders />
-    <wsNavigationDirectionTip />
     <wsBottomSheet v-model="isDetailsVisible">
       <wsBannerElement v-if="isDetailsVisible === true" />
     </wsBottomSheet>

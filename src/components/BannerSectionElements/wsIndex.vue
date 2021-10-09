@@ -17,23 +17,23 @@ export default {
   components: {
     Footer: () => import("../MainElements/wsFooter.vue"),
     Hair: () =>
-      import(/* webpackPrefetch: true */ "./BannerSections/HairSection.vue"),
+      import(/* webpackPrefetch: true */ "./BannerSections/HairBottomSheet/wsIndex.vue"),
     Aesthetic: () =>
       import(
-        /* webpackPrefetch: true */ "./BannerSections/AestheticSection.vue"
+        /* webpackPrefetch: true */ "./BannerSections/AestheticBottomSheet/wsIndex.vue"
       ),
     Biotricologia: () =>
       import(
-        /* webpackPrefetch: true */ "./BannerSections/BiotricologiaSection.vue"
+        /* webpackPrefetch: true */ "./BannerSections/BiotricologiaBottomSheet/wsIndex.vue"
       ),
     BrowLash: () =>
       import(
-        /* webpackPrefetch: true */ "./BannerSections/BrowLashSection.vue"
+        /* webpackPrefetch: true */ "./BannerSections/BrowLashBottomSheet/wsIndex.vue"
       ),
     Nail: () =>
-      import(/* webpackPrefetch: true */ "./BannerSections/NailSection.vue"),
+      import(/* webpackPrefetch: true */ "./BannerSections/NailBottomSheet/wsIndex.vue"),
     Facial: () =>
-      import(/* webpackPrefetch: true */ "./BannerSections/FacialSection.vue"),
+      import(/* webpackPrefetch: true */ "./BannerSections/FacialBottomSheet/wsIndex.vue"),
   },
   data() {
     return {};

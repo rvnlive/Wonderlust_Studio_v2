@@ -1,99 +1,104 @@
 <template>
   <footer>
-    <b-container fluid class="pb-3">
-      <p class="h3 text-center">CONTACT US</p>
-      <hr class="bg-light mb-3" />
-      <b-row class="d-flex flex-column flex-md-row align-content-center">
-        <b-col
-          class="
-            text-center
-            d-flex
-            flex-column
-            align-items-center
-            mt-2 mt-lg-4
-            mb-4 mb-lg-0
-          "
-        >
-          <p class="h5">Address:</p>
-          <p class="h6">175 Orford Lane, Warrington, WA2 7BA</p>
-          <b-dropdown text="Find us" offset="-35" class="mt-1">
-            <b-dropdown-item-button
-              href="https:/maps.apple.com/?q=175+Orford+Lane+Warrington+WA27BA"
-              >with Apple Maps</b-dropdown-item-button
+    <hr class="bg-light mb-3" />
+    <b-col class="p-0 m-0 align-items-end">
+      <b-row class="d-flex flex-row justify-content-center m-0 p-0">
+        <!-- Apple / Google Maps button Start -->
+        <b-dropdown dropup variant="transparent" class="wsButton mr-3">
+          <template #button-content>
+            <b-icon icon="map" class="mr-2" /><span class="sr-only"
+              >Address: 175 Orford Lane, Warrington, WA2 7BA</span
             >
-            <b-dropdown-divider></b-dropdown-divider>
-            <b-dropdown-item-button
-              href="https://maps.google.com/?q=Wonderlust Studio, Warrington WA2 7BA"
-              >with Google Maps</b-dropdown-item-button
-            >
-          </b-dropdown>
-        </b-col>
-        <b-col class="d-flex flex-column align-items-center mt-4">
-          <p class="h5">Business hours:</p>
-          <b-row>
-            <b-tabs
-              pills
-              active-nav-item-class="bg-secondary"
-              content-class="border border-secondary rounded mt-1 p-2"
-            >
-              <b-tab title="Mon" active>Appointments Only</b-tab>
-              <b-tab title="Tue-Fri">10 AM - 6 PM</b-tab>
-              <b-tab title="Sat">10 AM - 3 PM</b-tab>
-              <b-tab title="Sun">Closed</b-tab>
-            </b-tabs>
-          </b-row>
-        </b-col>
-        <b-col class="d-flex flex-column align-items-center mt-5 mt-lg-4">
-          <p class="h5 text-center">We’re social. Are you?</p>
-          <b-tabs
-            pills
-            active-nav-item-class="bg-secondary"
-            content-class="border border-secondary rounded mt-1 p-2"
+          </template>
+          <b-dropdown-item-button
+            href="https:/maps.apple.com/?q=175+Orford+Lane+Warrington+WA27BA"
+            >with Apple Maps</b-dropdown-item-button
           >
-            <b-tab active>
-              <template #title>
-                <font-awesome-icon :icon="Phone" />
-              </template>
-              <a href="tel:+447985292757" target="_blank" class="text-dark"
-                >+44-7985-292-757</a
-              ></b-tab
+          <b-dropdown-divider></b-dropdown-divider>
+          <b-dropdown-item-button
+            href="https://maps.google.com/?q=Wonderlust Studio, Warrington WA2 7BA"
+            >with Google Maps</b-dropdown-item-button
+          >
+        </b-dropdown>
+        <!-- Apple / Google Maps button End -->
+
+        <!-- Business hours Start -->
+        <b-dropdown
+          dropup
+          variant="transparent"
+          class="wsButton mr-3"
+          offset="-97"
+        >
+          <template #button-content>
+            <b-icon icon="clock" class="mr-2" /><span class="sr-only"
+              >Business hours</span
             >
-            <b-tab>
-              <template #title>
-                <font-awesome-icon :icon="Mail" />
-              </template>
-              <a href="mailto:info@wonderluststudio.co.uk" class="text-dark"
-                >info@wonderluststudio.co.uk</a
-              ></b-tab
+          </template>
+          <b-dropdown-text style="width: 260px"
+            ><b>Monday:</b> Appointments Only</b-dropdown-text
+          >
+          <b-dropdown-divider />
+          <b-dropdown-text
+            ><b>Tuesday-Friday:</b> <br />
+            10 AM - 6 PM</b-dropdown-text
+          >
+          <b-dropdown-divider />
+          <b-dropdown-text><b>Saturday:</b><br />10 AM - 3 PM</b-dropdown-text>
+          <b-dropdown-divider />
+          <b-dropdown-text><b>Sunday:</b> CLOSED</b-dropdown-text>
+        </b-dropdown>
+        <!-- Business hours End -->
+
+        <!-- Contact / Social Media Start -->
+        <b-dropdown dropup variant="transparent" class="wsButton" offset="-90">
+          <template #button-content>
+            <b-icon icon="share" class="mr-2" /><span class="sr-only"
+              >Contact us</span
             >
-            <b-tab>
-              <template #title>
-                <font-awesome-icon :icon="Instagram" />
-              </template>
-              <a
-                href="https://www.instagram.com/wonderlust_studio/"
-                class="text-dark"
-                target="_blank"
-                >@wonderlust_studio</a
-              ></b-tab
-            >
-            <b-tab>
-              <template #title>
-                <font-awesome-icon :icon="Facebook" />
-              </template>
-              <a
-                href="https://www.facebook.com/thewonderluststudio"
-                class="text-dark"
-                target="_blank"
-                >@thewonderluststudio</a
-              ></b-tab
-            >
-          </b-tabs>
-        </b-col>
+          </template>
+          <b-dropdown-item
+            variant="transparent"
+            href="tel:+447985292757"
+            class="text-center"
+            alt="Phone"
+          >
+            <font-awesome-icon :icon="Phone"
+          /></b-dropdown-item>
+          <b-dropdown-divider />
+          <b-dropdown-item
+            variant="transparent"
+            href="mailto:info@wonderluststudio.co.uk"
+            class="text-center"
+            alt="eMail"
+          >
+            <font-awesome-icon :icon="Mail"
+          /></b-dropdown-item>
+          <b-dropdown-divider />
+          <b-dropdown-item
+            variant="transparent"
+            href="https://www.instagram.com/wonderlust_studio/"
+            target="_blank"
+            class="text-center"
+            alt="Instagram"
+          >
+            <font-awesome-icon :icon="Instagram"
+          /></b-dropdown-item>
+          <b-dropdown-divider />
+          <b-dropdown-item
+            variant="transparent"
+            href="https://www.facebook.com/thewonderluststudio"
+            target="_blank"
+            class="text-center"
+            alt="Facebook"
+          >
+            <font-awesome-icon :icon="Facebook"
+          /></b-dropdown-item>
+        </b-dropdown>
+        <!-- Contact / Social Media End -->
       </b-row>
-      <p class="mt-4 text-center">Wonderlust Studio 2021</p>
-      <p class="mt-4 text-center">Designed & Developed by RVN</p>
-    </b-container>
+      <p class="p-0 m-0 mt-4 text-center">Wonderlust Studio 2021</p>
+      <p class="p-0 m-0 text-center">Designed & Developed by RVN</p>
+    </b-col>
   </footer>
 </template>
 <script>

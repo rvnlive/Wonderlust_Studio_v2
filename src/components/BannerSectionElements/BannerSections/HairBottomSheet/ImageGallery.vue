@@ -1,8 +1,6 @@
 <template>
   <div>
     <b-container fluid class="m-0 p-0">
-      <hr class="bg-light m-0 ml-3 mr-3 mb-4" />
-
       <b-row
         class="m-0 p-0"
         v-for="(services, index) in Services[0]"
@@ -56,9 +54,9 @@
   </div>
 </template>
 <script>
-import TestImage from "../../../assets/img/test_images/test_image_1.jpg";
-import BrowExample from "../../../assets/img/service_examples/brow_example.png";
-import LashExample from "../../../assets/img/service_examples/lashlift_example.jpg";
+import TestImage from "../../../../assets/img/test_images/test_image_1.jpg";
+import BrowExample from "../../../../assets/img/service_examples/brow_example.png";
+import LashExample from "../../../../assets/img/service_examples/lashlift_example.jpg";
 export default {
   mixins: ["baseMixin"],
   components: {},

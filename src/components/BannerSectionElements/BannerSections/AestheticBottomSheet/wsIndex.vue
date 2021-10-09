@@ -56,9 +56,9 @@
   </div>
 </template>
 <script>
-import TestImage from "../../../assets/img/test_images/test_image_1.jpg";
-import BrowExample from "../../../assets/img/service_examples/brow_example.png";
-import LashExample from "../../../assets/img/service_examples/lashlift_example.jpg";
+import TestImage from "../../../../assets/img/test_images/test_image_1.jpg";
+import BrowExample from "../../../../assets/img/service_examples/brow_example.png";
+import LashExample from "../../../../assets/img/service_examples/lashlift_example.jpg";
 export default {
   mixins: ["baseMixin"],
   components: {},

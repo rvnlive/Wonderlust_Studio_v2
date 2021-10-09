@@ -9,16 +9,16 @@
 
 // Components
 // @import "./Components/section";
+@import "./Components/home";
 @import "./Components/banner";
 // @import "./Components/aboutSection";
 @import "./Components/footer";
 
 // Main style
 html {
-  overflow: hidden;
   body {
-    box-sizing: border-box;
-    font-family: "Glory", Helvetica, Arial, sans-serif;
+    font-family: "Nunito Sans", Helvetica, Arial, sans-serif;
+    // Font-weight can be 200-300-400-600
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     // transition: background 250ms ease-in-out;

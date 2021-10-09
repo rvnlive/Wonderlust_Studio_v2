@@ -1,16 +1,15 @@
 export const baseMixin = {
   components: {
-    wsLoading: () => import("../Helpers/forComponentStatus/wsLoadingComponent.vue"),
-    wsBottomSheet: () => import(/* webpackPrefetch: true */ '../Helpers/wsBottomSheet.vue'),
-    wsBannerElement: () => import(/* webpackPrefetch: true */ '../components/BannerSectionElements/wsIndex.vue'),
-    wsNavigationPlaceholders: () => import('../components/MainElements/wsNavPlaceholders.vue'),
-    wsNavigationDirectionTip: () => import('../Helpers/wsNavigationDirectionTip')
+    wsLoading: () => import("../Helpers/forComponentStatus/wsLoadingComponent.vue")
   },
   data() {
     return {
+      isActive: false,
+      isAtHome: false,
       isDetailsVisible: false,
       isLoading: false,
       viewRoutes: {
+        home: this.$router.currentRoute.path === '/Home',
         hair: this.$router.currentRoute.path === '/Hair',
         aesthetic: this.$router.currentRoute.path === '/Aesthetic',
         biotricologia: this.$router.currentRoute.path === '/Biotricologia',
@@ -20,6 +19,7 @@ export const baseMixin = {
       },
       // Page background colors
       backgroundColor: {
+        home: '#F0F0F3',
         hair: 'linear-gradient(120deg, #fff 30%, #f9caa7)',
         aesthetic: 'linear-gradient(-120deg, #e99b9a 20%, #f9caa7)',
         biotricologia: 'linear-gradient(120deg, #e99b9a 20%, #e6b9bf 80%)',
@@ -29,7 +29,7 @@ export const baseMixin = {
       },
       // Page banners
       pageBanner: {
-        hair: '.wsBanner--hair',
+        hair: '.wsSliderNavigation-main__item--hair',
         aesthetic: '.wsBanner--aesthetic',
         biotricologia: '.wsBanner--biotricologia',
         browlash: '.wsBanner--browlash',
@@ -41,8 +41,10 @@ export const baseMixin = {
   watch: {},
   methods: {
     setBackground() { // Setting page background color
-      if (this.viewRoutes.hair) { // Hair view background color
-          document.body.style.background = this.backgroundColor.hair
+      if (this.viewRoutes.home) { // Hair view background color
+        document.body.style.background = this.backgroundColor.home
+      } else if (this.viewRoutes.hair) { // Hair view background color
+        document.body.style.background = this.backgroundColor.hair
       } else if (this.viewRoutes.aesthetic) { // Aesthetics view background color
         document.body.style.background = this.backgroundColor.aesthetic
       } else if (this.viewRoutes.biotricologia) { // Biotricologia view background color
@@ -55,65 +57,61 @@ export const baseMixin = {
         document.body.style.background = this.backgroundColor.facial
       }
     },
-    toLeft() { // Sliding Banner to left
+    pageActive() { // Navigation Icon highlight
       let translateX = 'translateX(-150%)'
-      if (this.viewRoutes.hair) { // Sliding Hair Banner
+      if (this.viewRoutes.hair) { // Hair
         const banner = document.querySelector(this.pageBanner.hair)
-        banner.style.transform = translateX
-        this.$router.push('/Aesthetic')
-      } else if (this.viewRoutes.aesthetic) { // Sliding Aesthetics Banner
+        banner.classList.add("active")
+        this.isActive = true
+      } else if (this.viewRoutes.aesthetic) { // Aesthetics
         const banner = document.querySelector(this.pageBanner.aesthetic)
         banner.style.transform = translateX
         this.$router.push('/Biotricologia')
-      } else if (this.viewRoutes.biotricologia) { // Sliding Biotricologia Banner
+      } else if (this.viewRoutes.biotricologia) { // Biotricologia
         const banner = document.querySelector(this.pageBanner.biotricologia)
         banner.style.transform = translateX
         this.$router.push('/Browlash')
-      } else if (this.viewRoutes.browlash) { // Sliding BrowLash Banner
+      } else if (this.viewRoutes.browlash) { // BrowLash
         const banner = document.querySelector(this.pageBanner.browlash)
         banner.style.transform = translateX
         this.$router.push('/Nail')
-      } else if (this.viewRoutes.nail) { // Sliding Nail Banner
+      } else if (this.viewRoutes.nail) { // Nail
         const banner = document.querySelector(this.pageBanner.nail)
         banner.style.transform = translateX
         this.$router.push('/Facial')
-      }
-    },
-    toRight() { // Sliding Banner to right
-      let translateX = 'translateX(150%)'
-      if (this.viewRoutes.aesthetic) { // Sliding Aesthetics Banner
-        const banner = document.querySelector(this.pageBanner.aesthetic)
-        banner.style.transform = translateX
-        this.$router.push('/Hair')
-      } else if (this.viewRoutes.biotricologia) { // Sliding Biotricologia Banner
-        const banner = document.querySelector(this.pageBanner.biotricologia)
-        banner.style.transform = translateX
-        this.$router.push('/Aesthetic')
-      } else if (this.viewRoutes.browlash) { // Sliding BrowLash Banner
-        const banner = document.querySelector(this.pageBanner.browlash)
-        banner.style.transform = translateX
-        this.$router.push('/Biotricologia')
-      } else if (this.viewRoutes.nail) { // Sliding Nail Banner
-        const banner = document.querySelector(this.pageBanner.nail)
-        banner.style.transform = translateX
-        this.$router.push('/Browlash')
-      } else if (this.viewRoutes.facial) { // Sliding Facial Banner
+      } else if (this.viewRoutes.facial) { // Facial
         const banner = document.querySelector(this.pageBanner.facial)
         banner.style.transform = translateX
-        this.$router.push('/Nail')
+        this.$router.push('/Hair')
       }
     },
     startLoading() { // Start loading animation
       this.isLoading = true
-      setTimeout(() => this.isLoading = false, 1000)
+      setTimeout(() => {
+        this.isLoading = false
+      }, 1500)
     },
     open() { // On opening Bottom Sheet
       this.isDetailsVisible = true
+    },
+    atHome() {
+      if (this.viewRoutes.home) {
+        this.isAtHome = true
+      }
+    },
+    backHome() {
+      if (!this.viewRoutes.home) {
+        this.$router.push('/Home')
+        this.isAtHome = true
+      }
     }
+
   },
   mounted() {
     this.setBackground()
+    this.pageActive()
     this.startLoading()
+    this.atHome()
     this.isDetailsVisible = false
   },
   beforeUpdate() {

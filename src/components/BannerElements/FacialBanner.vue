@@ -1,7 +1,7 @@
 <template>
   <div class="wsBanner wsBanner--facial" v-touch:swipe.top="open">
     <wsLoading v-if="isLoading" />
-    <span v-else v-touch:swipe.right="toRight">
+    <span v-else v-touch:swipe.right="toRight" v-touch:swipe.left="toLeft">
       <div
         class="wsBanner__header wsBanner__background--facial"
         aria-label="A woman with needles near her face, before aesthetic therapy."

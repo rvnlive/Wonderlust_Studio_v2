@@ -3,7 +3,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 
 // Importing pages
-import Hair from '../views/wsHair'
+import wsHome from '../views/wsHome'
 
 // Importing Vuex
 // import store from '../store'
@@ -15,10 +15,28 @@ const router = new VueRouter({
   base: '/',
   mode: 'history',
   routes: [
+    { // Home
+      path: '/Home',
+      name: 'Homepage',
+      component: wsHome,
+      meta: {
+        title: 'WS - Homepage',
+        meta: [
+          {
+            name: 'description',
+            content: 'Welcome to Wonderlust Studio.'
+          },
+          {
+            property: 'og:description',
+            content: 'Welcome to Wonderlust Studio.'
+          }
+        ]
+      }
+    },
     { // Hair
       path: '/Hair',
       name: 'Hair',
-      component: Hair,
+      component: () => import(/* webpackPrefetch: true */ '../views/wsHair'),
       meta: {
         title: 'WS - Hair',
         meta: [
@@ -124,7 +142,7 @@ const router = new VueRouter({
       }
     },
     // Otherwise redirect to home
-    { path: '*', redirect: '/Hair' }
+    { path: '*', redirect: '/Home' }
   ]
 })
 
