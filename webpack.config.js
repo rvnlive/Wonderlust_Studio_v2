@@ -1,3 +1,6 @@
+const productionConfig = merge([parts.eliminateUnusedCSS()]);
+
+
 module.exports = {
   devtool: 'source-map', // any "source-map"-like devtool is possible
   module: {

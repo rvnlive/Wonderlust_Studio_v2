@@ -1,6 +1,4 @@
 module.exports = {
-  plugins: [
-    require('autoprefixer'),
     {
       content: [`./public/**/*.html`, `./src/**/*.vue`],
       defaultExtractor(content) {
@@ -21,5 +19,4 @@ module.exports = {
         /data-v-.*/,
       ],
     },
-  ]
 };
