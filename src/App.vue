@@ -17,17 +17,13 @@
 </template>
 
 <script>
-//Components
-import wsSlidingNavigation from "./Helpers/wsSlidingNavigation.vue";
 // Page Elements
 import LogoBlack from "./assets/img/ws_brand/logo_transparent_black.png";
 import LogoWhite from "./assets/img/ws_brand/logo_transparent_white.png";
 export default {
   name: "App",
   mixins: ["mainMixin"],
-  components: {
-    wsSlidingNavigation,
-  },
+  components: {},
   data() {
     return {
       logoBlack: LogoBlack,

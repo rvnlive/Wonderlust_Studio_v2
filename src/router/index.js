@@ -36,7 +36,7 @@ const router = new VueRouter({
     { // Hair
       path: '/Hair',
       name: 'Hair',
-      component: () => import(/* webpackPrefetch: true */ '../views/wsHair'),
+      component: () => import(/* webpackChunkName: "Hair" */ '../views/wsHair'),
       meta: {
         title: 'WS - Hair',
         meta: [
@@ -54,7 +54,7 @@ const router = new VueRouter({
     { // Aesthetics
       path: '/Aesthetic',
       name: 'Aesthetics',
-      component: () => import(/* webpackPrefetch: true */ '../views/wsAesthetics'),
+      component: () => import(/* webpackChunkName: "Aesthetics" */ '../views/wsAesthetics'),
       meta: {
         title: 'WS - Aesthetics',
         meta: [
@@ -72,7 +72,7 @@ const router = new VueRouter({
     { // Biotricologia
       path: '/Biotricologia',
       name: 'Biotricologia',
-      component: () => import(/* webpackPrefetch: true */ '../views/wsBiotricologia'),
+      component: () => import(/* webpackChunkName: "Biotricologia" */ '../views/wsBiotricologia'),
       meta: {
         title: 'WS - Biotricologia',
         meta: [
@@ -90,7 +90,7 @@ const router = new VueRouter({
     { // Brows & Lashes
       path: '/Browlash',
       name: 'Brows N Lashes',
-      component: () => import(/* webpackPrefetch: true */ '../views/wsBrowLash'),
+      component: () => import(/* webpackChunkName: "BrowsNLashes" */ '../views/wsBrowLash'),
       meta: {
         title: 'WS - Brows N Lashes',
         meta: [
@@ -108,7 +108,7 @@ const router = new VueRouter({
     { // Nails
       path: '/Nail',
       name: 'Nails',
-      component: () => import(/* webpackPrefetch: true */ '../views/wsNail'),
+      component: () => import(/* webpackChunkName: "Nails" */ '../views/wsNail'),
       meta: {
         title: 'WS - Nails',
         meta: [
@@ -126,7 +126,7 @@ const router = new VueRouter({
     { // Facials
       path: '/Facial',
       name: 'Facials',
-      component: () => import(/* webpackPrefetch: true */ '../views/wsFacials'),
+      component: () => import(/* webpackChunkName: "Facials" */ '../views/wsFacials'),
       meta: {
         title: 'WS - Facials',
         meta: [

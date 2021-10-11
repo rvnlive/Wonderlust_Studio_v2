@@ -1,6 +1,10 @@
 export const baseMixin = {
   components: {
-    wsLoading: () => import("../Helpers/forComponentStatus/wsLoadingComponent.vue")
+    wsLoading: () => import(/* webpackChunkName: "wsLoading" */"../Helpers/forComponentStatus/wsLoadingComponent.vue"),
+    wsSlidingNavigation: () =>
+      import(
+        /* webpackChunkName: "wsSlidingNavigation" */ "../Helpers/wsSlidingNavigation.vue"
+      ),
   },
   data() {
     return {
