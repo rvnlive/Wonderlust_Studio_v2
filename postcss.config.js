@@ -1,9 +1,7 @@
-const purgecss = require("@fullhuman/postcss-purgecss")
-
 module.exports = {
   plugins: [
     require('autoprefixer'),
-    purgecss({
+    {
       content: [`./public/**/*.html`, `./src/**/*.vue`],
       defaultExtractor(content) {
         const contentWithoutStyleBlocks = content.replace(
@@ -22,6 +20,6 @@ module.exports = {
         /^router-link(|-exact)-active$/,
         /data-v-.*/,
       ],
-    }),
+    },
   ]
 };
