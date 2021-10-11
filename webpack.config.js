@@ -16,20 +16,15 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        exclude: /node_modules/,
         use: [
-          {
-            loader: 'style-loader',
-          },
+          'style-loader'
           {
             loader: 'css-loader',
             options: {
-              importLoaders: 1,
+              importLoaders: 1
             }
           },
-          {
-            loader: 'postcss-loader'
-          }
+          'postcss-loader'
         ]
       }
     ],
