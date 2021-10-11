@@ -1,6 +1,3 @@
-const productionConfig = merge([parts.eliminateUnusedCSS()]);
-
-
 module.exports = {
   devtool: 'source-map', // any "source-map"-like devtool is possible
   module: {
@@ -21,13 +18,6 @@ module.exports = {
         test: /\.css$/,
         use: [
           'style-loader'
-          {
-            loader: 'css-loader',
-            options: {
-              importLoaders: 1
-            }
-          },
-          'postcss-loader'
         ]
       }
     ],
