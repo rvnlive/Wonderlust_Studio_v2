@@ -23,7 +23,6 @@ module.exports = {
     //       /data-v-.*/,
     //     ],
     //   }),
-    require('autoprefixer'),
-    require('postcss-nested')
+    require('autoprefixer')
   ],
 };
