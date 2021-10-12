@@ -1,0 +1,9 @@
+.wsButton {
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px #a5a5a5, -5px -5px 10px #ffffff;
+  &:active {
+    border-radius: 10px;
+    background: linear-gradient(315deg, #e7e7e7, #f0f0f0);
+    box-shadow: -5px -5px 10px #bebebe, 5px 5px 10px #ffffff;
+  }
+}

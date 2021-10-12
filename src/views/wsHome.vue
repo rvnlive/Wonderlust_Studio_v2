@@ -1,6 +1,6 @@
 <template>
   <div>
-    <b-container fluid class="wsWrapper p-0 m-0 pt-3">
+    <b-container fluid class="m-0 mt-5 p-0">
       <b-img class="wsLogo" :src="logoBlack" />
     </b-container>
   </div>
@@ -12,13 +12,5 @@ export default {
   data() {
     return {};
   },
-  //   methods: {
-  //     fadeIn() {
-  //       document.body.style.opacity = "1";
-  //     },
-  //   },
-  //   mounted() {
-  //     this.fadeIn();
-  //   },
 };
 </script>

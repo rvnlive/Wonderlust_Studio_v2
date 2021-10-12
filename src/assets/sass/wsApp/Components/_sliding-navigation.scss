@@ -1,0 +1,122 @@
+.wsSliderNavigation-wrapper {
+  width: 100%;
+  height: 6em;
+  overflow-x: hidden;
+  .wsSliderNavigation-main {
+    height: 100%;
+    width: 41.5em;
+    display: flex;
+    will-change: transform;
+    overflow-x: hidden;
+    &__item {
+      padding-top: 1em;
+      overflow-x: hidden;
+      &:hover {
+        display: flex;
+        overflow-x: visible;
+        width: 10em;
+        .wsSliderNavigation-main {
+          width: 73.5em;
+          &__item {
+            &--hair,
+            &--aesthetic,
+            &--biotricologia,
+            &--browlash,
+            &--nail,
+            &--facial {
+              margin-right: 1em;
+            }
+            &--name {
+              display: block;
+              font-size: small;
+              margin-right: 2.5em;
+            }
+          }
+        }
+      }
+      &--hair {
+        top: 0.5em;
+        left: 10px;
+        margin-left: 0.75em;
+        margin-right: 1.5em;
+        width: 4em;
+        height: 4em;
+        // background: url("~../../assets/img/model_img/navigation/1.jpg");
+        // background-size: cover;
+        // background-position: center;
+        border: 2px solid #e0e0e0;
+        border-radius: 20px;
+        box-shadow: 5px 5px 10px #a8a8a8, -5px -5px 10px #ffffff;
+      }
+      &--aesthetic {
+        top: 0.5em;
+        margin-left: 1.5em;
+        margin-right: 1.5em;
+        width: 4em;
+        height: 4em;
+        border: 2px solid #e0e0e0;
+        border-radius: 20px;
+        box-shadow: 5px 5px 10px #a8a8a8, -5px -5px 10px #ffffff;
+      }
+      &--biotricologia {
+        top: 0.5em;
+        margin-left: 1.5em;
+        margin-right: 1.5em;
+        width: 4em;
+        height: 4em;
+        border: 2px solid #e0e0e0;
+        border-radius: 20px;
+        box-shadow: 5px 5px 10px #a8a8a8, -5px -5px 10px #ffffff;
+      }
+      &--browlash {
+        top: 0.5em;
+        margin-left: 1.5em;
+        margin-right: 1.5em;
+        width: 4em;
+        height: 4em;
+        border: 2px solid #e0e0e0;
+        border-radius: 20px;
+        box-shadow: 5px 5px 10px #a8a8a8, -5px -5px 10px #ffffff;
+      }
+      &--nail {
+        top: 0.5em;
+        margin-left: 1.5em;
+        margin-right: 1.5em;
+        width: 4em;
+        height: 4em;
+        border: 2px solid #e0e0e0;
+        border-radius: 20px;
+        box-shadow: 5px 5px 10px #a8a8a8, -5px -5px 10px #ffffff;
+      }
+      &--facial {
+        top: 0.5em;
+        margin-left: 1.5em;
+        margin-right: 1.5em;
+        width: 4em;
+        height: 4em;
+        border: 2px solid #e0e0e0;
+        border-radius: 20px;
+        box-shadow: 5px 5px 10px #a8a8a8, -5px -5px 10px #ffffff;
+      }
+      &--name {
+        display: none;
+        text-align: center;
+        margin-left: -15px;
+        margin-top: 4px;
+      }
+      &:hover {
+        &--name {
+          display: block;
+          text-align: center;
+          margin-top: 4px;
+        }
+      }
+    }
+  }
+}
+.fa-arrow {
+  font-size: 20px;
+  // margin-top: 0px;
+  color: #989898;
+  //   transform: translateX(-50px);
+}

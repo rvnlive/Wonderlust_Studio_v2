@@ -1,10 +1,14 @@
 <template>
-  <footer>
-    <hr class="bg-light mb-3" />
-    <b-col class="p-0 m-0 align-items-end">
+  <footer class="footer">
+    <b-col class="p-0 m-0">
       <b-row class="d-flex flex-row justify-content-center m-0 p-0">
         <!-- Apple / Google Maps button Start -->
-        <b-dropdown dropup variant="transparent" class="wsButton mr-3">
+        <b-dropdown
+          dropup
+          variant="transparent"
+          class="wsButton mr-4"
+          menu-class="mb-2 border-0 bg-transparent fadeIn"
+        >
           <template #button-content>
             <b-icon icon="map" class="mr-2" /><span class="sr-only"
               >Address: 175 Orford Lane, Warrington, WA2 7BA</span
@@ -12,11 +16,12 @@
           </template>
           <b-dropdown-item-button
             href="https:/maps.apple.com/?q=175+Orford+Lane+Warrington+WA27BA"
+            class="mb-3 wsButton"
             >with Apple Maps</b-dropdown-item-button
           >
-          <b-dropdown-divider></b-dropdown-divider>
           <b-dropdown-item-button
             href="https://maps.google.com/?q=Wonderlust Studio, Warrington WA2 7BA"
+            class="wsButton"
             >with Google Maps</b-dropdown-item-button
           >
         </b-dropdown>
@@ -26,31 +31,39 @@
         <b-dropdown
           dropup
           variant="transparent"
-          class="wsButton mr-3"
-          offset="-97"
+          class="wsButton mr-4"
+          offset="-95"
+          menu-class="mb-2 border-0 bg-transparent fadeIn"
         >
           <template #button-content>
             <b-icon icon="clock" class="mr-2" /><span class="sr-only"
               >Business hours</span
             >
           </template>
-          <b-dropdown-text style="width: 260px"
+          <b-dropdown-text class="wsButton mb-3 text-center" style="width: 260px"
             ><b>Monday:</b> Appointments Only</b-dropdown-text
           >
-          <b-dropdown-divider />
-          <b-dropdown-text
+          <b-dropdown-text class="wsButton mb-3 text-center"
             ><b>Tuesday-Friday:</b> <br />
             10 AM - 6 PM</b-dropdown-text
           >
-          <b-dropdown-divider />
-          <b-dropdown-text><b>Saturday:</b><br />10 AM - 3 PM</b-dropdown-text>
-          <b-dropdown-divider />
-          <b-dropdown-text><b>Sunday:</b> CLOSED</b-dropdown-text>
+          <b-dropdown-text class="wsButton mb-3 text-center"
+            ><b>Saturday:</b><br />10 AM - 3 PM</b-dropdown-text
+          >
+          <b-dropdown-text class="wsButton text-center"
+            ><b>Sunday:</b> CLOSED</b-dropdown-text
+          >
         </b-dropdown>
         <!-- Business hours End -->
 
         <!-- Contact / Social Media Start -->
-        <b-dropdown dropup variant="transparent" class="wsButton" offset="-90">
+        <b-dropdown
+          dropup
+          variant="transparent"
+          class="wsButton"
+          right
+          menu-class="mb-2 border-0 bg-transparent w-25 fadeIn"
+        >
           <template #button-content>
             <b-icon icon="share" class="mr-2" /><span class="sr-only"
               >Contact us</span
@@ -59,37 +72,38 @@
           <b-dropdown-item
             variant="transparent"
             href="tel:+447985292757"
-            class="text-center"
+            class="text-center wsButton ml-auto mr-0 mb-3"
             alt="Phone"
+            style="width: 65px"
           >
             <font-awesome-icon :icon="Phone"
           /></b-dropdown-item>
-          <b-dropdown-divider />
           <b-dropdown-item
             variant="transparent"
             href="mailto:info@wonderluststudio.co.uk"
-            class="text-center"
+            class="text-center wsButton ml-auto mr-0 mb-3"
             alt="eMail"
+            style="width: 65px"
           >
             <font-awesome-icon :icon="Mail"
           /></b-dropdown-item>
-          <b-dropdown-divider />
           <b-dropdown-item
             variant="transparent"
             href="https://www.instagram.com/wonderlust_studio/"
             target="_blank"
-            class="text-center"
+            class="text-center wsButton ml-auto mr-0 mb-3"
             alt="Instagram"
+            style="width: 65px"
           >
             <font-awesome-icon :icon="Instagram"
           /></b-dropdown-item>
-          <b-dropdown-divider />
           <b-dropdown-item
             variant="transparent"
             href="https://www.facebook.com/thewonderluststudio"
             target="_blank"
-            class="text-center"
+            class="text-center wsButton ml-auto mr-0"
             alt="Facebook"
+            style="width: 65px"
           >
             <font-awesome-icon :icon="Facebook"
           /></b-dropdown-item>
@@ -117,8 +131,3 @@ export default {
   methods: {},
 };
 </script>
-<style>
-.nav-link {
-  color: #000000;
-}
-</style>

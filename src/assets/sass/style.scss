@@ -1,29 +1,20 @@
 // Utils
-@import "./Utils/breaking-point";
-@import "./Utils/keyframes";
-@import "./Utils/mixins";
-@import "./Utils/variables";
+@import "./wsApp/Utils/breaking-point";
+@import "./wsApp/Utils/keyframes";
+@import "./wsApp/Utils/mixins";
 
 // Base
-@import "./Base/typography";
+@import "./wsApp/Base/animation";
+@import "./wsApp/Base/base";
+@import "./wsApp/Base/typography";
 
 // Components
-// @import "./Components/section";
-@import "./Components/home";
-@import "./Components/banner";
-// @import "./Components/aboutSection";
-@import "./Components/footer";
+@import "./wsApp/Components/home";
+@import "./wsApp/Components/footer";
+@import "./wsApp/Components/banner";
+@import "./wsApp/Components/buttons";
+@import "./wsApp/Components/sliding-navigation";
 
-// Main style
-html {
-  body {
-    font-family: "Nunito Sans", Helvetica, Arial, sans-serif;
-    // Font-weight can be 200-300-400-600
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    // transition: background 250ms ease-in-out;
-  }
-}
 
 // Bootstrap and BootstrapVue SCSS files (order is important)
 @import "././node_modules/bootstrap/scss/bootstrap.scss";

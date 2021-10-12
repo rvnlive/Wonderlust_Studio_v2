@@ -15,9 +15,9 @@ import { faUserSecret } from '@fortawesome/free-solid-svg-icons'
 import { faFontAwesome } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 /* Mixins */
+
 import { mainMixin } from './mixins/mainMixin'
 import { baseMixin } from './mixins/baseMixin'
-import { fadeIn } from './mixins/fadeIn'
 
 library.add(faUserSecret)
 library.add(faFontAwesome)
@@ -36,7 +36,6 @@ Vue.config.productionTip = false
 
 Vue.mixin(mainMixin)
 Vue.mixin(baseMixin)
-Vue.mixin(fadeIn)
 new Vue({
   el: '#app',
   router,

@@ -1,17 +1,19 @@
 <template>
-  <div id="app">
+  <div id="app" class="m-0 p-0">
     <wsLoading v-if="isLoading" />
     <transition-group v-else name="slide-fade">
       <wsSlidingNavigation key="1" />
       <span
         v-on:click="backHome"
         v-show="!isAtHome"
-        class="wsNavigation-back"
+        class="wsButton ml-2 pl-3 pr-3 pt-1 pb-1"
         key="2"
-        >back</span
+        >home</span
       >
-      <router-view :logoBlack="logoBlack" :logoWhite="logoWhite" key="3" />
-      <wsFooter key="4" />
+      <b-container class="p-0 m-0" key="3">
+        <router-view :logoBlack="logoBlack" :logoWhite="logoWhite" key="4" />
+        <wsFooter key="5" />
+      </b-container>
     </transition-group>
   </div>
 </template>
@@ -33,7 +35,7 @@ export default {
   computed: {},
 };
 </script>
-<style>
+<style scoped>
 .slide-fade-enter-active {
   transition: all 0.3s ease;
 }
@@ -44,12 +46,5 @@ export default {
 .slide-fade-leave-to {
   transform: translateX(0px);
   opacity: 0;
-}
-
-.wsNavigation-back {
-  margin-left: 10px;
-  padding: 5px 10px;
-  border-radius: 10px;
-  box-shadow: -5px -5px 10px #a5a5a5, 5px 5px 10px #ffffff;
 }
 </style>
