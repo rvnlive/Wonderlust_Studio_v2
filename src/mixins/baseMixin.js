@@ -1,9 +1,9 @@
 export const baseMixin = {
   components: {
-    wsLoading: () => import(/* webpackChunkName: "wsLoading" */ "../helpers/forComponentStatus/wsLoadingComponent.vue"),
+    wsLoading: () => import(/* webpackChunkName: "wsLoading" */ '../helpers/forComponentStatus/wsLoadingComponent.vue'),
     wsSlidingNavigation: () =>
       import(
-        /* webpackChunkName: "wsSlidingNavigation" */ "../helpers/wsSlidingNavigation.vue"
+        /* webpackChunkName: "wsSlidingNavigation" */ '../helpers/wsSlidingNavigation.vue'
       ),
   },
   data() {

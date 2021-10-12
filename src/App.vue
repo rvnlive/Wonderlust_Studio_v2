@@ -24,7 +24,7 @@ import LogoBlack from "./assets/img/ws_brand/logo_transparent_black.png";
 import LogoWhite from "./assets/img/ws_brand/logo_transparent_white.png";
 export default {
   name: "App",
-  mixins: ["mainMixin"],
+  mixins: ["baseMixin","mainMixin"],
   components: {},
   data() {
     return {
