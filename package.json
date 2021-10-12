@@ -1,6 +1,6 @@
 {
   "name": "wonderlust_studio_v2",
-  "version": "0.2.5",
+  "version": "0.2.0",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",

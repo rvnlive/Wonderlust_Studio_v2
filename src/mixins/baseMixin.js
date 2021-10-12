@@ -1,9 +1,7 @@
-import wsLoading from "../helpers/forComponentStatus/wsLoadingComponent.vue";
-import wsSlidingNavigation from "../helpers/wsSlidingNavigation.vue";
 export const baseMixin = {
   components: {
-    wsLoading,
-    wsSlidingNavigation
+    wsLoading: () => import('../helpers/forComponentStatus/wsLoadingComponent.vue'),
+    wsSlidingNavigation: () => import('../helpers/wsSlidingNavigation.vue')
   },
   data() {
     return {

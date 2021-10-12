@@ -16,8 +16,8 @@ import { faFontAwesome } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 /* Mixins */
 
-import { mainMixin } from './mixins/mainMixin'
 import { baseMixin } from './mixins/baseMixin'
+import { mainMixin } from './mixins/mainMixin'
 
 library.add(faUserSecret)
 library.add(faFontAwesome)
@@ -34,8 +34,8 @@ Vue.use(Vue2TouchEvents, {
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 Vue.config.productionTip = false
 
-Vue.mixin(mainMixin)
 Vue.mixin(baseMixin)
+Vue.mixin(mainMixin)
 new Vue({
   el: '#app',
   router,
