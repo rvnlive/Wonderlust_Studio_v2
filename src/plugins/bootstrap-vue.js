@@ -1,7 +1,16 @@
 import Vue from 'vue'
 
-import BootstrapVue from 'bootstrap-vue'
+/** For performance improvement
+ * we are only going to import
+ * necessary (active) plugins **/
+import {
+    LayoutPlugin,
+    DropdownPlugin,
+    ImagePlugin
+} from 'bootstrap-vue'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 
-Vue.use(BootstrapVue)
+Vue.use(LayoutPlugin)
+Vue.use(DropdownPlugin)
+Vue.use(ImagePlugin)
