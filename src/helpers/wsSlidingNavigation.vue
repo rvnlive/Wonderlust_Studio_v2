@@ -2,7 +2,7 @@
   <b-container fluid class="wsSliderNavigation-wrapper m-0 p-0">
     <div class="wsSliderNavigation-main">
       <div class="d-flex flex-column justify-content-center m-0 p-0">
-        <font-awesome-icon :icon="arrow" class="fa-arrow ml-3 mr-3" />
+        <font-awesome-icon :icon="arrow" class="fa-arrow ml-3 mr-3 fadeIn" />
       </div>
       <div
         v-for="(service, index) in wsServices"
@@ -12,7 +12,7 @@
         class="wsSliderNavigation-main__item fadeIn"
       >
         <b-img-lazy :src="service.imageUrl" :class="service.imageClass" />
-        <p class="wsSliderNavigation-main__item--name">
+        <p class="wsSliderNavigation-main__item--name fadeIn">
           {{ service.serviceName }}
         </p>
       </div>
@@ -20,7 +20,7 @@
   </b-container>
 </template>
 <script>
-import { faArrowsAltH, faHome } from "@fortawesome/free-solid-svg-icons";
+import { faArrowsAltH } from "@fortawesome/free-solid-svg-icons";
 export default {
   mixins: ["baseMixin"],
   data() {
@@ -70,7 +70,6 @@ export default {
         },
       ],
       arrow: faArrowsAltH,
-      house: faHome
     };
   },
   props: {},
