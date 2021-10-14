@@ -1,84 +1,86 @@
 <template>
-  <b-container fluid class="wsSliderNavigation-wrapper m-0 p-0 mb-2">
+  <b-container fluid class="wsSliderNavigation-wrapper m-0 p-0">
     <div class="wsSliderNavigation-main">
-      <div
-        class="
-          wsSliderNavigation-main__item
-          d-flex
-          flex-column
-          justify-content-center
-          m-0
-          p-0
-        "
-      >
-        <font-awesome-icon
-          :icon="arrow"
-          class="fa-arrow ml-3 mr-3"
-          v-show="!animated"
-        />
+      <div class="d-flex flex-column justify-content-center m-0 p-0">
+        <font-awesome-icon :icon="arrow" class="fa-arrow ml-3 mr-3" />
       </div>
       <div
         v-for="(service, index) in wsServices"
         :key="index"
-        class="wsSliderNavigation-main__item"
+        :id="service.serviceId"
+        @click="goTo((value = service.target))"
+        class="wsSliderNavigation-main__item fadeIn"
       >
-        <b-img :src="service.imageUrl" :class="service.imageClass" />
-        <p :class="service.nameClass">{{ service.serviceName }}</p>
+        <b-img-lazy :src="service.imageUrl" :class="service.imageClass" />
+        <p class="wsSliderNavigation-main__item--name">
+          {{ service.serviceName }}
+        </p>
       </div>
     </div>
   </b-container>
 </template>
 <script>
-import { faArrowsAltH } from "@fortawesome/free-solid-svg-icons";
+import { faArrowsAltH, faHome } from "@fortawesome/free-solid-svg-icons";
 export default {
-  mixins: ["baseMixin", "imageMixin"],
+  mixins: ["baseMixin"],
   data() {
     return {
       wsServices: [
         {
+          target: "/Hair",
           imageUrl: require("../assets/img/model_img/navigation/1.jpg"),
-          imageClass: "wsSliderNavigation-main__item--hair",
-          nameClass: "wsSliderNavigation-main__item--name",
-          serviceName: "Hairstyling"
+          imageClass: "wsSliderNavigation-main__item--hair fadeIn",
+          serviceName: "Hairstyling",
+          serviceId: "Hair",
         },
         {
+          target: "/Aesthetic",
           imageUrl: require("../assets/img/model_img/navigation/2.jpg"),
-          imageClass: "wsSliderNavigation-main__item--aesthetic",
-          nameClass: "wsSliderNavigation-main__item--name",
-          serviceName: "Aesthetics"
+          imageClass: "wsSliderNavigation-main__item--aesthetic fadeIn",
+          serviceName: "Aesthetics",
+          serviceId: "Aesthetic",
         },
         {
+          target: "/Biotricologia",
           imageUrl: require("../assets/img/model_img/navigation/3.jpg"),
           imageClass: "wsSliderNavigation-main__item--biotricologia",
-          nameClass: "wsSliderNavigation-main__item--name",
-          serviceName: "Biotricologia"
+          serviceName: "Biotricologia",
+          serviceId: "Biotricologia",
         },
         {
+          target: "/Browlash",
           imageUrl: require("../assets/img/model_img/navigation/4.jpg"),
           imageClass: "wsSliderNavigation-main__item--browlash",
-          nameClass: "wsSliderNavigation-main__item--name",
-          serviceName: "Brows & Lashes"
+          serviceName: "Brows & Lashes",
+          serviceId: "BrowLash",
         },
         {
+          target: "/Nail",
           imageUrl: require("../assets/img/model_img/navigation/5.jpg"),
           imageClass: "wsSliderNavigation-main__item--nail",
-          nameClass: "wsSliderNavigation-main__item--name",
-          serviceName: "Nails"
+          serviceName: "Nails",
+          serviceId: "Nail",
         },
         {
+          target: "/Facial",
           imageUrl: require("../assets/img/model_img/navigation/6.jpg"),
           imageClass: "wsSliderNavigation-main__item--facial",
-          nameClass: "wsSliderNavigation-main__item--name",
-          serviceName: "Facials"
+          serviceName: "Facials",
+          serviceId: "Facial",
         },
       ],
       arrow: faArrowsAltH,
-      isActive: false,
-      animated: false,
+      house: faHome
     };
   },
   props: {},
-  method: {},
+  methods: {
+    goTo(value) {
+      if (this.$router.currentRoute.path !== value) {
+        this.$router.push(value);
+      }
+    },
+  },
   mounted() {
     let sliderWrap = document.querySelector(".wsSliderNavigation-wrapper");
     let slider = document.querySelector(".wsSliderNavigation-main");

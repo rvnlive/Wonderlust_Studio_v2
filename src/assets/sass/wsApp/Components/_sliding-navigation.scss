@@ -4,33 +4,51 @@
   overflow-x: hidden;
   .wsSliderNavigation-main {
     height: 100%;
-    width: 41.5em;
+    padding-top: -0.5em;
+    width: 43em;
     display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
     will-change: transform;
     overflow-x: hidden;
     &__item {
-      padding-top: 1em;
-      overflow-x: hidden;
-      &:hover {
+      padding-top: 0.5em;
+      &--active {
         display: flex;
         overflow-x: visible;
         width: 10em;
-        .wsSliderNavigation-main {
-          width: 73.5em;
-          &__item {
-            &--hair,
-            &--aesthetic,
-            &--biotricologia,
-            &--browlash,
-            &--nail,
-            &--facial {
-              margin-right: 1em;
-            }
-            &--name {
-              display: block;
-              font-size: small;
-              margin-right: 2.5em;
-            }
+        .wsSliderNavigation-main__item {
+          &--hair,
+          &--aesthetic,
+          &--biotricologia,
+          &--browlash,
+          &--nail,
+          &--facial {
+            z-index: 999;
+            margin-left: auto;
+            margin-right: 0;
+          }
+          &--name {
+            z-index: 1;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            font-size: small;
+            height: 5em;
+            padding: 0.2em 0.75em 0.2em 1.5em;
+            background: linear-gradient(145deg, #f0f0f0, #cacaca);
+            border: 2px solid #e0e0e0;
+            border-top-right-radius: 20px;
+            border-bottom-right-radius: 20px;
+            box-shadow: 5px 5px 10px #a8a8a8, -5px -5px 10px #ffffff;
+            text-shadow: 3px 3px 3px #a8a8a8, -3px -3px 3px #ffffff;
+            margin-top: 0;
+            margin-left: -15px;
+            margin-right: auto;
+            opacity: 1;
+            transition: all 300ms ease-in-out;
+            animation: fadeIn 750ms;
           }
         }
       }
@@ -50,7 +68,7 @@
       }
       &--aesthetic {
         top: 0.5em;
-        margin-left: 1.5em;
+        margin-left: 0.5em;
         margin-right: 1.5em;
         width: 4em;
         height: 4em;
@@ -60,7 +78,7 @@
       }
       &--biotricologia {
         top: 0.5em;
-        margin-left: 1.5em;
+        margin-left: 0.5em;
         margin-right: 1.5em;
         width: 4em;
         height: 4em;
@@ -70,7 +88,7 @@
       }
       &--browlash {
         top: 0.5em;
-        margin-left: 1.5em;
+        margin-left: 0.5em;
         margin-right: 1.5em;
         width: 4em;
         height: 4em;
@@ -80,7 +98,7 @@
       }
       &--nail {
         top: 0.5em;
-        margin-left: 1.5em;
+        margin-left: 0.5em;
         margin-right: 1.5em;
         width: 4em;
         height: 4em;
@@ -90,7 +108,7 @@
       }
       &--facial {
         top: 0.5em;
-        margin-left: 1.5em;
+        margin-left: 0.5em;
         margin-right: 1.5em;
         width: 4em;
         height: 4em;
@@ -100,23 +118,18 @@
       }
       &--name {
         display: none;
+        opacity: 0;
         text-align: center;
-        margin-left: -15px;
+        margin-left: -75px;
         margin-top: 4px;
-      }
-      &:hover {
-        &--name {
-          display: block;
-          text-align: center;
-          margin-top: 4px;
-        }
+        transition: all 300ms ease-in-out;
       }
     }
   }
 }
 .fa-arrow {
   font-size: 20px;
-  // margin-top: 0px;
+  margin-top: -15px;
   color: #989898;
   //   transform: translateX(-50px);
 }

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <b-container fluid class="m-0 mt-5 p-0">
+    <b-container fluid class="m-0 mt-4 p-0">
       <b-img class="wsLogo" :src="logoBlack" />
     </b-container>
   </div>

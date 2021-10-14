@@ -5,8 +5,7 @@ export const baseMixin = {
   },
   data() {
     return {
-      isActive: false,
-      isAtHome: false,
+      // isActive: false,
       isDetailsVisible: false,
       isLoading: false,
       viewRoutes: {
@@ -28,6 +27,15 @@ export const baseMixin = {
         nail: 'linear-gradient(120deg, #9f8189 10%, #f3abb6)',
         facial: 'linear-gradient(120deg, #f3abb6 20%, #ffcad4)'
       },
+      // Sliding Navigation button
+      navigationButton: [
+        '#Hair',
+        '#Aesthetic',
+        '#Biotricologia',
+        '#BrowLash',
+        '#Nail',
+        '#Facial'
+      ],
       // Page banners
       pageBanner: {
         hair: '.wsSliderNavigation-main__item--hair',
@@ -39,7 +47,8 @@ export const baseMixin = {
       }
     }
   },
-  watch: {},
+  watch: {
+  },
   methods: {
     setBackground() { // Setting page background color
       if (this.viewRoutes.home) { // Hair view background color
@@ -58,32 +67,37 @@ export const baseMixin = {
         document.body.style.background = this.backgroundColor.facial
       }
     },
-    pageActive() { // Navigation Icon highlight
-      let translateX = 'translateX(-150%)'
+    setPageActive() { // Navigation Icon highlight
       if (this.viewRoutes.hair) { // Hair
-        const banner = document.querySelector(this.pageBanner.hair)
-        banner.classList.add("active")
-        this.isActive = true
-      } else if (this.viewRoutes.aesthetic) { // Aesthetics
-        const banner = document.querySelector(this.pageBanner.aesthetic)
-        banner.style.transform = translateX
-        this.$router.push('/Biotricologia')
+        this.resetPageActive()
+        const navigation = document.querySelector("#Hair")
+        navigation.classList.remove("wsSliderNavigation-main__item")
+        navigation.classList.add("wsSliderNavigation-main__item--active", "mt-2")
+      } else if (this.viewRoutes.aesthetic) { // Aesthetic
+        this.resetPageActive()
+        const navigation = document.querySelector("#Aesthetic")
+        navigation.classList.remove("wsSliderNavigation-main__item")
+        navigation.classList.add("wsSliderNavigation-main__item--active", "mt-2")
       } else if (this.viewRoutes.biotricologia) { // Biotricologia
-        const banner = document.querySelector(this.pageBanner.biotricologia)
-        banner.style.transform = translateX
-        this.$router.push('/Browlash')
+        this.resetPageActive()
+        const navigation = document.querySelector("#Biotricologia")
+        navigation.classList.remove("wsSliderNavigation-main__item")
+        navigation.classList.add("wsSliderNavigation-main__item--active", "mt-2")
       } else if (this.viewRoutes.browlash) { // BrowLash
-        const banner = document.querySelector(this.pageBanner.browlash)
-        banner.style.transform = translateX
-        this.$router.push('/Nail')
+        this.resetPageActive()
+        const navigation = document.querySelector("#BrowLash")
+        navigation.classList.remove("wsSliderNavigation-main__item")
+        navigation.classList.add("wsSliderNavigation-main__item--active", "mt-2")
       } else if (this.viewRoutes.nail) { // Nail
-        const banner = document.querySelector(this.pageBanner.nail)
-        banner.style.transform = translateX
-        this.$router.push('/Facial')
+        this.resetPageActive()
+        const navigation = document.querySelector("#Nail")
+        navigation.classList.remove("wsSliderNavigation-main__item")
+        navigation.classList.add("wsSliderNavigation-main__item--active", "mt-2")
       } else if (this.viewRoutes.facial) { // Facial
-        const banner = document.querySelector(this.pageBanner.facial)
-        banner.style.transform = translateX
-        this.$router.push('/Hair')
+        this.resetPageActive()
+        const navigation = document.querySelector("#Facial")
+        navigation.classList.remove("wsSliderNavigation-main__item")
+        navigation.classList.add("wsSliderNavigation-main__item--active", "mt-2")
       }
     },
     startLoading() { // Start loading animation
@@ -92,27 +106,30 @@ export const baseMixin = {
         this.isLoading = false
       }, 1500)
     },
-    open() { // On opening Bottom Sheet
-      this.isDetailsVisible = true
-    },
-    atHome() {
-      if (this.viewRoutes.home) {
-        this.isAtHome = true
+    // open() { // On opening Bottom Sheet
+    //   this.isDetailsVisible = true
+    // },
+    resetPageActive() {
+      const slidingNavigation = document.querySelectorAll('.wsSliderNavigation-main__item')
+      if (slidingNavigation.classList.contains("wsSliderNavigation-main__item--active")) {
+        const navigation = document.querySelectorAll(this.navigationButton)
+        for (let button of navigation) {
+          button.classList.remove("wsSliderNavigation-main__item--active", "mt-2")
+          button.classList.add("wsSliderNavigation-main__item")
+        }
       }
     },
     backHome() {
-      if (!this.viewRoutes.home) {
-        this.$router.push('/Home')
-        this.isAtHome = true
-      }
+      this.$router.push('/Home')
+      this.resetPageActive()
     }
+
 
   },
   mounted() {
     this.setBackground()
-    this.pageActive()
+    this.setPageActive()
     this.startLoading()
-    this.atHome()
     this.isDetailsVisible = false
   },
   beforeUpdate() {

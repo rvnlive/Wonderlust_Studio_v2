@@ -1,6 +1,6 @@
 <template>
-  <div class="wsBanner wsBanner--hair" v-touch:swipe.top="open">
-    <span v-touch:swipe.left="toLeft" v-touch:swipe.right="toRight">
+  <div class="m-0 p-0 mt-4">
+    <span>
       <wsLoading v-if="isLoading" />
       <div
         v-else
@@ -11,19 +11,13 @@
           class="wsBanner__watermark--dark"
           data-sectionName="#HairStyling"
         ></div>
-        <b-img
+        <b-img-lazy
           :src="logoBlack"
           alt="Wonderlust Studio"
-          class="wsBanner__logo wsBanner__will-animate"
+          class="wsLogo wsBanner__will-animate"
         />
-        <wsNavigationPlaceholders />
-        <wsNavigationDirectionTip />
       </div>
     </span>
-
-    <wsBottomSheet v-model="isDetailsVisible">
-      <wsBannerElement v-if="isDetailsVisible === true" />
-    </wsBottomSheet>
   </div>
 </template>
 
