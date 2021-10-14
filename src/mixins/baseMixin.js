@@ -110,13 +110,13 @@ export const baseMixin = {
     //   this.isDetailsVisible = true
     // },
     resetPageActive() {
-      const slidingNavigation = document.querySelectorAll('.wsSliderNavigation-main__item')
-      if (slidingNavigation.classList.contains("wsSliderNavigation-main__item--active")) {
-        const navigation = document.querySelectorAll(this.navigationButton)
-        for (let button of navigation) {
-          button.classList.remove("wsSliderNavigation-main__item--active", "mt-2")
-          button.classList.add("wsSliderNavigation-main__item")
-        }
+      // const slidingNavigation = document.querySelectorAll('.wsSliderNavigation-main__item')
+      // if (slidingNavigation.classList.contains("wsSliderNavigation-main__item--active")) {
+      const navigation = document.querySelectorAll(this.navigationButton)
+      for (let button of navigation) {
+        button.classList.remove("wsSliderNavigation-main__item--active", "mt-2")
+        button.classList.add("wsSliderNavigation-main__item")
+        // }
       }
     },
     backHome() {
