@@ -1,5 +1,5 @@
 <template>
-  <b-container fluid class="wsSliderNavigation-wrapper m-0 p-0">
+  <b-container fluid class="wsSliderNavigation-wrapper m-0 p-0 fadeIn">
     <div class="wsSliderNavigation-main fadeIn">
       <div
         class="d-flex flex-column justify-content-center m-0 p-0 fadeIn"
@@ -125,7 +125,7 @@ export default {
 
     function onLoad() {
       calculateDimension();
-      document.body.style.height = `${sliderWidth}px`;
+      // document.body.style.height = `${sliderWidth}px`;
       window.scrollTo({ top: 1 });
       scrollUpdate();
     }

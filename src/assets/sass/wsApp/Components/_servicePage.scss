@@ -1,0 +1,15 @@
+@media (orientation: landscape) {
+}
+@media (orientation: portrait) {
+  .wsServicePage {
+    height: calc(100vh - 120px);
+  }
+}
+
+.crazy-colors-gradient {
+  background-image: linear-gradient(to right, violet, aqua, blue, silver, orange, red);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}

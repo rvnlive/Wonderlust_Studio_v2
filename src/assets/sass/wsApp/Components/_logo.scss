@@ -1,0 +1,43 @@
+.wsLogo--top-left {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 25%;
+  min-width: 250px;
+  width: 50vw;
+  max-width: 450px;
+  @include wsNeumorphism--top-left;
+}
+
+.wsLogo--top-right {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 25%;
+  min-width: 250px;
+  width: 50vw;
+  max-width: 450px;
+  @include wsNeumorphism--top-right;
+}
+
+.wsLogo--bottom-left {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 25%;
+  min-width: 250px;
+  width: 50vw;
+  max-width: 450px;
+  @include wsNeumorphism--bottom-left;
+}
+
+.wsLogo--bottom-right {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 25%;
+  min-width: 250px;
+  width: 50vw;
+  max-width: 450px;
+  @include wsNeumorphism--bottom-right;
+}

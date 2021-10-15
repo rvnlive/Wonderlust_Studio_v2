@@ -21,66 +21,6 @@
 }
 /* Neumorphism End */
 
-/* Banner Start */
-@mixin aesthetic {
-  background: url("~../img/model_img/2.jpg");
-  background-position-x: 47%;
-  background-size: cover;
-  margin: 0 auto;
-  border: 2px solid rgba(255, 255, 255);
-  box-shadow: 0px 0px 15px 15px #2f323375;
-  -webkit-transition: background 250ms ease-in-out;
-  transition: background 250ms ease-in-out;
-}
-@mixin biotricologia {
-  background: url("~../img/model_img/3.jpg") center;
-  background-size: cover;
-  margin: 0 auto;
-  border: 2px solid rgb(255, 255, 255);
-  box-shadow: 0px 0px 15px 15px #2f323375;
-  -webkit-transition: background 250ms ease-in-out;
-  transition: background 250ms ease-in-out;
-}
-@mixin browlash {
-  background: url("~../img/model_img/4.jpg");
-  background-size: cover;
-  background-position-x: 65%;
-  margin: 0 auto;
-  border: 2px solid rgb(255, 255, 255);
-  box-shadow: 0px 0px 15px 15px #2f323375;
-  -webkit-transition: background 250ms ease-in-out;
-  transition: background 250ms ease-in-out;
-}
-@mixin facial {
-  background: url("~../img/model_img/6.jpg");
-  background-size: cover;
-  background-position-x: 75%;
-  margin: 0 auto;
-  border: 2px solid rgb(255, 255, 255);
-  box-shadow: 0px 0px 15px 15px #2f323375;
-  -webkit-transition: background 250ms ease-in-out;
-  transition: background 250ms ease-in-out;
-}
-@mixin hair {
-  background: url("~../img/model_img/1.jpg") center;
-  background-size: cover;
-  margin: 0 auto;
-  border: 2px solid rgb(255, 255, 255);
-  box-shadow: -10px -10px 30px 0 #ffffff, 10px 10px 30px 0 #aeaec09d;
-  -webkit-transition: background 250ms ease-in-out;
-  transition: background 250ms ease-in-out;
-}
-@mixin nail {
-  background: url("~../img/model_img/5.jpg");
-  background-size: cover;
-  background-position-x: 75%;
-  margin: 0 auto;
-  border: 2px solid rgb(255, 255, 255);
-  box-shadow: 0px 0px 15px 15px #2f323375;
-  -webkit-transition: background 250ms ease-in-out;
-  transition: background 250ms ease-in-out;
-}
-/* Banner End */
 //////////////////////
 /* Collapse Start */
 

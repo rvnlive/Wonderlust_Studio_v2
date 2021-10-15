@@ -5,9 +5,13 @@
 
 html {
   body {
+    height: 100vh;
     font-family: "Nunito Sans", Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    .wsWrapper {
+      height: 100%;
+    }
   }
   body::-webkit-scrollbar {
     display: none;

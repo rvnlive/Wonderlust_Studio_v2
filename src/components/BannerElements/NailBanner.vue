@@ -1,30 +1,11 @@
 <template>
-  <div class="wsBanner wsBanner--nail" v-touch:swipe.top="open">
-    <wsLoading v-if="isLoading" />
-    <span v-else v-touch:swipe.left="toLeft" v-touch:swipe.right="toRight">
-      <div
-        class="wsBanner__header wsBanner__background--nail"
-        aria-label="A woman with needles near her face, before aesthetic therapy."
-      >
-        <div class="wsBanner__watermark--dark" data-sectionName="#Nails"></div>
-        <b-img
-          :src="logoBlack"
-          alt="Wonderlust Studio"
-          class="wsBanner__logo wsBanner__will-animate"
-        />
-        <wsNavigationPlaceholders />
-        <wsNavigationDirectionTip />
-      </div>
-    </span>
-    <wsBottomSheet v-model="isDetailsVisible">
-      <wsBannerElement v-if="isDetailsVisible === true" />
-    </wsBottomSheet>
+  <div>
+      <b-img :src="logoBlack" alt="Wonderlust Studio" class="wsLogo--top-left" />
   </div>
 </template>
 
 <script>
 export default {
-  props: ["logoBlack"],
   mixins: ["baseMixin"],
   components: {},
   data() {

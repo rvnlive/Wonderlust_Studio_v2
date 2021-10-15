@@ -1,12 +1,14 @@
 <template>
-  <AestheticsBanner :logoBlack="logoBlack"/>
+  <div>
+    <wsLoading v-if="isLoading" class="mt-5" />
+    <Banner v-else :logoBlack="logoBlack" class="wsServicePage m-0 p-0 mt-4" />
+  </div>
 </template>
 <script>
-import AestheticsBanner from '../components/BannerElements/AestheticsBanner.vue'
+import Banner from "../components/BannerElements/AestheticsBanner.vue";
 export default {
-    props: ['logoBlack'],
-    components: {
-        AestheticsBanner
-    }
-}
+  components: {
+    Banner,
+  },
+};
 </script>
