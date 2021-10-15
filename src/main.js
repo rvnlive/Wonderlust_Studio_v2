@@ -17,6 +17,7 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 /* Mixins */
 
 import { baseMixin } from './mixins/baseMixin'
+import { serviceMixin } from './mixins/wsServiceMixin'
 import { mainMixin } from './mixins/mainMixin'
 
 library.add(faUserSecret)
@@ -35,6 +36,7 @@ Vue.component('font-awesome-icon', FontAwesomeIcon)
 Vue.config.productionTip = false
 
 Vue.mixin(baseMixin)
+Vue.mixin(serviceMixin)
 Vue.mixin(mainMixin)
 new Vue({
   el: '#app',

@@ -1,5 +1,6 @@
 import LogoBlack from "../assets/img/ws_brand/logo_transparent_black.png";
 import LogoWhite from "../assets/img/ws_brand/logo_transparent_white.png";
+import { faArrowsAltH, faHome } from "@fortawesome/free-solid-svg-icons";
 export const baseMixin = {
   components: {
     wsLoading: () => import('../helpers/forComponentStatus/wsLoadingComponent.vue'),
@@ -7,9 +8,13 @@ export const baseMixin = {
   },
   data() {
     return {
+      // wsLogos
       logoBlack: LogoBlack,
       logoWhite: LogoWhite,
-      isLoading: false,
+
+      // Icons
+      arrow: faArrowsAltH,
+      house: faHome,
       // Vue-router page routes
       viewRoutes: {
         home: this.$router.currentRoute.path === '/Home',
@@ -20,6 +25,7 @@ export const baseMixin = {
         nail: this.$router.currentRoute.path === '/Nail',
         facial: this.$router.currentRoute.path === '/Facial'
       },
+
       // Page background colors
       backgroundColor: {
         home: '#F0F0F3',
@@ -30,6 +36,7 @@ export const baseMixin = {
         nail: 'linear-gradient(120deg, #9f8189 10%, #f3abb6)',
         facial: 'linear-gradient(120deg, #f3abb6 20%, #ffcad4)'
       },
+
       // Sliding Navigation buttons
       navigationButton: [
         '#Hair',
@@ -39,6 +46,10 @@ export const baseMixin = {
         '#Nail',
         '#Facial'
       ],
+
+      // Conditions/States
+      isLoading: false,
+      isAtHome: true,
     }
   },
   watch: {},
