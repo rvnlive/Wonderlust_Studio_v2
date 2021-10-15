@@ -5,7 +5,6 @@ export const baseMixin = {
   },
   data() {
     return {
-      // isActive: false,
       isDetailsVisible: false,
       isLoading: false,
       viewRoutes: {
@@ -47,8 +46,7 @@ export const baseMixin = {
       }
     }
   },
-  watch: {
-  },
+  watch: {},
   methods: {
     setBackground() { // Setting page background color
       if (this.viewRoutes.home) { // Hair view background color
@@ -104,27 +102,23 @@ export const baseMixin = {
       this.isLoading = true
       setTimeout(() => {
         this.isLoading = false
-      }, 1500)
+      }, 750)
     },
     // open() { // On opening Bottom Sheet
     //   this.isDetailsVisible = true
     // },
     resetPageActive() {
-      // const slidingNavigation = document.querySelectorAll('.wsSliderNavigation-main__item')
-      // if (slidingNavigation.classList.contains("wsSliderNavigation-main__item--active")) {
       const navigation = document.querySelectorAll(this.navigationButton)
       for (let button of navigation) {
         button.classList.remove("wsSliderNavigation-main__item--active", "mt-2")
         button.classList.add("wsSliderNavigation-main__item", "fadeIn")
-        // }
       }
     },
     backHome() {
       this.$router.push('/Home')
       this.resetPageActive()
+      this.isAtHome = true
     }
-
-
   },
   mounted() {
     this.setBackground()
@@ -132,7 +126,5 @@ export const baseMixin = {
     this.startLoading()
     this.isDetailsVisible = false
   },
-  beforeUpdate() {
-  },
-
+  beforeUpdate() { }
 }

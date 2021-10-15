@@ -1,19 +1,11 @@
 <template>
   <div id="app" class="m-0 p-0">
-    <wsLoading v-if="isLoading" />
+    <wsLoading v-if="isLoading"/>
     <transition-group v-else name="slide-fade">
       <wsSlidingNavigation key="1" />
       <b-container class="p-0 m-0" key="2">
-        <span
-          @click="backHome"
-          v-show="this.$router.currentRoute.path !== '/Home'"
-          class="wsButton pt-1 pb-1 fadeIn"
-          key="3"
-          >
-          <font-awesome-icon :icon="house" class="fa-arrow pt-1 ml-3 mr-3" /></span
-        >
-        <router-view :logoBlack="logoBlack" :logoWhite="logoWhite" key="4" />
-        <wsFooter key="5" />
+        <router-view :logoBlack="logoBlack" :logoWhite="logoWhite" key="3" />
+        <wsFooter key="4" />
       </b-container>
     </transition-group>
   </div>
@@ -38,7 +30,7 @@ export default {
   computed: {},
 };
 </script>
-<style scoped>
+<style>
 .slide-fade-enter-active {
   transition: all 0.5s ease;
 }

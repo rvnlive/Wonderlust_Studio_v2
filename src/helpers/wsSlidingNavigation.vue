@@ -1,7 +1,17 @@
 <template>
   <b-container fluid class="wsSliderNavigation-wrapper m-0 p-0">
-    <div class="wsSliderNavigation-main">
-      <div class="d-flex flex-column justify-content-center m-0 p-0">
+    <div class="wsSliderNavigation-main fadeIn">
+      <div
+        class="d-flex flex-column justify-content-center m-0 p-0 fadeIn"
+        @click="backHome"
+        v-if="!isAtHome"
+      >
+        <font-awesome-icon :icon="house" class="fa-arrow ml-4 mr-3 fadeIn" />
+      </div>
+      <div
+        class="d-flex flex-column justify-content-center m-0 p-0 fadeIn"
+        v-if="isAtHome"
+      >
         <font-awesome-icon :icon="arrow" class="fa-arrow ml-3 mr-3 fadeIn" />
       </div>
       <div
@@ -20,7 +30,7 @@
   </b-container>
 </template>
 <script>
-import { faArrowsAltH } from "@fortawesome/free-solid-svg-icons";
+import { faArrowsAltH, faHome } from "@fortawesome/free-solid-svg-icons";
 export default {
   mixins: ["baseMixin"],
   data() {
@@ -70,13 +80,15 @@ export default {
         },
       ],
       arrow: faArrowsAltH,
+      house: faHome,
+      isAtHome: true,
     };
   },
-  props: {},
   methods: {
     goTo(value) {
       if (this.$router.currentRoute.path !== value) {
         this.$router.push(value);
+        this.isAtHome = false;
       }
     },
   },
@@ -113,7 +125,7 @@ export default {
 
     function onLoad() {
       calculateDimension();
-      //   document.body.style.height = `${sliderWidth}px`;
+      document.body.style.height = `${sliderWidth}px`;
       window.scrollTo({ top: 1 });
       scrollUpdate();
     }

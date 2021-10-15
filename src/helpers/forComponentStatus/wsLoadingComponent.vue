@@ -1,5 +1,5 @@
 <template>
-  <div class="loader">
+  <div class="wsLoader">
     <span></span>
   </div>
 </template>
@@ -9,11 +9,11 @@ export default {
 };
 </script>
 <style scoped>
-.loader {
+.wsLoader {
   position: relative;
   width: 200px;
   height: 200px;
-  margin: 30vh auto 0 auto;
+  margin: calc((100vh - 96px) - 55vh) auto 0 auto;
   border: 2px solid #f0f0f3;
   overflow: hidden;
   border-radius: 50px;
@@ -22,7 +22,7 @@ export default {
     inset 10px 10px 10px rgba(59, 59, 59, 0.4);
 }
 
-.loader:before {
+.wsLoader:before {
   content: "";
   position: absolute;
   top: 25px;
@@ -37,7 +37,7 @@ export default {
     inset 3px 3px 5px rgba(0, 0, 0, 0.5);
 }
 
-.loader span {
+.wsLoader span {
   position: absolute;
   width: 100%;
   height: 100%;
