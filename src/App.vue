@@ -7,8 +7,8 @@
         <transition name="slide" mode="out-in">
           <router-view :logoBlack="logoBlack" :logoWhite="logoWhite" />
         </transition>
-        <wsFooter />
       </b-container>
+      <wsScrollToTop />
     </span>
   </div>
 </template>
@@ -16,7 +16,7 @@
 <script>
 export default {
   name: "App",
-  mixins: ["baseMixin", "mainMixin"],
+  mixins: ["baseMixin", "componentMixin"],
   components: {},
   data() {
     return {};

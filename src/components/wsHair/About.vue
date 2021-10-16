@@ -1,6 +1,6 @@
 <template>
   <div>
-    <b-list-group class="mb-4 text-center">
+    <b-list-group class="text-uppercase mb-4 text-center">
       <b-list-group-item class="h3 m-0 ml-4 mr-4 bg-transparent border border-0"
         >We are more, than just a hair salon,</b-list-group-item
       >

@@ -1,5 +1,5 @@
 <template>
-  <footer class="footer">
+  <footer class="fadeIn">
     <b-col class="p-0 m-0">
       <b-row class="d-flex flex-row justify-content-center m-0 p-0">
         <!-- Apple / Google Maps button Start -->

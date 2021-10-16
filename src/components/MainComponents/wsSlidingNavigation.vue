@@ -6,13 +6,13 @@
         @click="backHome"
         v-if="!isAtHome"
       >
-        <font-awesome-icon :icon="house" class="fa-arrow ml-4 mr-3 fadeIn" />
+        <font-awesome-icon :icon="house" class="fa-arrow ml-3 mr-2 fadeIn" />
       </div>
       <div
         class="d-flex flex-column justify-content-center m-0 p-0 fadeIn"
         v-if="isAtHome"
       >
-        <font-awesome-icon :icon="arrow" class="fa-arrow ml-3 mr-3 fadeIn" />
+        <font-awesome-icon :icon="arrow" class="fa-arrow ml-3 mr-2 fadeIn" />
       </div>
       <div
         v-for="(service, index) in wsServices"

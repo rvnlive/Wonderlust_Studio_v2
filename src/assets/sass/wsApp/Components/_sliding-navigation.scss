@@ -3,24 +3,25 @@
   height: 6em;
   overflow-x: hidden;
   animation: slideFromRight 500ms;
-  transition: all 1s ease;
+  transition: all 250ms ease;
   .wsSliderNavigation-main {
     height: 100%;
     padding-top: -0.5em;
     width: 45em;
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-around;
     will-change: transform;
     overflow-x: hidden;
-    transition: all 1s ease;
+      transition: all 250ms ease;
     &__item {
       padding-top: 0.5em;
+      transition: all 250ms ease;
       &--active {
         display: flex;
         overflow-x: visible;
         width: 10em;
-        transition: width 1s ease-in-out;
+        transition: all 250ms ease;
         .wsSliderNavigation-main__item {
           &--hair,
           &--aesthetic,
@@ -29,9 +30,9 @@
           &--nail,
           &--facial {
             z-index: 999;
-            margin-left: auto;
+            margin-left: 0;
             margin-right: 0;
-            transition: margin-right 500ms ease;
+            transition: all 250ms ease;
           }
           &--name {
             z-index: 1;
@@ -50,17 +51,16 @@
             text-shadow: 3px 3px 3px #a8a8a8, -3px -3px 3px #ffffff;
             margin-top: 0;
             margin-left: -15px;
-            margin-right: auto;
+            margin-right: 1em;
             opacity: 1;
             animation: slideFromLeft 1s;
-                        transition: margin-right 1s ease-in-out;
           }
         }
       }
       &--hair {
         top: 0.5em;
         left: 10px;
-        margin-left: 0.75em;
+        margin-left: 0.5em;
         margin-right: 1.5em;
         width: 4em;
         height: 4em;
@@ -87,6 +87,7 @@
         opacity: 0;
         text-align: center;
         margin-left: -75px;
+        margin-right: auto;
         margin-top: 4px;
         transition: all 300ms ease-in-out;
       }
@@ -97,4 +98,5 @@
   font-size: 20px;
   margin-top: -15px;
   color: #989898;
+  transition: all 250ms ease;
 }

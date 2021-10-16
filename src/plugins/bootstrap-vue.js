@@ -6,11 +6,17 @@ import Vue from 'vue'
 import {
     LayoutPlugin,
     DropdownPlugin,
-    ImagePlugin
+    ImagePlugin,
+    ButtonPlugin,
+    ListGroupPlugin
 } from 'bootstrap-vue'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
+import { IconsPlugin } from 'bootstrap-vue'
 
 Vue.use(LayoutPlugin)
 Vue.use(DropdownPlugin)
 Vue.use(ImagePlugin)
+Vue.use(ButtonPlugin)
+Vue.use(ListGroupPlugin)
+Vue.use(IconsPlugin)

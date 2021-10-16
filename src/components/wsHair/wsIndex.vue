@@ -1,13 +1,18 @@
 <template>
   <div>
-      <b-img :src="logoBlack" alt="Wonderlust Studio" class="wsLogo--top-left" />
+    <about />
+    <gallery />
+    <wsFooter />
   </div>
 </template>
 
 <script>
 export default {
   mixins: ["baseMixin"],
-  components: {},
+  components: {
+    about: () => import("./About.vue"),
+    gallery: () => import("./Gallery.vue")
+  },
   data() {
     return {};
   },
