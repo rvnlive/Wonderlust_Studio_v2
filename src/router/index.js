@@ -2,9 +2,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
-// Importing pages
-import wsHome from '../views/wsHome'
-
 // Importing Vuex
 // import store from '../store'
 
@@ -18,7 +15,7 @@ const router = new VueRouter({
     { // Home
       path: '/Home',
       name: 'Homepage',
-      component: wsHome,
+      component: () => import(/* webpackChunkName: "Home" */ '../views/wsHome'),
       meta: {
         title: 'WS - Homepage',
         meta: [

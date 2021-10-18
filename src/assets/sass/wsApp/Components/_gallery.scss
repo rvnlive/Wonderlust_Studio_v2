@@ -1,54 +1,40 @@
-.wsImage-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: auto;
-  .wsImage-description-layer {
+.wsFlipCard {
+  margin: 0 auto 1.5em auto;
+  width: 280px;
+  height: 280px;
+  perspective: 1000px;
+  &-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  &:hover &-inner {
+    transform: rotateY(180deg);
+  }
+  &-front,
+  &-back {
     position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 280px;
     width: 280px;
-    margin: auto;
-    visibility: hidden;
-    opacity: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    height: 280px;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
   }
-  .wsImage {
-    height: 280px;
-    width: 280px;
+  &-front {
     object-fit: cover;
-    @include wsNeumorphism--top-left;
-    transition: all 300ms ease-in-out;
+    width: 280px;
+    height: 280px;
+    @include wsNeumorphism--bottom-right;
   }
-  &:hover {
-    .wsImage-description-layer {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        height: 280px;
-        width: 280px;
-        margin: auto;
-        visibility: visible;
-        opacity: 1;
-        display: flex;
-        flex-direction: column;
-        align-content: center;
-        text-align: center;
-        color: #f0f0f3;
-        font-weight: 700;
-        transition: all 300ms ease-in-out;
-    }
-    .wsImage {
-      filter: blur(10px) invert(30%);
-      @include wsNeumorphism--bottom-right;
-      transition: all 300ms ease-in-out;
-    }
+  &-back {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transform: rotateY(180deg);
+    background: #e0e0e0;
+    @include wsNeumorphism--bottom-left;
   }
 }
