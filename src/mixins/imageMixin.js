@@ -10,6 +10,7 @@ export const imageMixin = {
             //Hair service
             wsHair: [
                 {
+                    // image: require('@/assets/img/service_examples/hair/1.webp'),
                     image: hair1,
                     alt: "Girl with rainbow color hair. Crazy colors",
                     message: "#CrazyColors - anything you imagine!",

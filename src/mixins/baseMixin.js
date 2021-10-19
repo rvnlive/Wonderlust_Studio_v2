@@ -11,7 +11,7 @@ export const baseMixin = {
       // Icons
       arrow: faArrowsAltH,
       house: faHome,
-      
+
       // Vue-router page routes
       viewRoutes: {
         home: this.$router.currentRoute.path === '/Home',
@@ -44,10 +44,9 @@ export const baseMixin = {
   watch: {},
   methods: {
     setBackground() { // Setting page background color on load for
-        document.body.style.background = this.backgroundColor
+      document.body.style.background = this.backgroundColor
     },
     setPageActive() { // Revealing hidden navigation button tag for
-      this.startLoading()
       if (this.viewRoutes.hair) { // Hair button
         this.isAtHome = false
         this.resetPageActive()
@@ -97,6 +96,7 @@ export const baseMixin = {
           navigation.classList.add("wsSliderNavigation-main__item--active", "mt-2")
         }
       }
+      this.startLoading()
     },
     startLoading() { // Loading animation with delayed hide
       this.isLoading = true

@@ -1,40 +1,48 @@
-.wsFlipCard {
-  margin: 0 auto 1.5em auto;
-  width: 280px;
-  height: 280px;
-  perspective: 1000px;
-  &-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    transition: transform 0.8s;
-    transform-style: preserve-3d;
-  }
-  &:hover &-inner {
-    transform: rotateY(180deg);
-  }
-  &-front,
-  &-back {
-    position: absolute;
-    width: 280px;
-    height: 280px;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-  }
-  &-front {
-    object-fit: cover;
-    width: 280px;
-    height: 280px;
-    @include wsNeumorphism--bottom-right;
-  }
-  &-back {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    transform: rotateY(180deg);
-    background: #e0e0e0;
-    @include wsNeumorphism--bottom-left;
-  }
+.wsGallery-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-width: 759.99px;
+  margin-left: auto;
+  margin-right: auto;
 }
+.wsFlipCard {
+    margin: 0 auto 1.5em auto;
+    width: 280px;
+    height: 280px;
+    perspective: 1000px;
+    &-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transition: transform 0.8s;
+      transform-style: preserve-3d;
+    }
+    &:hover &-inner {
+      transform: rotateY(180deg);
+    }
+    &-front,
+    &-back {
+      position: absolute;
+      width: 280px;
+      height: 280px;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+    }
+    &-front {
+      object-fit: cover;
+      width: 280px;
+      height: 280px;
+      @include wsNeumorphism--bottom-right;
+    }
+    &-back {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      transform: rotateY(180deg);
+      background: #e0e0e0;
+      @include wsNeumorphism--bottom-left;
+    }
+  }

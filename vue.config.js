@@ -5,10 +5,11 @@ module.exports = {
   configureWebpack: {
     plugins: [
       new CompressionWebpackPlugin({
-        filename: '[path].gz[query]',
-        test: /\.(js|css)$/,
-        algorithm: 'gzip',
-        minRatio: 1
+        Filename: '[path][name].gz[query]',
+        Test: /\.(js|css)$/i,
+        Algorithm: 'gzip',
+        MinRatio: 1,
+        DeleteOriginalAssets: true
       })
     ]
   }

@@ -1,5 +1,5 @@
 <template>
-  <b-container fluid class="wsSliderNavigation-wrapper m-0 p-0 fadeIn">
+  <div class="wsSliderNavigation-wrapper m-0 p-0 ml-auto mr-auto fadeIn">
     <div class="wsSliderNavigation-main fadeIn">
       <div
         class="d-flex flex-column justify-content-center m-0 p-0 fadeIn"
@@ -27,7 +27,7 @@
         </p>
       </div>
     </div>
-  </b-container>
+  </div>
 </template>
 <script>
 export default {
@@ -44,29 +44,21 @@ export default {
     },
   },
   mounted() {
-    let sliderWrap = document.querySelector(".wsSliderNavigation-wrapper");
     let slider = document.querySelector(".wsSliderNavigation-main");
+    let scrollPosition = getScrollPosition();
 
     function getScrollPosition() {
       return window.scrollY;
     }
 
-    let scrollPosition;
-    let sliderWidth;
+    let sliderWidth = calculateDimension();
     function scrollUpdate() {
-      if (window.innerWidth > 760) {
-        sliderWrap.style.overflowX = "hidden";
-        scrollPosition = getScrollPosition();
-        if (scrollPosition >= sliderWidth) {
-          window.scrollTo({ top: 1 });
-        } else if (scrollPosition <= 0) {
-          window.scrollTo({ top: sliderWidth - 1 });
-        }
-        slider.style.transform = `translateX(${-window.scrollY}px)`;
-        requestAnimationFrame(scrollUpdate);
-      } else {
-        sliderWrap.style.overflowX = "scroll";
+      if (scrollPosition >= sliderWidth) {
+        window.scrollTo({ top: 1 });
+      } else if (scrollPosition <= 0) {
+        window.scrollTo({ top: sliderWidth });
       }
+      requestAnimationFrame(scrollUpdate);
     }
 
     function calculateDimension() {
@@ -74,8 +66,6 @@ export default {
     }
 
     function onLoad() {
-      calculateDimension();
-      window.scrollTo({ top: 1 });
       scrollUpdate();
     }
 

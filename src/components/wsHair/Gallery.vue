@@ -1,5 +1,5 @@
 <template>
-  <div class="m-0 p-0">
+  <div class="wsGallery-wrapper">
     <div class="wsFlipCard" v-for="(service, index) of wsHair" :key="index">
       <div class="wsFlipCard-inner">
         <b-img-lazy

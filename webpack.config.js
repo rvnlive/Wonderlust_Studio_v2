@@ -1,41 +1,18 @@
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
-
+const CompressionPlugin = require("compression-webpack-plugin");
 module.exports = {
   devtool: 'source-map', // any "source-map"-like devtool is possible
   module: {
     rules: [
       {
-        test: /\.vue$/,
-        loader: 'vue-loader',
-        include: [ helpers.root('src') ]
-      },
-      {
-        test: /\.js$/,
-        loader: 'babel-loader',
-        include: [ helpers.root('src') ]
-      },
-      {
-        test: /\.css$/,
+        test: /\.s[ac]ss$/i,
         use: [
-          isDev ? 'vue-style-loader' : MiniCSSExtractPlugin.loader,
-          { loader: 'css-loader', options: { sourceMap: isDev } },
-        ]
-      },
-      {
-        test: /\.scss$/,
-        use: [
-          isDev ? 'vue-style-loader' : MiniCSSExtractPlugin.loader,
-          { loader: 'css-loader', options: { sourceMap: isDev } },
-          { loader: 'sass-loader', options: { sourceMap: isDev } }
-        ]
-      },
-      {
-        test: /\.sass$/,
-        use: [
-          isDev ? 'vue-style-loader' : MiniCSSExtractPlugin.loader,
-          { loader: 'css-loader', options: { sourceMap: isDev } },
-          { loader: 'sass-loader', options: { sourceMap: isDev } }
+          'style-loader',
+          {
+            loader: 'sass-loader',
+            options: {
+              sourceMap: true
+            }
+          }
         ]
       }
     ],
@@ -48,12 +25,13 @@ module.exports = {
       }
     ]
   },
-  optimization: {
-    minimizer: [
-      // For webpack@5 you can use the `...` syntax to extend existing minimizers (i.e. `terser-webpack-plugin`), uncomment the next line
-      // `...`,
-      new CssMinimizerPlugin(),
-    ],
-  },
-  plugins: [new MiniCssExtractPlugin()],
+  plugins: [
+    new CompressionPlugin({
+      filename: "[path][base].gz",
+      algorithm: "gzip",
+      test: /\.js$|\.css$|\.html$/,
+      threshold: 10240,
+      minRatio: 0.8,
+    }),
+  ]
 }
