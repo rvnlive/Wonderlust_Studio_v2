@@ -44,29 +44,40 @@ export default {
     },
   },
   mounted() {
+   let sliderWrap = document.querySelector(".wsSliderNavigation-wrapper");
     let slider = document.querySelector(".wsSliderNavigation-main");
-    let scrollPosition = getScrollPosition();
+    let sliderWidth;
+    let scrollPosition;
+
 
     function getScrollPosition() {
       return window.scrollY;
     }
 
-    let sliderWidth
     function scrollUpdate() {
-      if (scrollPosition >= sliderWidth) {
-        window.scrollTo({ top: 1 });
-      } else if (scrollPosition <= 0) {
-        window.scrollTo({ top: sliderWidth });
+      if (window.innerWidth > 760) {
+        sliderWrap.style.overflow = "hidden";
+        scrollPosition = getScrollPosition();
+        if (scrollPosition >= sliderWidth) {
+          window.scrollTo({ top: 1 });
+        } else if (scrollPosition <= 0) {
+          window.scrollTo({ top: sliderWidth - 1 });
+        }
+        requestAnimationFrame(scrollUpdate);
+      } else {
+        sliderWrap.style.overflow = "scroll";
       }
-      requestAnimationFrame(scrollUpdate);
     }
+
+    window.addEventListener("resize", onLoad);
 
     function calculateDimension() {
       sliderWidth = slider.getBoundingClientRect().width;
     }
 
     function onLoad() {
-      calculateDimension()
+      calculateDimension();
+      window.scrollTo({ top: 1 });
       scrollUpdate();
     }
 
