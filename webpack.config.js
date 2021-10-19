@@ -6,21 +6,38 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.s[ac]ss$/i,
+        test: /\.vue$/,
+        loader: 'vue-loader',
+        include: [ helpers.root('src') ]
+      },
+      {
+        test: /\.js$/,
+        loader: 'babel-loader',
+        include: [ helpers.root('src') ]
+      },
+      {
+        test: /\.css$/,
         use: [
-          'style-loader',
-          {
-            loader: 'sass-loader',
-            options: {
-              sourceMap: true
-            }
-          }
+          isDev ? 'vue-style-loader' : MiniCSSExtractPlugin.loader,
+          { loader: 'css-loader', options: { sourceMap: isDev } },
         ]
       },
       {
-        test: /.s?css$/,
-        use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
+        test: /\.scss$/,
+        use: [
+          isDev ? 'vue-style-loader' : MiniCSSExtractPlugin.loader,
+          { loader: 'css-loader', options: { sourceMap: isDev } },
+          { loader: 'sass-loader', options: { sourceMap: isDev } }
+        ]
       },
+      {
+        test: /\.sass$/,
+        use: [
+          isDev ? 'vue-style-loader' : MiniCSSExtractPlugin.loader,
+          { loader: 'css-loader', options: { sourceMap: isDev } },
+          { loader: 'sass-loader', options: { sourceMap: isDev } }
+        ]
+      }
     ],
     loaders: [
       {
