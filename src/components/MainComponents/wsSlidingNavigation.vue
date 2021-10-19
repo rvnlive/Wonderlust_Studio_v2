@@ -51,7 +51,7 @@ export default {
       return window.scrollY;
     }
 
-    let sliderWidth = calculateDimension();
+    let sliderWidth
     function scrollUpdate() {
       if (scrollPosition >= sliderWidth) {
         window.scrollTo({ top: 1 });
@@ -66,6 +66,7 @@ export default {
     }
 
     function onLoad() {
+      calculateDimension()
       scrollUpdate();
     }
 
