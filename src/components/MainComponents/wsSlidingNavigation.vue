@@ -69,7 +69,7 @@ export default {
       }
     }
 
-    window.addEventListener("resize", onLoad);
+    // window.addEventListener("resize", onLoad);
 
     function calculateDimension() {
       sliderWidth = slider.getBoundingClientRect().width;
