@@ -4,7 +4,9 @@
 }
 
 html {
+  scroll-behavior: smooth;
   body {
+    scroll-behavior: smooth;
     height: 100vh;
     font-family: "Nunito Sans", Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
