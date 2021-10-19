@@ -1,0 +1,28 @@
+.wsBanner {
+  z-index: -1;
+  position: relative;
+  .wsBanner-image {
+    margin-top: -5em;
+    height: 70vh;
+    width: 100vw;
+    object-fit: cover;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+  &:after {
+    position: absolute;
+    content: "";
+    margin-top: -15em;
+    height: 90vh;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to top, #ecf0f31a 50%, #ecf0f3 70%);
+  }
+  .wsWatermark {
+    position: absolute;
+    transform: rotate(-90deg);
+    margin-top: -22vh;
+    margin-left: -14vw;
+  }
+}

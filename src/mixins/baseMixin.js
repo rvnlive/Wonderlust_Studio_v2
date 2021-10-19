@@ -24,7 +24,7 @@ export const baseMixin = {
       },
 
       // Page background colors
-      backgroundColor: '#F0F0F3',
+      backgroundColor: '#ecf0f3',
 
       // Sliding Navigation buttons
       navigationButton: [

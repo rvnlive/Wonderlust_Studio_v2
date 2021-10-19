@@ -1,5 +1,5 @@
 .fadeIn {
-  animation: fadeIn 750ms;
+  animation: fadeIn 1s;
 }
 @keyframes fadeIn {
   0% {
@@ -197,5 +197,121 @@
   100% {
     opacity: 1;
     transform: translateX(0);
+  }
+}
+
+.slideFromTop {
+  animation: slideFromTop 350ms;
+}
+@keyframes slideFromTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-50vh);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@-moz-keyframes slideFromTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-50vh);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes slideFromTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-50vh);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@-o-keyframes slideFromTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-50vh);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@-ms-keyframes slideFromTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-50vh);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.slideFromBottom {
+  animation: slideFromBottom 500ms;
+}
+@keyframes slideFromBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(50vh);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@-moz-keyframes slideFromBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(50vh);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes slideFromBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(50vh);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@-o-keyframes slideFromBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(50vh);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@-ms-keyframes slideFromBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(50vh);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

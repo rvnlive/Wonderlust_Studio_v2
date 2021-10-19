@@ -4,7 +4,7 @@
     <span v-else>
       <wsSlidingNavigation />
       <b-container fluid class="p-0 m-0">
-        <transition name="slide" mode="out-in">
+        <transition name="fade" mode="out-in">
           <router-view :logoBlack="logoBlack" :logoWhite="logoWhite" />
         </transition>
       </b-container>

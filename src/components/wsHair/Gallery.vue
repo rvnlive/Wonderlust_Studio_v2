@@ -3,13 +3,13 @@
     <div class="wsFlipCard" v-for="(service, index) of wsHair" :key="index">
       <div class="wsFlipCard-inner">
         <b-img
-          class="wsFlipCard-front"
+          class="wsFlipCard-front slideFromBottom"
           :src="service.image"
           :alt="service.alt"
         />
         <div class="wsFlipCard-back pl-3 pr-3">
-          <p>{{ service.message }}</p>
-          <div class="wsButton pl-3 pr-3 pt-1 pb-1 text-dark">
+          <p class="font-neumorph">{{ service.message }}</p>
+          <div class="wsButton pl-3 pr-3 pt-1 pb-1 font-grey">
             {{ service.button }}
           </div>
         </div>

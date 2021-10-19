@@ -1,11 +1,11 @@
 .wsButton {
-  background: #f0f0f0;
+  background: #ecf0f3;
   border-radius: 10px;
   box-shadow: 5px 5px 10px #a5a5a5, -5px -5px 10px #ffffff;
   &:active,
   &:focus {
     border-radius: 10px;
-    background: #e0e0e0;
+    background: #d9dde0;
     // background: linear-gradient(315deg, #e7e7e7, #f0f0f0);
     box-shadow: -5px -5px 10px #bebebe, 5px 5px 10px #ffffff;
   }

@@ -1,0 +1,8 @@
+.wsSection {
+    margin-top: -10vh;
+    padding-top: 5vh;
+    background-color: #ecf0f3;
+    @include wsNeumorphism--bottom-right;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+}

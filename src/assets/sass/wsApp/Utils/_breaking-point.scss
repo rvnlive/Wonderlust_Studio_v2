@@ -1,14 +1,14 @@
 @media screen and (max-width: 735.99px) {
   .wsSliderNavigation-wrapper {
-    // overflow-x: scroll;
+    overflow-x: scroll;
   }
 }
 @media screen and (min-width: 736px) {
   .wsSliderNavigation-wrapper {
-    // max-width: fit-content;
-    // overflow-x: hidden;
-    // .wsSliderNavigation-main {
-    //   max-width: 750px;
-    // }
+    max-width: fit-content;
+    overflow-x: hidden;
+    .wsSliderNavigation-main {
+      max-width: 750px;
+    }
   }
 }

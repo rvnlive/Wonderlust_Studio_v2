@@ -43,45 +43,5 @@ export default {
       }
     },
   },
-  mounted() {
-   let sliderWrap = document.querySelector(".wsSliderNavigation-wrapper");
-    let slider = document.querySelector(".wsSliderNavigation-main");
-    let sliderWidth;
-    let scrollPosition;
-
-
-    function getScrollPosition() {
-      return window.scrollY;
-    }
-
-    function scrollUpdate() {
-      if (window.innerWidth > 760) {
-        sliderWrap.style.overflow = "hidden";
-        scrollPosition = getScrollPosition();
-        if (scrollPosition >= sliderWidth) {
-          window.scrollTo({ top: 1 });
-        } else if (scrollPosition <= 0) {
-          window.scrollTo({ top: sliderWidth - 1 });
-        }
-        requestAnimationFrame(scrollUpdate);
-      } else {
-        sliderWrap.style.overflow = "scroll";
-      }
-    }
-
-    // window.addEventListener("resize", onLoad);
-
-    function calculateDimension() {
-      sliderWidth = slider.getBoundingClientRect().width;
-    }
-
-    function onLoad() {
-      calculateDimension();
-      window.scrollTo({ top: 1 });
-      scrollUpdate();
-    }
-
-    onLoad();
-  },
 };
 </script>
