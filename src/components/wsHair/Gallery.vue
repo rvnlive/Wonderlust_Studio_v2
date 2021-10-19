@@ -2,7 +2,7 @@
   <div class="wsGallery-wrapper">
     <div class="wsFlipCard" v-for="(service, index) of wsHair" :key="index">
       <div class="wsFlipCard-inner">
-        <b-img-lazy
+        <b-img
           class="wsFlipCard-front"
           :src="service.image"
           :alt="service.alt"
