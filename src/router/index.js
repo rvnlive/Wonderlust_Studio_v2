@@ -33,7 +33,7 @@ const router = new VueRouter({
     { // Hair
       path: '/Hair',
       name: 'Hair',
-      component: () => import(/* webpackChunkName: "Hair" */ '../views/wsHair'),
+      component: () => import(/* webpackChunkName: "Hair", webpackPrefetch: true */ '../views/wsHair'),
       meta: {
         title: 'WS - Hair',
         meta: [
@@ -51,7 +51,7 @@ const router = new VueRouter({
     { // Aesthetics
       path: '/Aesthetic',
       name: 'Aesthetics',
-      component: () => import(/* webpackChunkName: "Aesthetics" */ '../views/wsAesthetics'),
+      component: () => import(/* webpackChunkName: "Aesthetics", webpackPrefetch: true */ '../views/wsAesthetics'),
       meta: {
         title: 'WS - Aesthetics',
         meta: [
@@ -69,7 +69,7 @@ const router = new VueRouter({
     { // Biotricologia
       path: '/Biotricologia',
       name: 'Biotricologia',
-      component: () => import(/* webpackChunkName: "Biotricologia" */ '../views/wsBiotricologia'),
+      component: () => import(/* webpackChunkName: "Biotricologia", webpackPrefetch: true */ '../views/wsBiotricologia'),
       meta: {
         title: 'WS - Biotricologia',
         meta: [
@@ -87,7 +87,7 @@ const router = new VueRouter({
     { // Brows & Lashes
       path: '/Browlash',
       name: 'Brows N Lashes',
-      component: () => import(/* webpackChunkName: "BrowsNLashes" */ '../views/wsBrowLash'),
+      component: () => import(/* webpackChunkName: "BrowsNLashes", webpackPrefetch: true */ '../views/wsBrowLash'),
       meta: {
         title: 'WS - Brows N Lashes',
         meta: [
@@ -105,7 +105,7 @@ const router = new VueRouter({
     { // Nails
       path: '/Nail',
       name: 'Nails',
-      component: () => import(/* webpackChunkName: "Nails" */ '../views/wsNail'),
+      component: () => import(/* webpackChunkName: "Nails", webpackPrefetch: true */ '../views/wsNail'),
       meta: {
         title: 'WS - Nails',
         meta: [
@@ -123,7 +123,7 @@ const router = new VueRouter({
     { // Facials
       path: '/Facial',
       name: 'Facials',
-      component: () => import(/* webpackChunkName: "Facials" */ '../views/wsFacials'),
+      component: () => import(/* webpackChunkName: "Facials", webpackPrefetch: true */ '../views/wsFacials'),
       meta: {
         title: 'WS - Facials',
         meta: [

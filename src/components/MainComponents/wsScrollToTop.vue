@@ -1,6 +1,6 @@
 <template>
   <button @click="scrollToTop" v-show="visible" class="scroll-to-top">
-    <b-icon icon="arrow-up" aria-label="Scroll to top" />
+    <b-icon-arrow-up aria-label="Scroll to top" />
   </button>
 </template>
 <script>

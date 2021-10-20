@@ -10,7 +10,7 @@
           menu-class="mb-2 border-0 bg-transparent fadeIn"
         >
           <template #button-content>
-            <b-icon icon="map" class="mr-2 font-grey" /><span class="sr-only"
+            <b-icon-map class="mr-2 font-grey" /><span class="sr-only"
               >Address: 175 Orford Lane, Warrington, WA2 7BA</span
             >
           </template>
@@ -38,7 +38,7 @@
           menu-class="mb-2 border-0 bg-transparent fadeIn font-neumorph"
         >
           <template #button-content>
-            <b-icon icon="clock" class="mr-2 font-neumorph" /><span
+            <b-icon-clock class="mr-2 font-neumorph" /><span
               class="sr-only"
               >Business hours</span
             >
@@ -70,7 +70,7 @@
           menu-class="mb-2 border-0 bg-transparent w-25 fadeIn"
         >
           <template #button-content>
-            <b-icon icon="share" class="mr-2 font-neumorph" /><span
+            <b-icon-share class="mr-2 font-neumorph" /><span
               class="sr-only"
               >Contact us</span
             >
