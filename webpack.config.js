@@ -1,6 +1,11 @@
 const CompressionPlugin = require("compression-webpack-plugin");
 module.exports = {
   // devtool: 'source-map', // any "source-map"-like devtool is possible
+  mode: 'production',
+  optimization: {
+    nodeEnv: 'production',
+    minimize: true
+  },
   module: {
     rules: [
       {

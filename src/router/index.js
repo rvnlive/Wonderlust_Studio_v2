@@ -5,6 +5,8 @@ import VueRouter from 'vue-router'
 // Importing Vuex
 // import store from '../store'
 
+import Home from '../views/wsHome'
+
 Vue.use(VueRouter)
 
 // Creating routes
@@ -15,7 +17,7 @@ const router = new VueRouter({
     { // Home
       path: '/Home',
       name: 'Homepage',
-      component: () => import(/* webpackChunkName: "Home" */ '../views/wsHome'),
+      component: Home,
       meta: {
         title: 'WS - Homepage',
         meta: [

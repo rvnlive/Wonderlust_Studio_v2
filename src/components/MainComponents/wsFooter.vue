@@ -1,7 +1,6 @@
 <template>
-  <footer class="fadeIn">
-    <b-col class="p-0 m-0">
-      <b-row class="d-flex flex-row justify-content-center m-0 p-0">
+  <footer class="slideFromBottom">
+      <div>
         <!-- Apple / Google Maps button Start -->
         <b-dropdown
           dropup
@@ -115,14 +114,13 @@
           /></b-dropdown-item>
         </b-dropdown>
         <!-- Contact / Social Media End -->
-      </b-row>
+      </div>
       <p class="p-0 m-0 mt-4 text-center font-neumorph">
         Wonderlust Studio 2021
       </p>
       <p class="p-0 m-0 text-center font-neumorph">
         Designed & Developed by RVN
       </p>
-    </b-col>
   </footer>
 </template>
 <script>

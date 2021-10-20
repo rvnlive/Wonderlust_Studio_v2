@@ -7,8 +7,8 @@
     <div class="wsSection slideFromBottom">
       <about />
       <gallery />
-      <wsFooter />
     </div>
+    <wsFooter />
   </div>
 </template>
 
