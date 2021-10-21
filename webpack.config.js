@@ -4,7 +4,10 @@ module.exports = {
   mode: 'production',
   optimization: {
     nodeEnv: 'production',
-    minimize: true
+    minimize: true,
+    splitChunks: {
+      chunks: 'all'
+    }
   },
   module: {
     rules: [

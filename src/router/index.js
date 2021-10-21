@@ -19,7 +19,7 @@ const router = new VueRouter({
       name: 'Homepage',
       component: Home,
       meta: {
-        title: 'WS - Homepage',
+        title: 'Homepage',
         meta: [
           {
             name: 'description',
@@ -35,9 +35,9 @@ const router = new VueRouter({
     { // Hair
       path: '/Hair',
       name: 'Hair',
-      component: () => import(/* webpackChunkName: "Hair", webpackPrefetch: true */ '../views/wsHair'),
+      component: () => import(/* webpackChunkName: "Services", webpackPrefetch: true */ '../views/wsHair'),
       meta: {
-        title: 'WS - Hair',
+        title: 'Hairstyling',
         meta: [
           {
             name: 'description',
@@ -53,17 +53,17 @@ const router = new VueRouter({
     { // Aesthetics
       path: '/Aesthetic',
       name: 'Aesthetics',
-      component: () => import(/* webpackChunkName: "Aesthetics", webpackPrefetch: true */ '../views/wsAesthetics'),
+      component: () => import(/* webpackChunkName: "Services", webpackPrefetch: true */ '../views/wsAesthetics'),
       meta: {
-        title: 'WS - Aesthetics',
+        title: 'Aesthetics',
         meta: [
           {
             name: 'description',
-            content: 'Aesthetics at Wonderlust Studio.'
+            content: 'Aesthetic treatment at Wonderlust Studio.'
           },
           {
             property: 'og:description',
-            content: 'Aesthetics at Wonderlust Studio.'
+            content: 'Aesthetic treatment at Wonderlust Studio.'
           }
         ]
       }
@@ -71,17 +71,17 @@ const router = new VueRouter({
     { // Biotricologia
       path: '/Biotricologia',
       name: 'Biotricologia',
-      component: () => import(/* webpackChunkName: "Biotricologia", webpackPrefetch: true */ '../views/wsBiotricologia'),
+      component: () => import(/* webpackChunkName: "Services", webpackPrefetch: true */ '../views/wsBiotricologia'),
       meta: {
-        title: 'WS - Biotricologia',
+        title: 'Biotricologia',
         meta: [
           {
             name: 'description',
-            content: 'Biotricologia at Wonderlust Studio.'
+            content: 'Biotricologia treatment at Wonderlust Studio.'
           },
           {
             property: 'og:description',
-            content: 'Biotricologia at Wonderlust Studio.'
+            content: 'Biotricologia treatment at Wonderlust Studio.'
           }
         ]
       }
@@ -89,17 +89,17 @@ const router = new VueRouter({
     { // Brows & Lashes
       path: '/Browlash',
       name: 'Brows N Lashes',
-      component: () => import(/* webpackChunkName: "BrowsNLashes", webpackPrefetch: true */ '../views/wsBrowLash'),
+      component: () => import(/* webpackChunkName: "Services", webpackPrefetch: true */ '../views/wsBrowLash'),
       meta: {
-        title: 'WS - Brows N Lashes',
+        title: 'Brows N Lashes',
         meta: [
           {
             name: 'description',
-            content: 'Brows and Lashes at Wonderlust Studio.'
+            content: 'Brow and lash treatments at Wonderlust Studio.'
           },
           {
             property: 'og:description',
-            content: 'Brows and Lashes at Wonderlust Studio.'
+            content: 'Brow and lash treatments at Wonderlust Studio.'
           }
         ]
       }
@@ -107,9 +107,9 @@ const router = new VueRouter({
     { // Nails
       path: '/Nail',
       name: 'Nails',
-      component: () => import(/* webpackChunkName: "Nails", webpackPrefetch: true */ '../views/wsNail'),
+      component: () => import(/* webpackChunkName: "Services", webpackPrefetch: true */ '../views/wsNail'),
       meta: {
-        title: 'WS - Nails',
+        title: 'Nails',
         meta: [
           {
             name: 'description',
@@ -125,17 +125,17 @@ const router = new VueRouter({
     { // Facials
       path: '/Facial',
       name: 'Facials',
-      component: () => import(/* webpackChunkName: "Facials", webpackPrefetch: true */ '../views/wsFacials'),
+      component: () => import(/* webpackChunkName: "Services", webpackPrefetch: true */ '../views/wsFacials'),
       meta: {
-        title: 'WS - Facials',
+        title: 'Facials',
         meta: [
           {
             name: 'description',
-            content: 'Facials at Wonderlust Studio.'
+            content: 'Facial treatments at Wonderlust Studio.'
           },
           {
             property: 'og:description',
-            content: 'Facials at Wonderlust Studio.'
+            content: 'Facial treatments at Wonderlust Studio.'
           }
         ]
       }

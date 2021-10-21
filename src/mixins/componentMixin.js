@@ -1,8 +1,11 @@
+import wsLoading from '../helpers/forComponentStatus/wsLoadingComponent.vue'
+import wsSlidingNavigation from '../components/MainComponents/wsSlidingNavigation.vue'
+import wsFooter from '../components/MainComponents/wsFooter.vue'
 export const componentMixin = {
     components: {
-        wsLoading: () => import('../helpers/forComponentStatus/wsLoadingComponent.vue'),
-        wsSlidingNavigation: () => import('../components/MainComponents/wsSlidingNavigation.vue'),
+        wsLoading: wsLoading,
+        wsSlidingNavigation: wsSlidingNavigation,
         wsScrollToTop: () => import('../components/MainComponents/wsScrollToTop.vue'),
-        wsFooter: () => import('../components/MainComponents/wsFooter.vue')
+        wsFooter: wsFooter
     }
 }

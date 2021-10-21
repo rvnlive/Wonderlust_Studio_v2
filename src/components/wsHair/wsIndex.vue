@@ -8,7 +8,7 @@
       <about />
       <gallery />
     </div>
-    <wsFooter style="position: static; margin-top: 1em" />
+    <wsFooter style="position: static; margin: 1.5em auto" />
   </div>
 </template>
 

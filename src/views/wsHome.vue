@@ -1,7 +1,7 @@
 <template>
-  <b-container class="wsServicePage m-0 mt-4 p-0">
+  <b-container fluid class="m-0 mt-4 p-0">
     <b-img class="wsLogo--top-left" :src="logoBlack" />
-    <wsFooter />
+    <wsFooter style="position: fixed" />
   </b-container>
 </template>
 <script>
@@ -11,7 +11,7 @@ export default {
     return {};
   },
   mounted() {
-    this.resetPageActive()
+    this.resetPageActive();
   },
 };
 </script>

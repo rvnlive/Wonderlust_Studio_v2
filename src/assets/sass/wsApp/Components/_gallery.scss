@@ -8,8 +8,8 @@
 }
 .wsFlipCard {
     margin: 0 auto 1.5em auto;
-    width: 280px;
-    height: 280px;
+    width: 260px;
+    height: 260px;
     perspective: 1000px;
     &-inner {
       position: relative;
@@ -24,15 +24,15 @@
     &-front,
     &-back {
       position: absolute;
-      width: 280px;
-      height: 280px;
+      width: 260px;
+      height: 260px;
       -webkit-backface-visibility: hidden;
       backface-visibility: hidden;
     }
     &-front {
       object-fit: cover;
-      width: 280px;
-      height: 280px;
+      width: 260px;
+      height: 260px;
       @include wsNeumorphism--bottom-right;
     }
     &-back {

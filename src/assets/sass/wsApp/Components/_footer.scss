@@ -1,8 +1,9 @@
 footer {
-    position: fixed;
-    left: 0;
+    width: 100vw;
+    left: 50vw;
     bottom: 0;
     right: 0;
+    margin-left: -50vw;
     top: calc(100vh - 20vh);
-    height: 120px;
+    height: 90px;
 }

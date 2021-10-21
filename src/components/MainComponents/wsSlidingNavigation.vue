@@ -21,7 +21,7 @@
         @click="goTo((value = service.target))"
         class="wsSliderNavigation-main__item fadeIn"
       >
-        <b-img-lazy :src="service.imageUrl" :class="service.imageClass" />
+        <b-img-lazy :src="service.imageUrl" :class="service.imageClass" :alt="service.imageAlt" />
         <p class="wsSliderNavigation-main__item--name fadeIn">
           {{ service.serviceName }}
         </p>
