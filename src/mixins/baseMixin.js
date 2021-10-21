@@ -1,6 +1,7 @@
 import LogoBlack from "../assets/img/ws_brand/logo_transparent_black.png";
 import LogoWhite from "../assets/img/ws_brand/logo_transparent_white.png";
-import { faArrowsAltH, faHome } from "@fortawesome/free-solid-svg-icons";
+import { faArrowsAltH, faHome, faPhone, faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { faInstagram, faFacebook } from "@fortawesome/free-brands-svg-icons";
 export const baseMixin = {
   data() {
     return {
@@ -11,6 +12,10 @@ export const baseMixin = {
       // Icons
       arrow: faArrowsAltH,
       house: faHome,
+      Phone: faPhone,
+      Mail: faEnvelope,
+      Instagram: faInstagram,
+      Facebook: faFacebook,
 
       // Vue-router page routes
       viewRoutes: {

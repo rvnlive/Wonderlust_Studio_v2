@@ -1,9 +1,8 @@
 footer {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    // top: calc((100vh - 80vh));
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    top: calc(100vh - 20vh);
     height: 120px;
 }

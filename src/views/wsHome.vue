@@ -1,7 +1,7 @@
 <template>
   <b-container class="wsServicePage m-0 mt-4 p-0">
     <b-img class="wsLogo--top-left" :src="logoBlack" />
-    <wsFooter style="top: calc(100vh - 75vh)" />
+    <wsFooter />
   </b-container>
 </template>
 <script>
