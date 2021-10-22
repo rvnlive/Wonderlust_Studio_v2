@@ -2,7 +2,7 @@ module.exports = {
     content: ['./dist/index.html', './dist/**/*.html', './dist/js/*.js'],
     css: ['./dist/css/*.css'],
     output: ['./dist/css/'],
-    // keyframes: true,
+    keyframes: false,
     // variables: true,
     safelist: {
         standard: [/fixed-.*/],
