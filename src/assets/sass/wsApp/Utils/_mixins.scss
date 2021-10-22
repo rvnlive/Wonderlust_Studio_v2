@@ -1,4 +1,5 @@
 /* Neumorphism Start */
+/* purgecss start ignore */
 @mixin wsNeumorphism--top-left {
   border: 2px solid #e0e0e0;
   border-radius: 20px;
@@ -19,6 +20,7 @@
   border-radius: 20px;
   box-shadow: -10px -10px 20px #afafaf, 10px 10px 20px #fbfbfb;
 }
+/* purgecss end ignore */
 /* Neumorphism End */
 
 //////////////////////

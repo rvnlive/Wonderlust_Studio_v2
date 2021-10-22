@@ -1,4 +1,5 @@
 /* Slide In */
+/* purgecss start ignore */
 @keyframes slideIn {
   0% {
     transform: translateX(100%);
@@ -15,3 +16,4 @@
     transform: translateX(0%);
   }
 }
+/* purgecss end ignore */

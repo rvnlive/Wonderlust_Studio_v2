@@ -33,6 +33,7 @@ export default {
 </script>
 
 <style scoped>
+/* purgecss start ignore */
 .scroll-to-top {
   position: fixed;
   bottom: 11vh;
@@ -45,4 +46,5 @@ export default {
   cursor: pointer;
   animation: slideIn 250ms;
 }
+/* purgecss end ignore */
 </style>
