@@ -2,7 +2,6 @@
   <div>
     <div class="wsBanner">
       <b-img :src="banner" class="wsBanner-image slideFromTop" />
-      <!-- <p class="h4 font-weight-light wsWatermark font-grey">#Hairstyling</p> -->
     </div>
     <div class="wsSection slideFromBottom">
       <about />
