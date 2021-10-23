@@ -98,7 +98,10 @@
 }
 .fa-arrow,
 .fa-house {
-  font-size: 20px;
+  @include wsNeumorphism--bottom-right;
+  border-radius: 20%;
+  padding: 0.15em;
+  font-size: 30px;
   margin-top: -1.5vh;
   color: #989898;
   transition: all 250ms ease;
