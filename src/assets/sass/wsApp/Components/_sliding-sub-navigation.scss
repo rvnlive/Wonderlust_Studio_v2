@@ -1,11 +1,13 @@
 .wsSlidingSubNavigation {
-  margin-top: -0.75em;
+  margin-top: -1.15em;
   margin-left: 3.75em;
-  padding: 5px 0;
+  padding: 10px 0;
   overflow-x: auto;
   white-space: nowrap;
-  @include wsNeumorphism--bottom-right;
-  border-top-left-radius: 15px;
+  // @include wsNeumorphism--bottom-right;
+  background: transparent;
+  box-shadow: -10px -10px 15px #ffffff00, 10px 10px 15px #bdbdc4c5;
+  // border-top-left-radius: 15px;
   border-bottom-left-radius: 15px;
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;

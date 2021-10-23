@@ -1,11 +1,20 @@
-.fade-enter-active, .fade-leave-active {
-  transition: all 300ms ease-in-out;
+.fade-enter-active,
+.fade-leave-active {
+  transition: all 350ms;
 }
 
-.fade-enter, .fade-leave-to {
-  animation: fadeOut 300ms;
+.fade-enter {
+  animation: slideFromLeft 350ms;
+}
+.fade-leave-to {
+  animation: slideToRight 350ms;
+  // transform: translateX(-100%);
 }
 
-.fade-enter-to, .fade-leave {
-  animation: fadeIn 750ms;
+.fade-enter-to {
+  animation: slideFromLeft 350ms;
+}
+.fade-leave {
+  animation: slideToRight 350ms;
+  // transform: translateX(0);
 }
