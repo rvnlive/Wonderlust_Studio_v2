@@ -36,7 +36,7 @@ export default {
 /* purgecss start ignore */
 .scroll-to-top {
   position: fixed;
-  bottom: 11vh;
+  bottom: 5.5em;
   right: -1em;
   border: 2px solid #e0e0e0;
   background: #f0f0f3;
