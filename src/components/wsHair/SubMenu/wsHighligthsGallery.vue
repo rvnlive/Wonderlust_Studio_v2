@@ -6,7 +6,7 @@
       :key="index"
     >
       <div class="wsFlipCard-inner">
-        <b-img
+        <b-img-lazy
           class="wsFlipCard-front slideFromBottom"
           :src="service.image"
           :alt="service.alt"
