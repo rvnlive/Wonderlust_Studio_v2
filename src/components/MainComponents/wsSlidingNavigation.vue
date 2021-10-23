@@ -1,4 +1,5 @@
 <template>
+<div>
   <div class="wsSliderNavigation-wrapper m-0 p-0 ml-auto mr-auto fadeIn">
     <div class="wsSliderNavigation-main fadeIn">
       <div
@@ -27,6 +28,7 @@
         </p>
       </div>
     </div>
+  </div>
   </div>
 </template>
 <script>

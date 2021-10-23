@@ -7,7 +7,7 @@
   margin-right: auto;
 }
 .wsFlipCard {
-    margin: 0 auto 1.5em auto;
+    margin: 0 auto 2.25em auto;
     width: 260px;
     height: 260px;
     perspective: 1000px;
@@ -42,7 +42,7 @@
       align-items: center;
       text-align: center;
       transform: rotateY(180deg);
-      background: #e0e0e0;
+      background: #f0f0f3;
       @include wsNeumorphism--bottom-left;
     }
   }

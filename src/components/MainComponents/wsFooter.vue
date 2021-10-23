@@ -114,7 +114,7 @@
       <!-- Contact / Social Media End -->
     </b-container>
     <p class="p-0 m-0 mt-4 text-center font-neumorph">Wonderlust Studio 2021</p>
-    <p class="p-0 m-0 text-center font-neumorph">Designed & Developed by RVN</p>
+    <p class="p-0 m-0 pb-3 text-center font-neumorph">Designed & Developed by RVN</p>
   </footer>
 </template>
 <script>

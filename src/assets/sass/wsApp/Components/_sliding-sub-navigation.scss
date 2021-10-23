@@ -1,0 +1,32 @@
+.wsSlidingSubNavigation {
+  margin-top: -0.75em;
+  margin-left: 3.75em;
+  padding: 5px 0;
+  overflow-x: auto;
+  white-space: nowrap;
+  @include wsNeumorphism--bottom-right;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  &__item {
+    display: inline-block;
+    color: #6b6b6b;
+    font-size: 12px;
+    text-align: center;
+    border-right: 1px solid white;
+    padding: 0 14px;
+    cursor: pointer;
+    &--active,
+    &:hover {
+      display: inline-block;
+      color: #6b6b6b;
+      font-size: 15px;
+      text-align: center;
+      text-shadow: 3px 3px 3px #a8a8a8cb, 3px 3px 3px #ffffff;
+      border-right: 1px solid white;
+      padding: 0 14px;
+      cursor: pointer;
+    }
+  }
+}

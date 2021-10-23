@@ -1,6 +1,10 @@
 <template>
   <div class="wsGallery-wrapper">
-    <div class="wsFlipCard" v-for="(service, index) of wsHair" :key="index">
+    <div
+      class="wsFlipCard"
+      v-for="(service, index) of wsHair"
+      :key="index"
+    >
       <div class="wsFlipCard-inner">
         <b-img
           class="wsFlipCard-front slideFromBottom"

@@ -1,24 +1,24 @@
 /* Neumorphism Start */
 /* purgecss start ignore */
 @mixin wsNeumorphism--top-left {
-  border: 2px solid #e0e0e0;
+  border: 0;
   border-radius: 20px;
-  box-shadow: 10px 10px 20px #afafaf, -10px -10px 20px #fbfbfb;
+  box-shadow: 10px 10px 15px #ffffff, -10px -10px 15px #bdbdc4c5;
 }
 @mixin wsNeumorphism--bottom-left {
-  border: 2px solid #e0e0e0;
+  border: 0;
   border-radius: 20px;
-  box-shadow: 10px -10px 20px #afafaf, -10px 10px 20px #fbfbfb;
+  box-shadow: 10px -10px 15px #ffffff, -10px 10px 15px #bdbdc4c5;
 }
 @mixin wsNeumorphism--top-right {
-  border: 2px solid #e0e0e0;
+  border: 0;
   border-radius: 20px;
-  box-shadow: -10px 10px 20px #afafaf, 10px -10px 20px #fbfbfb;
+  box-shadow: -10px 10px 15px #ffffff, 10px -10px 15px #bdbdc4c5;
 }
 @mixin wsNeumorphism--bottom-right {
-  border: 2px solid #e0e0e0;
+  border: 0;
   border-radius: 20px;
-  box-shadow: -10px -10px 20px #afafaf, 10px 10px 20px #fbfbfb;
+  box-shadow: -10px -10px 15px #ffffff, 10px 10px 15px #bdbdc4c5;
 }
 /* purgecss end ignore */
 /* Neumorphism End */

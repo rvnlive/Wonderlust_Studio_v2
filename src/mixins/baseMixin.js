@@ -29,7 +29,7 @@ export const baseMixin = {
       },
 
       // Page background colors
-      backgroundColor: '#ecf0f3',
+      backgroundColor: '#f0f0f3',
 
       // Sliding Navigation buttons
       navigationButton: [
@@ -125,5 +125,5 @@ export const baseMixin = {
   mounted() {
     this.setBackground()
     this.setPageActive()
-  }
+  },
 }

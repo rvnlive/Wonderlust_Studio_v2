@@ -43,18 +43,18 @@
             align-items: center;
             font-size: small;
             height: 5em;
-            padding: 0.2em 0.75em 0.2em 1.5em;
-            background: linear-gradient(145deg, #d9dde0, rgb(240, 239, 239));
-            border: 2px solid #e0e0e0;
-            border-top-right-radius: 20px;
-            border-bottom-right-radius: 20px;
-            box-shadow: 5px 5px 10px #a8a8a8, -5px -5px 10px #ffffff;
-            text-shadow: 3px 3px 3px #a8a8a8, -3px -3px 3px #ffffff;
+            padding: 0.2em 0.75em 0.2em 2em;
+            background: linear-gradient(145deg, #f0f0f3, rgb(240, 239, 239));
+            @include wsNeumorphism--bottom-left;
+            // border-top-right-radius: 20px;
+            // border-bottom-right-radius: 20px;
+            border-radius: 0 20px 20px 0;
+            text-shadow: 3px 3px 3px #bdbdc480, -3px -3px 3px #ffffff;
             margin-top: 0;
-            margin-left: -15px;
+            margin-left: -20px;
             margin-right: 1em;
             opacity: 1;
-            animation: slideFromLeft 1s;
+            animation: slideFromLeft .75s;
           }
         }
       }
@@ -65,9 +65,10 @@
         margin-right: 1.5em;
         width: 4em;
         height: 4em;
+        @include wsNeumorphism--bottom-right;
         border: 2px solid #e0e0e0;
-        border-radius: 20px;
-        box-shadow: 5px 5px 10px #a8a8a8, -5px -5px 10px #ffffff;
+        // border-radius: 20px;
+        // box-shadow: 5px 5px 10px #bdbdc4, -5px -5px 10px #ffffff;
       }
       &--aesthetic,
       &--biotricologia,
@@ -81,7 +82,7 @@
         height: 4em;
         border: 2px solid #e0e0e0;
         border-radius: 20px;
-        box-shadow: 5px 5px 10px #a8a8a8, -5px -5px 10px #ffffff;
+        box-shadow: 5px 5px 10px #bdbdc4, -5px -5px 10px #ffffff;
       }
       &--name {
         display: none;
