@@ -11,7 +11,7 @@
       <b-tab
         title="Highlights"
         title-link-class="border-0 bg-transparent font-grey"
-        :active="$route.query === '?details=Highlights' || $route.query === ''"
+        :active="readQuery((query = 'Highlights'))"
         @click="addQuery((query = 'Highlights'))"
       >
         <Gallery />
@@ -19,7 +19,7 @@
       <b-tab
         title="Prices"
         title-link-class="border-0 bg-transparent font-grey"
-        :active="$route.query === '?details=Prices'"
+        :active="readQuery((query = 'Prices'))"
         @click="addQuery((query = 'Prices'))"
       >
         <Prices />
@@ -43,6 +43,18 @@ export default {
   },
   data() {
     return {};
+  },
+  computed: {
+     activeTab: {
+                set(value) {
+                    let query = {...this.$route.query};
+                    query.tab = value;
+                    this.$router.replace({query: query});
+                },
+                get() {
+                    return (this.$route.query.tab || 'tabA');
+                }
+            }
   },
   methods: {},
 };

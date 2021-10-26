@@ -11,11 +11,11 @@
 }
 
 .wsTabButton {
-  border-radius: 10px;
   @include wsNeumorphism--bottom-right;
+  border-radius: 10px;
   &:active,
   &:focus {
-    border-radius: 10px;
     @include wsNeumorphism--bottom-right;
+    border-radius: 10px;
   }
 }

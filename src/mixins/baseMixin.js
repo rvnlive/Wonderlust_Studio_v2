@@ -126,6 +126,13 @@ export const baseMixin = {
         return this.$router.push({ name: this.$router.currentRoute.name, query: { details: query } });
       }
     },
+    readQuery(query) {
+      if (window.location.href.includes("?details=" + query)) {
+        return true
+      }
+
+
+    }
   },
   mounted() {
     this.setBackground()
