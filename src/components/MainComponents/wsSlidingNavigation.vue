@@ -3,11 +3,11 @@
   <div class="wsSliderNavigation-wrapper m-0 p-0 ml-auto mr-auto fadeIn">
     <div class="wsSliderNavigation-main fadeIn">
       <div
-        class="d-flex flex-column justify-content-center m-0 p-0 fadeIn"
+        class="d-flex flex-column justify-content-center fadeIn" style="height: 80px"
         @click="backHome"
         v-if="!isAtHome"
       >
-        <font-awesome-icon :icon="house" class="fa-arrow ml-3 mr-2 fadeIn" />
+        <font-awesome-icon :icon="house" class="fa-house ml-3 mr-2 fadeIn" />
       </div>
       <div
         class="d-flex flex-column justify-content-center m-0 p-0 fadeIn"

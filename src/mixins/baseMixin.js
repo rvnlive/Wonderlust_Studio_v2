@@ -120,7 +120,12 @@ export const baseMixin = {
       this.$router.push('/Home')
       this.resetPageActive()
       this.isAtHome = true
-    }
+    },
+    addQuery(query) {
+      if (!window.location.href.includes("?details=" + query)) {
+        return this.$router.push({ name: this.$router.currentRoute.name, query: { details: query } });
+      }
+    },
   },
   mounted() {
     this.setBackground()

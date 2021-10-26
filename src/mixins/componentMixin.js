@@ -5,7 +5,7 @@ export const componentMixin = {
     components: {
         wsLoading: wsLoading,
         wsSlidingNavigation: wsSlidingNavigation,
-        wsSlidingSubNavigation: () => import('../components/MainComponents/wsSlidingSubNavigation.vue'),
+        wsTabSection: () => import("../components/MainComponents/wsTabSection.vue"),
         wsScrollToTop: () => import(/* webpackPrefetch: true */ '../components/MainComponents/wsScrollToTop.vue'),
         wsFooter: wsFooter
     }

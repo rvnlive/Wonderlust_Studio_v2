@@ -1,16 +1,14 @@
 <template>
   <div>
-    <wsSlidingSubNavigation />
-    <wsLoading v-if="isLoading" class="mt-5" />
-    <Banner v-else :logoBlack="logoBlack" class="wsServicePage m-0 p-0 mt-5" />
+    <wsLoading v-if="isLoading" class="wsServicePage mt-5" />
+    <wsTabSection v-else />
   </div>
 </template>
 <script>
-import Banner from "../components/wsHair/wsIndex.vue";
 export default {
-  components: { Banner },
+  mixins: ["componentMixin"],
   mounted() {
-    this.isAtHome = false
+    this.isAtHome = false;
   },
 };
 </script>

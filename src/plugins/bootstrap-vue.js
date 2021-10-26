@@ -10,6 +10,8 @@ import {
     ImagePlugin,
     ButtonPlugin,
     ListGroupPlugin,
+    BadgePlugin,
+    TabsPlugin,
     // Icons
     BIconMap,
     BIconClock,
@@ -26,6 +28,8 @@ Vue.use(DropdownPlugin)
 Vue.use(ImagePlugin)
 Vue.use(ButtonPlugin)
 Vue.use(ListGroupPlugin)
+Vue.use(BadgePlugin)
+Vue.use(TabsPlugin)
 // Icons in use
 Vue.component("BIconMap", BIconMap)
 Vue.component("BIconClock", BIconClock)

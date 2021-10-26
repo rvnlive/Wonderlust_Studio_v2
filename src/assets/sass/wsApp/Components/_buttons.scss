@@ -6,7 +6,16 @@
   &:focus {
     border-radius: 10px;
     background: #e7e9eb;
-    // background: linear-gradient(315deg, #e7e7e7, #f0f0f0);
     box-shadow: -5px -5px 10px #bdbdc4c7, 5px 5px 10px #ffffff;
+  }
+}
+
+.wsTabButton {
+  border-radius: 10px;
+  @include wsNeumorphism--bottom-right;
+  &:active,
+  &:focus {
+    border-radius: 10px;
+    @include wsNeumorphism--bottom-right;
   }
 }

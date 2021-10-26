@@ -4,6 +4,5 @@
   background-color: #f0f0f3;
   // background-color: #ecf0f3;
   @include wsNeumorphism--bottom-right;
-  border-top-left-radius: 50px;
-  border-top-right-radius: 50px;
+  border-radius: 50px;
 }

@@ -1,6 +1,6 @@
 .wsSliderNavigation-wrapper {
   z-index: 999;
-  height: 6em;
+  height: 5.5em;
   animation: slideFromRight 500ms;
   transition: all 250ms ease;
   .wsSliderNavigation-main {
@@ -46,8 +46,6 @@
             padding: 0.2em 0.75em 0.2em 2em;
             background: linear-gradient(145deg, #f0f0f3, rgb(240, 239, 239));
             @include wsNeumorphism--bottom-right;
-            // border-top-right-radius: 20px;
-            // border-bottom-right-radius: 20px;
             border-radius: 0 20px 20px 0;
             text-shadow: 3px 3px 3px #bdbdc480, -3px -3px 3px #ffffff;
             margin-top: 0;
@@ -60,15 +58,12 @@
       }
       &--hair {
         top: 0.5em;
-        left: 10px;
         margin-left: 0.5em;
         margin-right: 1.5em;
         width: 4em;
         height: 4em;
         @include wsNeumorphism--bottom-right;
         border: 2px solid #e0e0e0;
-        // border-radius: 20px;
-        // box-shadow: 5px 5px 10px #bdbdc4, -5px -5px 10px #ffffff;
       }
       &--aesthetic,
       &--biotricologia,
@@ -96,13 +91,18 @@
     }
   }
 }
-.fa-arrow,
-.fa-house {
-  @include wsNeumorphism--bottom-right;
-  border-radius: 20%;
+.fa-arrow {
   padding: 0.15em;
   font-size: 30px;
-  margin-top: -1.5vh;
+  height: 50px;
+  margin-top: -2vh;
   color: #989898;
-  transition: all 250ms ease;
+}
+
+.fa-house {
+  padding: 0.15em;
+  font-size: 30px;
+  height: 50px;
+  margin-top: 0vh;
+  color: #989898;
 }

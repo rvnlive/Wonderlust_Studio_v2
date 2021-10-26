@@ -5,13 +5,14 @@ import VueRouter from 'vue-router'
 // Importing Vuex
 // import store from '../store'
 
-import Home from '../views/wsHome'
+import Home from '@/views/wsHome'
 
 Vue.use(VueRouter)
 
 // Creating routes
 const router = new VueRouter({
-  base: '/',
+  // base: __dirname,
+  base: './',
   mode: 'history',
   routes: [
     { // Home
@@ -34,8 +35,15 @@ const router = new VueRouter({
     },
     { // Hair
       path: '/Hair',
-      name: 'Hair',
-      component: () => import(/* webpackChunkName: "Services", webpackPrefetch: true */ '../views/wsHair'),
+      name: 'Hairstyling',
+      component: () => import(/* webpackChunkName: "Services", webpackPrefetch: true */ '@/views/wsHair'),
+      // component: {
+      //   template: `<div>
+      //               <wsSlidingSubNavigation />
+      //               <wsLoading v-if="isLoading" class="wsServicePage mt-5" />
+      //               <router-view name="highlights"></router-view>
+      //             </div>`
+      // },
       meta: {
         title: 'Hairstyling',
         meta: [
@@ -48,12 +56,17 @@ const router = new VueRouter({
             content: 'Hairstyling at Wonderlust Studio.'
           }
         ]
-      }
+      },
+      children: [
+        {
+          path: ':query'
+        }
+      ]
     },
     { // Aesthetics
       path: '/Aesthetic',
       name: 'Aesthetics',
-      component: () => import(/* webpackChunkName: "Services", webpackPrefetch: true */ '../views/wsAesthetics'),
+      component: () => import(/* webpackChunkName: "Services", webpackPrefetch: true */ '@/views/wsAesthetics'),
       meta: {
         title: 'Aesthetics',
         meta: [
@@ -66,12 +79,17 @@ const router = new VueRouter({
             content: 'Aesthetic treatment at Wonderlust Studio.'
           }
         ]
-      }
+      },
+      children: [
+        {
+          path: ':query'
+        }
+      ]
     },
     { // Biotricologia
       path: '/Biotricologia',
       name: 'Biotricologia',
-      component: () => import(/* webpackChunkName: "Services", webpackPrefetch: true */ '../views/wsBiotricologia'),
+      component: () => import(/* webpackChunkName: "Services", webpackPrefetch: true */ '@/views/wsBiotricologia'),
       meta: {
         title: 'Biotricologia',
         meta: [
@@ -84,12 +102,17 @@ const router = new VueRouter({
             content: 'Biotricologia treatment at Wonderlust Studio.'
           }
         ]
-      }
+      },
+      children: [
+        {
+          path: ':query'
+        }
+      ]
     },
     { // Brows & Lashes
       path: '/Browlash',
-      name: 'Brows N Lashes',
-      component: () => import(/* webpackChunkName: "Services", webpackPrefetch: true */ '../views/wsBrowLash'),
+      name: 'BrowsNLashes',
+      component: () => import(/* webpackChunkName: "Services", webpackPrefetch: true */ '@/views/wsBrowLash'),
       meta: {
         title: 'Brows N Lashes',
         meta: [
@@ -102,12 +125,17 @@ const router = new VueRouter({
             content: 'Brow and lash treatments at Wonderlust Studio.'
           }
         ]
-      }
+      },
+      children: [
+        {
+          path: ':query'
+        }
+      ]
     },
     { // Nails
       path: '/Nail',
       name: 'Nails',
-      component: () => import(/* webpackChunkName: "Services", webpackPrefetch: true */ '../views/wsNail'),
+      component: () => import(/* webpackChunkName: "Services", webpackPrefetch: true */ '@/views/wsNail'),
       meta: {
         title: 'Nails',
         meta: [
@@ -120,12 +148,17 @@ const router = new VueRouter({
             content: 'Nails at Wonderlust Studio.'
           }
         ]
-      }
+      },
+      children: [
+        {
+          path: ':query'
+        }
+      ]
     },
     { // Facials
       path: '/Facial',
       name: 'Facials',
-      component: () => import(/* webpackChunkName: "Services", webpackPrefetch: true */ '../views/wsFacials'),
+      component: () => import(/* webpackChunkName: "Services", webpackPrefetch: true */ '@/views/wsFacials'),
       meta: {
         title: 'Facials',
         meta: [
@@ -138,7 +171,12 @@ const router = new VueRouter({
             content: 'Facial treatments at Wonderlust Studio.'
           }
         ]
-      }
+      },
+      children: [
+        {
+          path: ':query'
+        }
+      ]
     },
     // Otherwise redirect to home
     { path: '*', redirect: '/Home' }

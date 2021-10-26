@@ -1,14 +1,14 @@
 <template>
   <div>
-    <wsLoading v-if="isLoading" class="mt-4" />
-    <Banner v-else :logoWhite="logoWhite" class="wsServicePage m-0 p-0 mt-4" />
+    <wsLoading v-if="isLoading" class="wsServicePage mt-5" />
+    <wsTabSection v-else />
   </div>
 </template>
 <script>
-import Banner from "../components/BannerElements/BiotricologiaBanner.vue";
 export default {
-  components: {
-    Banner,
+  mixins: ["componentMixin"],
+  mounted() {
+    this.isAtHome = false;
   },
 };
 </script>

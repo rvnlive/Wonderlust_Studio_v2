@@ -3,22 +3,22 @@
 @mixin wsNeumorphism--top-left {
   border: 0;
   border-radius: 20px;
-  box-shadow: 10px 10px 15px #ffffff, -10px -10px 15px #bdbdc4c5;
+  box-shadow: 5px 5px 15px #ffffff, -5px -5px 15px #bdbdc4c5;
 }
 @mixin wsNeumorphism--bottom-left {
   border: 0;
   border-radius: 20px;
-  box-shadow: 10px -10px 15px #ffffff, -10px 10px 15px #bdbdc4c5;
+  box-shadow: 5px -5px 15px #ffffff, -5px 5px 15px #bdbdc4c5;
 }
 @mixin wsNeumorphism--top-right {
   border: 0;
   border-radius: 20px;
-  box-shadow: -10px 10px 15px #ffffff, 10px -10px 15px #bdbdc4c5;
+  box-shadow: -5px 5px 15px #ffffff, 5px -5px 15px #bdbdc4c5;
 }
 @mixin wsNeumorphism--bottom-right {
   border: 0;
   border-radius: 20px;
-  box-shadow: -10px -10px 15px #ffffff, 10px 10px 15px #bdbdc4c5;
+  box-shadow: -5px -5px 15px #ffffff, 5px 5px 15px #bdbdc4c5;
 }
 /* purgecss end ignore */
 /* Neumorphism End */

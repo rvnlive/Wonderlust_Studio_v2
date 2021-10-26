@@ -1,6 +1,12 @@
 <template>
   <b-container fluid class="m-0 mt-4 p-0">
-    <b-img class="wsLogo--bottom-right" :src="logoBlack" alt="Wonderlust Studio" />
+    <wsLoading v-if="isLoading" class="wsServicePage mt-5" />
+    <b-img
+      v-else
+      class="wsLogo--bottom-right"
+      :src="logoBlack"
+      alt="Wonderlust Studio"
+    />
     <wsFooter style="position: fixed" />
   </b-container>
 </template>
@@ -11,7 +17,7 @@ export default {
     return {};
   },
   mounted() {
-    this.isAtHome = true
+    this.isAtHome = true;
     this.resetPageActive();
   },
 };
