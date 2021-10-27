@@ -10,7 +10,7 @@
     width: 750px;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-evenly;
     will-change: transform;
     overflow-x: hidden;
     transition: all 250ms ease;
@@ -21,7 +21,7 @@
       &--active {
         display: flex;
         overflow-x: visible;
-        width: 10em;
+        width: max-content;
         transition: all 250ms ease;
         .wsSliderNavigation-main__item {
           &--hair,
@@ -64,6 +64,7 @@
         height: 4em;
         @include wsNeumorphism--bottom-right;
         border: 2px solid #e0e0e0;
+        transition: all 250ms ease;
       }
       &--aesthetic,
       &--biotricologia,
@@ -78,6 +79,7 @@
         border: 2px solid #e0e0e0;
         border-radius: 20px;
         box-shadow: 5px 5px 10px #bdbdc4, -5px -5px 10px #ffffff;
+        transition: all 250ms ease;
       }
       &--name {
         display: none;
@@ -95,8 +97,9 @@
   padding: 0.15em;
   font-size: 30px;
   height: 50px;
-  margin-top: -2vh;
+  margin-top: -1vh;
   color: #989898;
+  transition: all 250ms ease;
 }
 
 .fa-house {

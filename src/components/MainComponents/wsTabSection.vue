@@ -1,15 +1,18 @@
 <template>
-  <div class="wsSubNavigationTabs slideFromBottom">
+  <div class="slideFromBottom">
     <b-tabs
       small
-      fill
+      justified
       pills
       lazy
+      no-nav-style
+      nav-class="font-neumorph border-0 ml-2 mr-2"
       active-nav-item-class="text-dark font-neumorph font-weight-bold wsTabButton"
       content-class="wsSection slideFromBottom"
     >
       <b-tab
         title="Highlights"
+        title-item-class="border-0 font-grey"
         title-link-class="border-0 bg-transparent font-grey"
         :active="readQuery((query = 'Highlights'))"
         @click="addQuery((query = 'Highlights'))"
@@ -18,6 +21,7 @@
       </b-tab>
       <b-tab
         title="Prices"
+        title-item-class="border-0 font-grey"
         title-link-class="border-0 bg-transparent font-grey"
         :active="readQuery((query = 'Prices'))"
         @click="addQuery((query = 'Prices'))"
@@ -45,16 +49,6 @@ export default {
     return {};
   },
   computed: {
-     activeTab: {
-                set(value) {
-                    let query = {...this.$route.query};
-                    query.tab = value;
-                    this.$router.replace({query: query});
-                },
-                get() {
-                    return (this.$route.query.tab || 'tabA');
-                }
-            }
   },
   methods: {},
 };

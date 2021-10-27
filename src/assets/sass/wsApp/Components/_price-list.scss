@@ -1,0 +1,8 @@
+.wsPriceBadge {
+    & span {
+        width: 30px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
