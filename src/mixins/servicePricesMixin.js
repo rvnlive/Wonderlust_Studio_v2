@@ -277,7 +277,7 @@ export const servicePricesMixin = {
                 },
                 {
                     name: "Gel infill up to 3 weeks",
-                    range: ["Short","Long"],
+                    range: ["Short", "Long"],
                     prices: ["30", "32"]
                 },
                 {

@@ -96,17 +96,23 @@
       >
         {{ treatment.header }}
         {{ treatment.name }}
-        <b-badge pill class="m-1" v-if="treatment.price">
+        <b-badge
+          pill
+          variant="transparent"
+          class="m-1 font-neumorph"
+          v-if="treatment.price"
+        >
           <span v-if="treatment.range">
             {{ treatment.range + " " }}
           </span>
           {{ "£" + treatment.price }}
         </b-badge>
 
-        <div v-if="treatment.prices" class="float-right d-flex flex-column">
+        <div v-if="treatment.prices" class="d-flex flex-column">
           <b-badge
             pill
-            class="m-1"
+            variant="transparent"
+            class="m-1 font-neumorph ml-auto"
             v-for="(value, index) in treatment.prices"
             :key="index + value"
           >
