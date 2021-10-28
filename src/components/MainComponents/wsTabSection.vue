@@ -1,5 +1,5 @@
 <template>
-  <div class="slideFromBottom" style="margin-top: 0.5em">
+  <div class="slideFromBottom" style="margin: 0.5em auto 0 auto; max-width: 1024px">
     <b-tabs
       small
       justified
@@ -30,7 +30,7 @@
         <Prices />
       </b-tab>
     </b-tabs>
-    <wsFooter style="position: static; margin: 1.5em auto 3em auto" />
+    <wsFooter style="position: static; margin: 1.5em auto 3em auto; max-width: 1024px" />
   </div>
 </template>
 <script>

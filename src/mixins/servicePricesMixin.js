@@ -250,7 +250,142 @@ export const servicePricesMixin = {
             // wsBiotricologia END
 
             // wsBrowLash START
-            wsBrowLashPrices: [],
+            wsBrowLashPrices: [
+                // Eyebrows
+                {
+                    header: "Eyebrow treatment(s)"
+                },
+                {
+                    name: "Eyebrow shaping",
+                    price: "10"
+                },
+                {
+                    name: "Eyebrow shaping and mustache (upper lip) hair removal",
+                    price: "15"
+                },
+                {
+                    name: "Eyebrow shaping with epilation (on selected face area)",
+                    price: "20"
+                },
+                {
+                    name: "Eyebrow tinting (without shaping)",
+                    price: "15"
+                },
+                {
+                    name: "Eyebrow tinting (with shaping)",
+                    price: "20"
+                },
+                {
+                    name: "Eyebrow styling with tint and shaping",
+                    price: "30"
+                },
+                {
+                    name: "Henna eyebrow styling and shaping",
+                    price: "30"
+                },
+                {
+                    name: "Eyebrow lamination and shaping (without tinting)",
+                    price: "30"
+                },
+                {
+                    name: "Eyebrow lamination and shaping (with tinting)",
+                    price: "45"
+                },
+                {
+                    name: "Eyebrow lamination and shaping (with tinting and botox)",
+                    price: "60"
+                },
+                {
+                    name: "Eyebrow botox",
+                    range: "1 treatment",
+                    price: "15"
+                },
+                {
+                    name: "Eyebrow botox - nutritional therapy (for hair growth)",
+                    range: "5 treatments",
+                    price: "65"
+                },
+                // Permanent Eyebrow Makeup
+                {
+                    header: "Permanent Eyebrow Makeup"
+                },
+                {
+                    name: "Permanent makeup for eyebrows",
+                    price: "199",
+                },
+                {
+                    name: "Touch up (correction - compulsory after 6 weeks)",
+                    price: "50",
+                },
+                {
+                    name: "Color refreshment (after 1-2 years)",
+                    price: "120",
+                },
+                // Eyelashes
+                {
+                    header: "Eyelash treatment(s)"
+                },
+                {
+                    name: "Eyelash tinting",
+                    price: "10"
+                },
+                {
+                    name: "Eyelash lamination (LVL)",
+                    price: "40"
+                },
+                {
+                    name: "Eyelash lamination (LVL) (with botox)",
+                    price: "55"
+                },
+                {
+                    name: "Eyelash botox",
+                    range: "1 treatment",
+                    price: "15"
+                },
+                {
+                    name: "Eyelash botox - nutritional therapy (for hair growth, thickening and restoration)",
+                    range: "5 treatments",
+                    price: "65"
+                },
+                // Others
+                {
+                    header: "Other treatment(s)"
+                },
+                {
+                    name: "Hand depilation",
+                    price: "25"
+                },
+                // Packages
+                {
+                    header: "Treatment packages"
+                },
+                {
+                    package: "Ready to go!",
+                    name: "Eyebrow styling with henna / tint & Nourishing mask plus a face massage",
+                    price: "55"
+                },
+                {
+                    package: "Wonderlust Girl",
+                    name: "Eyebrow styling with henna / tint & lash lamination (LVL)",
+                    price: "65"
+                },
+                {
+                    package: "You are Wonderlust!",
+                    name: "Eyebrow styling with henna / tint & Eyelash lamination with botox for 'brows and 'lashes plus a Face treatment",
+                    price: "55"
+                },
+                {
+                    name: "Eyebrow and Eyelash botox - nutritional therapy (for hair growth, thickening and reconstruction)",
+                    range: "5 treatments",
+                    price: "140"
+                },
+                {
+                    name: "Eyelash lamination",
+                    range: "8 treatments",
+                    price: "280"
+                }
+
+            ],
             // wsBrowLash END
 
             // wsNail START
@@ -335,7 +470,73 @@ export const servicePricesMixin = {
             // wsNail END
 
             // wsFacial START
-            wsFacialPrices: []
+            wsFacialPrices: [
+                {
+                    name: "Cavitation peeling (facial cleansing)",
+                    price: "35"
+                },
+                {
+                    name: "AHA acid treatment plus serum and mask",
+                    price: "40"
+                },
+                {
+                    name: "Microneedle mesotherapy",
+                    range: ["face", "face, neck", "face, neck, decolletage"],
+                    prices: ["65", "80", "95"]
+                },
+                {
+                    name: "FAR-X lifting treatment",
+                    price: "50"
+                },
+                {
+                    name: "Face massage plus serum and mask",
+                    price: "25"
+                },
+                // Packages
+                {
+                    header: "Treatment packages"
+                },
+                {
+                    package: "Ready to go!",
+                    name: "Nourishing mask plus a face massage & Eyebrow styling with henna / tint",
+                    price: "55"
+                },
+                {
+                    package: "You are Wonderlust!",
+                    name: "Face treatment plus Eyebrow styling with henna / tint & Eyelash lamination with botox for 'brows and 'lashes",
+                    price: "55"
+                },
+                {
+                    name: "Cavitation peeling",
+                    range: "5 treatments",
+                    price: "140"
+                },
+                {
+                    name: "AHA acids",
+                    range: "5 treatments",
+                    price: "160"
+                },
+                {
+                    name: "FAR-X lifting treatment",
+                    range: "5 treatments",
+                    price: "200"
+                },
+                {
+                    name: "Microneedle mesotherapy (face)",
+                    range: "5 treatments",
+                    price: "275"
+                },
+                {
+                    name: "Microneedle mesotherapy (face and neck)",
+                    range: "5 treatments",
+                    price: "350"
+                },
+                {
+                    name: "Microneedle mesotherapy (face, neck and decolletage)",
+                    range: "5 treatments",
+                    price: "400"
+                },
+            ]
             // wsFacial END
         }
     },

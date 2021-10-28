@@ -46,7 +46,17 @@ export const serviceImagesMixin = {
                 {
                     image: require("../assets/img/service_examples/aesthetic/2.webp"),
                     alt: "Woman with a doctors hand around her head - taking measurement before treatment.",
-                    message: "Take a look at our prices.",
+                    message: "Take a look at our prices and choose one for your need.",
+                },
+                {
+                    image: require("../assets/img/service_examples/aesthetic/3.webp"),
+                    alt: "Woman with needle near her lips - before lip filler treatment.",
+                    message: "Lips to talk about.",
+                },
+                {
+                    image: require("../assets/img/service_examples/aesthetic/4.webp"),
+                    alt: "Woman with needle near her armpit - before treatment against excessive sweating (hyperhidrosis).",
+                    message: "Having problems with sweating? Choose our treatment against it.",
                 },
             ],
             // wsAesthetic END

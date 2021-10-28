@@ -15,6 +15,9 @@
     margin-top: 15vh;
     width: 260px;
   }
+  .wsSection {
+    margin: 5vh 5vw 0 5vw;
+  }
 }
 
 
@@ -38,5 +41,8 @@
   .wsLogo--bottom-right {
     margin-top: calc((100vh - 96px) - 75vh);
     width: 25vw;
+  }
+  .wsSection {
+    margin: 5vh auto 0 auto;
   }
 }

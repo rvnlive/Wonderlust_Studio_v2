@@ -17,8 +17,12 @@
         </span>
         <br />
         <br />
-        <span class="">
+        <span>
           {{ information.story }}
+          <br />
+          <br />
+
+          For more information, contact us or take a look at our prices!
         </span>
       </div>
     </b-container>

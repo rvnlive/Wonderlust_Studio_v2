@@ -18,7 +18,7 @@ export const serviceInformationMixin = {
                     alt: "Dr. Nim - Aesthetics",
                     url: "https://drnim.co.uk/",
                     introduction: "We are pleased to present our new collaboration with Dr Nim.",
-                    story: "Dr Nim Aesthetics specialises in anti-ageing aesthetic procedures that enhance your natural beauty and restore your youthful appearance. Every aesthetic procedure is non- surgical and doctor - led, using only the very best certified products to get the results you’re looking for. Her treatments target cosmetic concerns, including fine lines, wrinkles and excessive sweating. For more information, contact us or check our prices!"
+                    story: "Dr Nim Aesthetics specialises in anti-ageing aesthetic procedures that enhance your natural beauty and restore your youthful appearance. Every aesthetic procedure is non- surgical and doctor - led, using only the very best certified products to get the results you’re looking for. Her treatments target cosmetic concerns, including fine lines, wrinkles and excessive sweating."
                 }
             ],
             // wsAesthetic END

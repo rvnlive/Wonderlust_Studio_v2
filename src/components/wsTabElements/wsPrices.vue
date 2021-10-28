@@ -12,11 +12,12 @@
           'font-weight-bold': treatment.header,
           'justify-content-between': treatment.name,
         }"
-        v-for="treatment in treatments"
-        :key="treatment.name"
+        v-for="(treatment, index) in treatments"
+        :key="index + treatment.name || index + treatment.header"
         :treatment="treatment"
         class="
           d-flex
+          flex-row
           align-items-center
           bg-transparent
           border-0
@@ -30,7 +31,16 @@
         "
       >
         {{ treatment.header }}
-        {{ treatment.name }}
+        <div v-if="treatment.package">
+          <div class="font-neumorph font-italic font-weight-light m-0">
+            {{ treatment.package }}
+          </div>
+          <br />
+          {{ treatment.name }}
+        </div>
+        <div v-if="!treatment.package">
+          {{ treatment.name }}
+        </div>
         <b-badge
           pill
           variant="transparent"
