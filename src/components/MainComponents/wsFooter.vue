@@ -13,17 +13,19 @@
             >Address: 175 Orford Lane, Warrington, WA2 7BA</span
           >
         </template>
-        <b-dropdown-item-button
+        <b-dropdown-item
           href="https:/maps.apple.com/?q=175+Orford+Lane+Warrington+WA27BA"
+          target="_blank"
           class="mb-3 wsButton"
           button-class="font-neumorph"
-          >with Apple Maps</b-dropdown-item-button
+          >with Apple Maps</b-dropdown-item
         >
-        <b-dropdown-item-button
+        <b-dropdown-item
           href="https://maps.google.com/?q=Wonderlust Studio, Warrington WA2 7BA"
+          target="_blank"
           class="wsButton"
           button-class="font-neumorph"
-          >with Google Maps</b-dropdown-item-button
+          >with Google Maps</b-dropdown-item
         >
       </b-dropdown>
       <!-- Apple / Google Maps button End -->
