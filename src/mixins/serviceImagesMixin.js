@@ -63,6 +63,21 @@ export const serviceImagesMixin = {
 
             // wsBiotricologia START
             wsBiotricologia: [
+                {
+                    image: require("../assets/img/service_examples/biotricologia/1.webp"),
+                    alt: "Woman with hair mask on her hair being washed off - during Biotricologia treatment.",
+                    message: "We can treat a variety of scalp and hair types.",
+                },
+                {
+                    image: require("../assets/img/service_examples/biotricologia/2.webp"),
+                    alt: "Hair and scalp being analysed with macro-camera - during Biotricologia treatment.",
+                    message: "If you experience problems with your hair or scalp, contact us for a consultation so we can treat it right.",
+                },
+                {
+                    image: require("../assets/img/service_examples/biotricologia/3.webp"),
+                    alt: "Woman getting a relaxing, calming head massage during Biotricologia treatment - to work the product(s) into the scalp.",
+                    message: "We do also offer take-home products for continuing the treatment at your home and enjoying the benefits of these treatments.",
+                },
             ],
             // wsBiotricologia END
 

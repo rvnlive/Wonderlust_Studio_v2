@@ -26,7 +26,7 @@ export const navigationBarMixin = {
           imageUrl: require("../assets/img/model_img/navigation/3.webp"),
           imageAlt: "Woman with hair mask on",
           imageClass: "wsSliderNavigation-main__item--biotricologia",
-          serviceName: "Biotricologia",
+          serviceName: "Biotricologia®",
           serviceId: "Biotricologia",
         },
         {

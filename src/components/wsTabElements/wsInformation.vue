@@ -1,10 +1,10 @@
 <template>
-  <div v-if="this.relevantInformation">
+  <div v-if="this.relevantInformation" class="slideFromBottom">
     <b-container
       v-for="(information, index) in this.relevantInformation"
       :key="index"
     >
-      <a :href="information.url" target="_blank">
+      <a v-if="information.url !== null" :href="information.url" target="_blank">
         <b-img-lazy
           class="wsInformation-image"
           :src="information.image"
@@ -22,7 +22,10 @@
           <br />
           <br />
 
-          For more information, contact us or take a look at our prices!
+          <span class="font-italic"
+            >For more information, contact us or take a look at our
+            prices!</span
+          >
         </span>
       </div>
     </b-container>
