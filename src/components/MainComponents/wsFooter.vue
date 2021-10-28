@@ -14,7 +14,7 @@
           >
         </template>
         <b-dropdown-item
-          href="https:/maps.apple.com/?q=175+Orford+Lane+Warrington+WA27BA"
+          href="https://maps.apple.com/?q=175+Orford+Lane+Warrington+WA27BA"
           target="_blank"
           class="mb-3 wsButton"
           button-class="font-neumorph"
