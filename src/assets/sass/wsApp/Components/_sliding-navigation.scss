@@ -1,6 +1,6 @@
 .wsSliderNavigation-wrapper {
   z-index: 999;
-  height: 5.5em;
+  height: 5.75em;
   animation: slideFromRight 500ms;
   transition: all 250ms ease;
   .wsSliderNavigation-main {
@@ -42,6 +42,7 @@
             justify-content: center;
             align-items: center;
             font-size: small;
+            font-weight: 600;
             height: 5em;
             padding: 0.2em 0.75em 0.2em 2em;
             background: linear-gradient(145deg, #f0f0f3, rgb(240, 239, 239));
@@ -97,7 +98,7 @@
   padding: 0.15em;
   font-size: 30px;
   height: 50px;
-  margin-top: -1vh;
+  margin-top: -1.5vh;
   color: #989898;
   transition: all 250ms ease;
 }
@@ -108,4 +109,5 @@
   height: 50px;
   margin-top: 0vh;
   color: #989898;
+  transition: padding 250ms ease;
 }

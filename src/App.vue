@@ -1,5 +1,5 @@
 <template>
-  <div id="app" class="wsServicePage">
+  <div id="app">
     <wsLoading v-if="isLoading" />
     <span v-else>
       <wsSlidingNavigation />

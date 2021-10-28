@@ -19,7 +19,7 @@
         v-for="(service, index) in wsServices"
         :key="index"
         :id="service.serviceId"
-        @click="goTo((value = service.target))"
+        @click="goTo((value = service.target), (path = service.path))"
         class="wsSliderNavigation-main__item fadeIn"
       >
         <b-img-lazy :src="service.imageUrl" :class="service.imageClass" :alt="service.imageAlt" />
@@ -33,13 +33,13 @@
 </template>
 <script>
 export default {
-  mixins: ["baseMixin", "serviceMixin"],
+  mixins: ["baseMixin", "navigationBarMixin"],
   data() {
     return {};
   },
   methods: {
-    goTo(value) {
-      if (this.$router.currentRoute.path !== value) {
+    goTo(value, path) {
+      if (this.$router.currentRoute.path !== path) {
         this.$router.push(value);
         this.isAtHome = false;
       }

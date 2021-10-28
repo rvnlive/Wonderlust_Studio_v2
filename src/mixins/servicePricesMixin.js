@@ -115,7 +115,7 @@ export const servicePricesMixin = {
                     price: "150"
                 },
                 {
-                    name: "Dimpled/Pebbled Chin (Orange Peel Skin)",
+                    name: "Dimpled / Pebbled Chin (Orange Peel Skin)",
                     price: "170"
                 },
                 {
@@ -127,7 +127,7 @@ export const servicePricesMixin = {
                     price: "300"
                 },
                 {
-                    name: "Bruxism/Teeth grinding/TMJ disorder",
+                    name: "Bruxism / Teeth grinding / TMJ disorder",
                     price: "220"
                 },
                 {
@@ -135,7 +135,7 @@ export const servicePricesMixin = {
                     price: "220"
                 },
                 {
-                    name: "Nefertiti Neck Lift/Platysmal Bands",
+                    name: "Nefertiti Neck Lift / Platysmal Bands",
                     price: "220"
                 },
                 {
@@ -147,7 +147,7 @@ export const servicePricesMixin = {
                     header: "Dermal filler"
                 },
                 {
-                    name: "Lip enhancement (needle/cannula)",
+                    name: "Lip enhancement (needle / cannula)",
                     range: ["0.5ml", "1ml"],
                     prices: [
                         "160",
@@ -264,12 +264,16 @@ export const servicePricesMixin = {
                     price: "25"
                 },
                 {
-                    name: "Mineral/Protein base",
+                    name: "Mineral / Protein base",
                     price: "23"
                 },
                 {
                     name: "Shellac",
                     price: "28"
+                },
+                {
+                    name: "Gel on natural plate",
+                    price: "33"
                 },
                 {
                     name: "Gel extensions",

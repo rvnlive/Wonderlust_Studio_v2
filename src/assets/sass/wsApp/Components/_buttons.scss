@@ -2,11 +2,13 @@
   background: #f0f0f3;
   border-radius: 10px;
   box-shadow: 5px 5px 10px #bdbdc49f, -5px -5px 10px #ffffff;
+  transition: all 125ms ease;
   &:active,
   &:focus {
     border-radius: 10px;
     background: #e7e9eb;
     box-shadow: -5px -5px 10px #bdbdc4c7, 5px 5px 10px #ffffff;
+    transition: all 125ms ease;
   }
 }
 

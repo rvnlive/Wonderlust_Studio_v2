@@ -2,7 +2,9 @@ import LogoBlack from "../assets/img/ws_brand/logo_transparent_black.png";
 import LogoWhite from "../assets/img/ws_brand/logo_transparent_white.png";
 import { faArrowsAltH, faHome, faPhone, faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { faInstagram, faFacebook } from "@fortawesome/free-brands-svg-icons";
+import { navigationBarMixin } from './navigationBarMixin'
 export const baseMixin = {
+  mixins: [navigationBarMixin],
   data() {
     return {
       // wsLogos
@@ -60,6 +62,7 @@ export const baseMixin = {
           navigation.classList.remove("wsSliderNavigation-main__item")
           navigation.classList.add("wsSliderNavigation-main__item--active", "mt-2")
         }
+        this.setURL()
       } else if (this.viewRoutes.aesthetic) { // Aesthetic button
         this.isAtHome = false
         this.resetPageActive()
@@ -68,6 +71,7 @@ export const baseMixin = {
           navigation.classList.remove("wsSliderNavigation-main__item")
           navigation.classList.add("wsSliderNavigation-main__item--active", "mt-2")
         }
+        this.setURL()
       } else if (this.viewRoutes.biotricologia) { // Biotricologia button
         this.isAtHome = false
         this.resetPageActive()
@@ -76,6 +80,7 @@ export const baseMixin = {
           navigation.classList.remove("wsSliderNavigation-main__item")
           navigation.classList.add("wsSliderNavigation-main__item--active", "mt-2")
         }
+        this.setURL()
       } else if (this.viewRoutes.browlash) { // BrowLash button
         this.isAtHome = false
         this.resetPageActive()
@@ -84,6 +89,7 @@ export const baseMixin = {
           navigation.classList.remove("wsSliderNavigation-main__item")
           navigation.classList.add("wsSliderNavigation-main__item--active", "mt-2")
         }
+        this.setURL()
       } else if (this.viewRoutes.nail) { // Nail button
         this.isAtHome = false
         this.resetPageActive()
@@ -92,6 +98,7 @@ export const baseMixin = {
           navigation.classList.remove("wsSliderNavigation-main__item")
           navigation.classList.add("wsSliderNavigation-main__item--active", "mt-2")
         }
+        this.setURL()
       } else if (this.viewRoutes.facial) { // Facial button
         this.isAtHome = false
         this.resetPageActive()
@@ -100,6 +107,7 @@ export const baseMixin = {
           navigation.classList.remove("wsSliderNavigation-main__item")
           navigation.classList.add("wsSliderNavigation-main__item--active", "mt-2")
         }
+        this.setURL()
       }
       this.startLoading()
     },
@@ -130,9 +138,14 @@ export const baseMixin = {
       if (window.location.href.includes("?details=" + query)) {
         return true
       }
-
-
-    }
+    },
+    setURL() {
+      for (let service of this.wsServices) {
+        if (!window.location.href.includes("?details=") && (this.$router.currentRoute.path === service.path)) {
+          this.$router.push(service.target);
+        }
+      }
+    },
   },
   mounted() {
     this.setBackground()

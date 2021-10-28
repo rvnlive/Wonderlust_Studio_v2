@@ -43,6 +43,7 @@ export default {
   border-radius: 10px;
   box-shadow: 5px -5px 10px #a8a8a8, -5px 5px 10px #ffffff;
   padding: 5px 20px 5px 10px;
+  color: #6b6b6b;
   cursor: pointer;
   animation: slideIn 250ms;
 }

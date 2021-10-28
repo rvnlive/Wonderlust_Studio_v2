@@ -1,8 +1,24 @@
+// Small and Medium Screens
 @media screen and (max-width: 735.99px) {
   .wsSliderNavigation-wrapper {
     overflow-x: scroll;
   }
 }
+@media (orientation: portrait) {
+  footer {
+    top: calc(100vh - 20vh);
+  }
+  .wsLogo--top-left,
+  .wsLogo--top-right,
+  .wsLogo--bottom-left,
+  .wsLogo--bottom-right {
+    margin-top: 15vh;
+    width: 260px;
+  }
+}
+
+
+// Large Screens
 @media screen and (min-width: 736px) {
   .wsSliderNavigation-wrapper {
     max-width: fit-content;
@@ -10,5 +26,17 @@
     .wsSliderNavigation-main {
       max-width: 750px;
     }
+  }
+}
+@media (orientation: landscape) {
+  footer {
+    top: calc((100vh - 96px) - 5vh);
+  }
+  .wsLogo--top-left,
+  .wsLogo--top-right,
+  .wsLogo--bottom-left,
+  .wsLogo--bottom-right {
+    margin-top: calc((100vh - 96px) - 75vh);
+    width: 25vw;
   }
 }

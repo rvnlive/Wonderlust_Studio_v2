@@ -1,7 +1,8 @@
 .wsGallery-wrapper {
   display: flex;
-  flex-direction: column;
-  max-width: 759.99px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-width: 1024px;
   margin-left: auto;
   margin-right: auto;
 }

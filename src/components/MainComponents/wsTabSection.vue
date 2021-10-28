@@ -1,5 +1,5 @@
 <template>
-  <div class="slideFromBottom">
+  <div class="slideFromBottom" style="margin-top: 0.5em">
     <b-tabs
       small
       justified
@@ -11,18 +11,19 @@
       content-class="wsSection slideFromBottom"
     >
       <b-tab
-        title="Highlights"
+        title="Details"
         title-item-class="border-0 font-grey"
-        title-link-class="border-0 bg-transparent font-grey"
-        :active="readQuery((query = 'Highlights'))"
-        @click="addQuery((query = 'Highlights'))"
+        title-link-class="border-0 text-dark font-grey"
+        :active="readQuery((query = 'Details'))"
+        @click="addQuery((query = 'Details'))"
       >
-        <Gallery />
+        <Information />
+        <Details />
       </b-tab>
       <b-tab
         title="Prices"
         title-item-class="border-0 font-grey"
-        title-link-class="border-0 bg-transparent font-grey"
+        title-link-class="border-0 text-dark font-grey"
         :active="readQuery((query = 'Prices'))"
         @click="addQuery((query = 'Prices'))"
       >
@@ -36,20 +37,23 @@
 export default {
   mixins: ["baseMixin"],
   components: {
-    Gallery: () =>
+    Information: () =>
       import(
-        /* webpackChunkName: "Services", webpackPrefecth: true */ "../wsHair/wsHighligthsGallery.vue"
+        /* webpackChunkName: "Services", webpackPrefecth: true */ "../wsTabElements/wsInformation.vue"
+      ),
+    Details: () =>
+      import(
+        /* webpackChunkName: "Services", webpackPrefecth: true */ "../wsTabElements/wsDetails.vue"
       ),
     Prices: () =>
       import(
-        /* webpackChunkName: "Services", webpackPrefecth: true */ "../wsHair/wsPrices.vue"
+        /* webpackChunkName: "Services", webpackPrefecth: true */ "../wsTabElements/wsPrices.vue"
       ),
   },
   data() {
     return {};
   },
-  computed: {
-  },
+  computed: {},
   methods: {},
 };
 </script>
