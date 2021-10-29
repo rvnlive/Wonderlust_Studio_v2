@@ -17,9 +17,5 @@
 <script>
 export default {
   mixins: ["serviceImagesMixin"],
-  components: {},
-  data() {
-    return {};
-  },
 };
 </script>

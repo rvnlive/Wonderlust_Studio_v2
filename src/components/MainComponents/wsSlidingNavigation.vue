@@ -34,9 +34,6 @@
 <script>
 export default {
   mixins: ["baseMixin", "navigationBarMixin"],
-  data() {
-    return {};
-  },
   methods: {
     goTo(value, path) {
       if (this.$router.currentRoute.path !== path) {

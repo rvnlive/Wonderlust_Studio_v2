@@ -4,7 +4,11 @@
       v-for="(information, index) in this.relevantInformation"
       :key="index"
     >
-      <a v-if="information.url !== null" :href="information.url" target="_blank">
+      <a
+        v-if="information.url !== null"
+        :href="information.url"
+        target="_blank"
+      >
         <b-img-lazy
           class="wsInformation-image"
           :src="information.image"
@@ -34,6 +38,6 @@
 
 <script>
 export default {
-  mixins: ["serviceInformationMixin"],
+  mixins: ["baseMixin", "serviceInformationMixin"],
 };
 </script>

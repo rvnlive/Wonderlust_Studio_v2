@@ -121,11 +121,6 @@
 </template>
 <script>
 export default {
-  mixins: ["baseMixin"],
-  data() {
-    return {};
-  },
-  computed: {},
-  methods: {},
+  mixins: ["baseMixin"]
 };
 </script>

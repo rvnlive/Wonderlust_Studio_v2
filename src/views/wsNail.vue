@@ -7,6 +7,21 @@
 <script>
 export default {
   mixins: ["componentMixin"],
+  metaInfo() {
+    return {
+      title: "Nails",
+      meta: [
+        {
+          name: "description",
+          content: "Nails at Wonderlust Studio.",
+        },
+        {
+          property: "og:description",
+          content: "Nails at Wonderlust Studio.",
+        },
+      ],
+    };
+  },
   mounted() {
     this.isAtHome = false;
   },

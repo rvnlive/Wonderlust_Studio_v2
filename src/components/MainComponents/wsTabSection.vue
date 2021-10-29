@@ -35,25 +35,6 @@
 </template>
 <script>
 export default {
-  mixins: ["baseMixin"],
-  components: {
-    Information: () =>
-      import(
-        /* webpackChunkName: "Services", webpackPrefecth: true */ "../wsTabElements/wsInformation.vue"
-      ),
-    Details: () =>
-      import(
-        /* webpackChunkName: "Services", webpackPrefecth: true */ "../wsTabElements/wsDetails.vue"
-      ),
-    Prices: () =>
-      import(
-        /* webpackChunkName: "Services", webpackPrefecth: true */ "../wsTabElements/wsPrices.vue"
-      ),
-  },
-  data() {
-    return {};
-  },
-  computed: {},
-  methods: {},
+  mixins: ["baseMixin", "componentMixin"]
 };
 </script>

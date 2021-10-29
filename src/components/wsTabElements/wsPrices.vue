@@ -2,7 +2,7 @@
   <div>
     <b-list-group
       class="slideFromBottom bg-transparent pt-3 pl-4 pr-4 pb-4"
-      v-for="(treatments, index) in this.relevantDetails"
+      v-for="(treatments, index) in this.relevantPrices"
       :key="index"
     >
       <b-list-group-item
@@ -71,10 +71,5 @@
 <script>
 export default {
   mixins: ["servicePricesMixin"],
-  // computed: {
-  //   header: function() {
-  //     return this.relevantDetails[1].slice(0,1)
-  //   }
-  // }
 };
 </script>

@@ -1,6 +1,6 @@
 {
   "name": "wonderlust_studio_v2",
-  "version": "0.9.0",
+  "version": "0.9.3",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
@@ -39,6 +39,7 @@
     "sass-loader": "^10.2.0",
     "url-loader": "^4.1.1",
     "vue-cli-plugin-compression": "~1.1.5",
+    "vue-meta": "^2.4.0",
     "vue-router": "^3.5.2",
     "vue-template-compiler": "^2.6.11",
     "webpack": "^4.46.0",

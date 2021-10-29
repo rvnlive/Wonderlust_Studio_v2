@@ -13,8 +13,20 @@
 <script>
 export default {
   mixins: ["baseMixin"],
-  data() {
-    return {};
+  metaInfo() {
+    return {
+      title: "Homepage",
+      meta: [
+        {
+          name: "description",
+          content: "Welcome to Wonderlust Studio. We are a hair and beauty salon, located in the heart of Warrington, UK.",
+        },
+        {
+          property: "og:description",
+          content: "Welcome to Wonderlust Studio. We are a hair and beauty salon, located in the heart of Warrington, UK.",
+        },
+      ],
+    };
   },
   mounted() {
     this.isAtHome = true;

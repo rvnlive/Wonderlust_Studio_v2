@@ -541,7 +541,7 @@ export const servicePricesMixin = {
         }
     },
     computed: {
-        relevantDetails() {
+        relevantPrices() {
             if (this.$router.currentRoute.name === "Hairstyling") {
                 return [this.wsHairPrices]
             } else if (this.$router.currentRoute.name === "Aesthetics") {

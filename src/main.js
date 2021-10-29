@@ -3,6 +3,7 @@ import 'mutationobserver-shim'
 import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
+import Meta from 'vue-meta'
 // import store from './store'
 
 /* Importing plugins and styles */
@@ -21,7 +22,7 @@ import './plugins/font-awesome'
 //   longTapTimeInterval: 400,
 //   namespace: 'touch'
 // })
-
+Vue.use(Meta)
 Vue.config.productionTip = false
 
 import './mixins/wsIndex'

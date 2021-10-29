@@ -7,6 +7,21 @@
 <script>
 export default {
   mixins: ["componentMixin"],
+  metaInfo() {
+    return {
+      title: "Brows N Lashes",
+      meta: [
+        {
+          name: "description",
+          content: "Brow and lash treatments at Wonderlust Studio.",
+        },
+        {
+          property: "og:description",
+          content: "Brow and lash treatments at Wonderlust Studio.",
+        },
+      ],
+    };
+  },
   mounted() {
     this.isAtHome = false;
   },

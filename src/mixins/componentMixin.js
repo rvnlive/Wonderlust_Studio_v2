@@ -5,7 +5,19 @@ export const componentMixin = {
     components: {
         wsLoading: wsLoading,
         wsSlidingNavigation: wsSlidingNavigation,
-        wsTabSection: () => import("../components/MainComponents/wsTabSection.vue"),
+        wsTabSection: () => import(/* webpackChunkName: "Services", webpackPrefetch: true */ "../components/MainComponents/wsTabSection.vue"),
+        Information: () =>
+            import(
+          /* webpackChunkName: "Services", webpackPrefecth: true */ "../components/wsTabElements/wsInformation.vue"
+            ),
+        Details: () =>
+            import(
+          /* webpackChunkName: "Services", webpackPrefecth: true */ "../components/wsTabElements/wsDetails.vue"
+            ),
+        Prices: () =>
+            import(
+          /* webpackChunkName: "Services", webpackPrefecth: true */ "../components/wsTabElements/wsPrices.vue"
+            ),
         wsScrollToTop: () => import(/* webpackPrefetch: true */ '../components/MainComponents/wsScrollToTop.vue'),
         wsFooter: wsFooter
     }
