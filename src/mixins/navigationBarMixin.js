@@ -4,7 +4,7 @@ export const navigationBarMixin = {
       wsServices: [
         {
           path: "/Hair",
-          target: "/Hair?details=Highlights",
+          target: "/Hair?details=Details",
           imageUrl: require("../assets/img/model_img/navigation/1.webp"),
           imageAlt: "Young lady with a snow white hair color",
           imageClass: "wsSliderNavigation-main__item--hair fadeIn",
@@ -13,7 +13,7 @@ export const navigationBarMixin = {
         },
         {
           path: "/Aesthetic",
-          target: "/Aesthetic?details=Highlights",
+          target: "/Aesthetic?details=Details",
           imageUrl: require("../assets/img/model_img/navigation/2.webp"),
           imageAlt: "Woman before aesthetic treatment - needles around her face",
           imageClass: "wsSliderNavigation-main__item--aesthetic fadeIn",
@@ -22,7 +22,7 @@ export const navigationBarMixin = {
         },
         {
           path: "/Biotricologia",
-          target: "/Biotricologia?details=Highlights",
+          target: "/Biotricologia?details=Details",
           imageUrl: require("../assets/img/model_img/navigation/3.webp"),
           imageAlt: "Woman with hair mask on",
           imageClass: "wsSliderNavigation-main__item--biotricologia",
@@ -30,17 +30,17 @@ export const navigationBarMixin = {
           serviceId: "Biotricologia",
         },
         {
-          path: "/Browlash",
-          target: "/Browlash?details=Highlights",
+          path: "/BrowsLVL",
+          target: "/BrowsLVL?details=Details",
           imageUrl: require("../assets/img/model_img/navigation/4.webp"),
           imageAlt: "Perfectly shaped eyebrows and lifted eyelashes",
           imageClass: "wsSliderNavigation-main__item--browlash",
-          serviceName: "Brows & Lashes",
+          serviceName: "Brows & LVL Lashes",
           serviceId: "BrowLash",
         },
         {
           path: "/Nail",
-          target: "/Nail?details=Highlights",
+          target: "/Nail?details=Details",
           imageUrl: require("../assets/img/model_img/navigation/5.webp"),
           imageAlt: "Fingers with solid but wonderful french nails",
           imageClass: "wsSliderNavigation-main__item--nail",
@@ -49,7 +49,7 @@ export const navigationBarMixin = {
         },
         {
           path: "/Facial",
-          target: "/Facial?details=Highlights",
+          target: "/Facial?details=Details",
           imageUrl: require("../assets/img/model_img/navigation/6.webp"),
           imageAlt: "Tanned girl before facial treatment",
           imageClass: "wsSliderNavigation-main__item--facial",

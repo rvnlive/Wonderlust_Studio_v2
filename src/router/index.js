@@ -23,8 +23,8 @@ const router = new VueRouter({
       component: () => import(/* webpackChunkName: "Services", webpackPrefetch: true */ '@/views/wsHair'),
       children: [
         {
-          path: ':query'
-        }
+          path: ':query',
+        },
       ]
     },
     { // Aesthetics
@@ -48,8 +48,8 @@ const router = new VueRouter({
       ]
     },
     { // Brows & Lashes
-      path: '/Browlash',
-      name: 'BrowsNLashes',
+      path: '/BrowsLVL',
+      name: 'Brows & LVL Lashes',
       component: () => import(/* webpackChunkName: "Services", webpackPrefetch: true */ '@/views/wsBrowLash'),
       children: [
         {

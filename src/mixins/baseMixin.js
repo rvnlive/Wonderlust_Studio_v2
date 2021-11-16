@@ -25,7 +25,7 @@ export const baseMixin = {
         hair: this.$router.currentRoute.path === '/Hair',
         aesthetic: this.$router.currentRoute.path === '/Aesthetic',
         biotricologia: this.$router.currentRoute.path === '/Biotricologia',
-        browlash: this.$router.currentRoute.path === '/Browlash',
+        browlash: this.$router.currentRoute.path === '/BrowsLVL',
         nail: this.$router.currentRoute.path === '/Nail',
         facial: this.$router.currentRoute.path === '/Facial'
       },
@@ -108,6 +108,10 @@ export const baseMixin = {
           navigation.classList.add("wsSliderNavigation-main__item--active", "mt-2")
         }
         this.setURL()
+      }
+      const wrapper = document.querySelector(".wsSliderNavigation-wrapper");
+      if (wrapper) {
+        wrapper.style.width = "100%";
       }
       this.startLoading()
     },

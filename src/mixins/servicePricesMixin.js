@@ -296,8 +296,7 @@ export const servicePricesMixin = {
                     price: "60"
                 },
                 {
-                    name: "Eyebrow botox",
-                    range: "1 treatment",
+                    name: "Eyebrow botox  - nutritional therapy (for hair growth)",
                     price: "15"
                 },
                 {
@@ -338,8 +337,7 @@ export const servicePricesMixin = {
                     price: "55"
                 },
                 {
-                    name: "Eyelash botox",
-                    range: "1 treatment",
+                    name: "Eyelash botox - nutritional therapy (for hair growth, thickening and restoration)",
                     price: "15"
                 },
                 {
@@ -380,7 +378,7 @@ export const servicePricesMixin = {
                     price: "140"
                 },
                 {
-                    name: "Eyelash lamination",
+                    name: "Eyelash lamination (LVL)",
                     range: "8 treatments",
                     price: "280"
                 }
@@ -548,7 +546,7 @@ export const servicePricesMixin = {
                 return [this.wsAestheticPrices]
             } else if (this.$router.currentRoute.name === "Biotricologia") {
                 return [this.wsBiotricologiaPrices]
-            } else if (this.$router.currentRoute.name === "BrowsNLashes") {
+            } else if (this.$router.currentRoute.name === "Brows & LVL Lashes") {
                 return [this.wsBrowLashPrices]
             } else if (this.$router.currentRoute.name === "Nails") {
                 return [this.wsNailPrices]

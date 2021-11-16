@@ -13,11 +13,28 @@ export default {
       meta: [
         {
           name: "description",
-          content: "Facial treatments at Wonderlust Studio.",
+          content: "At Wonderlust Studio, we will take care of the appearance of your face and skin. Thanks to us, you will be able to take better care of your external beauty. We select individually the treatments for you and offer you home care products too. The result of our treatments: your face will regain its glow!",
+        },
+        // OpenGraph
+        {
+          property: "og:title",
+          content: "Facials",
         },
         {
           property: "og:description",
-          content: "Facial treatments at Wonderlust Studio.",
+          content: "At Wonderlust Studio, we will take care of the appearance of your face and skin. Thanks to us, you will be able to take better care of your external beauty. We select individually the treatments for you and offer you home care products too. The result of our treatments: your face will regain its glow!",
+        },
+        {
+          property: "og:image",
+          content: require("../assets/img/ws_brand/social_preview.webp"),
+        },
+        {
+          property: "og:url",
+          content: "https://wonderluststudio.co.uk/Facial",
+        },
+        {
+          property: "og:type",
+          content: "website",
         },
       ],
     };

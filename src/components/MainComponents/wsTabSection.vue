@@ -1,5 +1,8 @@
 <template>
-  <div class="slideFromBottom" style="margin: 0.5em auto 0 auto; max-width: 1024px">
+  <div
+    class="slideFromBottom"
+    style="margin: 0.5em auto 0 auto; max-width: 1024px"
+  >
     <b-tabs
       small
       justified
@@ -16,6 +19,7 @@
         title-link-class="border-0 text-dark font-grey"
         :active="readQuery((query = 'Details'))"
         @click="addQuery((query = 'Details'))"
+        id="Details"
       >
         <Information />
         <Details />
@@ -30,11 +34,13 @@
         <Prices />
       </b-tab>
     </b-tabs>
-    <wsFooter style="position: static; margin: 1.5em auto 3em auto; max-width: 1024px" />
+    <wsFooter
+      style="position: static; margin: 1.5em auto 3em auto; max-width: 1024px"
+    />
   </div>
 </template>
 <script>
 export default {
-  mixins: ["baseMixin", "componentMixin"]
+  mixins: ["baseMixin", "componentMixin"],
 };
 </script>

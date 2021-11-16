@@ -15,13 +15,13 @@ export const serviceImagesMixin = {
                 },
                 {
                     image: require("../assets/img/service_examples/hair/3.webp"),
-                    alt: "Lady with stylish glasses and a fancy, short hair. Tell us your desire and we cut it.",
-                    message: "We like shortcuts... Short haircuts, I mean!",
+                    alt: "Girl with multi colored hair.",
+                    message: "Life isn't perfect - but your hair can be!",
                 },
                 {
                     image: require("../assets/img/service_examples/hair/4.webp"),
-                    alt: "Girl with dark, curly styled hair.",
-                    message: "Curly style? - Oooouu yesss!",
+                    alt: "Girl with thick, big volume hair.",
+                    message: "Don't mess with the messy hair girl!",
                 },
                 {
                     image: require("../assets/img/service_examples/hair/5.webp"),
@@ -30,8 +30,8 @@ export const serviceImagesMixin = {
                 },
                 {
                     image: require("../assets/img/service_examples/hair/6.webp"),
-                    alt: "Girl with dark, straight hair. Simple, wonderful.",
-                    message: "Simple, wonderful. Or simply wonderful!",
+                    alt: "Smiling girl with light colored (blond) curly hair.",
+                    message: "Love is in the hair!",
                 }
             ],
             // wsHair END
@@ -85,33 +85,33 @@ export const serviceImagesMixin = {
             wsBrowLash: [
                 {
                     image: require("../assets/img/service_examples/browlash/1.webp"),
-                    alt: "Girl with dark, straight hair. Simple, wonderful.",
-                    message: "Simple, wonderful. Or simply wonderful!",
+                    alt: "Lashes after LVL treatment.",
+                    message: "Perfect lashes - Easy morning!",
                 },
                 {
                     image: require("../assets/img/service_examples/browlash/2.webp"),
-                    alt: "Girl with dark, straight hair. Simple, wonderful.",
-                    message: "Simple, wonderful. Or simply wonderful!",
+                    alt: "Girl having henna brow treatment.",
+                    message: "Eyebrows are 90% of your selfies!",
                 },
                 {
                     image: require("../assets/img/service_examples/browlash/3.webp"),
-                    alt: "Girl with dark, straight hair. Simple, wonderful.",
-                    message: "Simple, wonderful. Or simply wonderful!",
+                    alt: "Girl during permanent eyebrows treatment.",
+                    message: "Wake up & Don't make up!",
                 },
                 {
                     image: require("../assets/img/service_examples/browlash/4.webp"),
-                    alt: "Girl with dark, straight hair. Simple, wonderful.",
-                    message: "Simple, wonderful. Or simply wonderful!",
+                    alt: "Girl with henna mixing tool and henna.",
+                    message: "Good brows, good mood!",
                 },
                 {
                     image: require("../assets/img/service_examples/browlash/5.webp"),
-                    alt: "Girl with dark, straight hair. Simple, wonderful.",
-                    message: "Simple, wonderful. Or simply wonderful!",
+                    alt: "Girl before and after brow henna treatment.",
+                    message: "Brows speak louder than words!",
                 },
                 {
                     image: require("../assets/img/service_examples/browlash/6.webp"),
-                    alt: "Girl with dark, straight hair. Simple, wonderful.",
-                    message: "Simple, wonderful. Or simply wonderful!",
+                    alt: "Girl with the eye shields on during lash lift treatment.",
+                    message: "Great lashes don't happen by chance: they happen by appointment!",
                 },
             ],
             // wsBrowLash END
@@ -119,34 +119,34 @@ export const serviceImagesMixin = {
             // wsNail START
             wsNail: [
                 {
-                    image: require("../assets/img/service_examples/hair/6.webp"),
-                    alt: "Girl with dark, straight hair. Simple, wonderful.",
-                    message: "Simple, wonderful. Or simply wonderful!",
+                    image: require("../assets/img/service_examples/nail/1.webp"),
+                    alt: "Foot during pedicure treatment.",
+                    message: "Take care of your feet - the same way you taking care of your hands!",
                 },
                 {
-                    image: require("../assets/img/service_examples/hair/6.webp"),
-                    alt: "Girl with dark, straight hair. Simple, wonderful.",
-                    message: "Simple, wonderful. Or simply wonderful!",
+                    image: require("../assets/img/service_examples/nail/2.webp"),
+                    alt: "Girl with red shellac toe nails.",
+                    message: "Feet always looking better with shellac on toes!",
                 },
                 {
-                    image: require("../assets/img/service_examples/hair/6.webp"),
-                    alt: "Girl with dark, straight hair. Simple, wonderful.",
-                    message: "Simple, wonderful. Or simply wonderful!",
+                    image: require("../assets/img/service_examples/nail/3.webp"),
+                    alt: "Girl with multi colored finger nails.",
+                    message: "Colorful nail brings more happy vibes!",
                 },
                 {
-                    image: require("../assets/img/service_examples/hair/6.webp"),
-                    alt: "Girl with dark, straight hair. Simple, wonderful.",
-                    message: "Simple, wonderful. Or simply wonderful!",
+                    image: require("../assets/img/service_examples/nail/4.webp"),
+                    alt: "Girl with shiny - crystallised gel nail extension.",
+                    message: "Gel extensions are good alternatives!",
                 },
                 {
-                    image: require("../assets/img/service_examples/hair/6.webp"),
-                    alt: "Girl with dark, straight hair. Simple, wonderful.",
-                    message: "Simple, wonderful. Or simply wonderful!",
+                    image: require("../assets/img/service_examples/nail/5.webp"),
+                    alt: "Girl nails with purple shellac on.",
+                    message: "Make your nails stronger with shellac!",
                 },
                 {
-                    image: require("../assets/img/service_examples/hair/6.webp"),
-                    alt: "Girl with dark, straight hair. Simple, wonderful.",
-                    message: "Simple, wonderful. Or simply wonderful!",
+                    image: require("../assets/img/service_examples/nail/6.webp"),
+                    alt: "Classic french nails with pink base.",
+                    message: "Classic french nails - suits everyone!",
                 },
             ],
             // wsNail END
@@ -154,34 +154,24 @@ export const serviceImagesMixin = {
             // wsFacial START
             wsFacial: [
                 {
-                    image: require("../assets/img/service_examples/hair/6.webp"),
-                    alt: "Girl with dark, straight hair. Simple, wonderful.",
-                    message: "Simple, wonderful. Or simply wonderful!",
+                    image: require("../assets/img/service_examples/facial/1.webp"),
+                    alt: "Woman during cavitation peeling / face treatment.",
+                    message: "Spots? Blackheads? Blemish skin? We can make your face clean!",
                 },
                 {
-                    image: require("../assets/img/service_examples/hair/6.webp"),
-                    alt: "Girl with dark, straight hair. Simple, wonderful.",
-                    message: "Simple, wonderful. Or simply wonderful!",
+                    image: require("../assets/img/service_examples/facial/2.webp"),
+                    alt: "Woman during microneedle mesotherapy / face treatment.",
+                    message: "Boost your skin with Anti-age DermaPen treatment!",
                 },
                 {
-                    image: require("../assets/img/service_examples/hair/6.webp"),
-                    alt: "Girl with dark, straight hair. Simple, wonderful.",
-                    message: "Simple, wonderful. Or simply wonderful!",
+                    image: require("../assets/img/service_examples/facial/3.webp"),
+                    alt: "Woman during face revitalization - with face mask on",
+                    message: "Give your skin more glow!",
                 },
                 {
-                    image: require("../assets/img/service_examples/hair/6.webp"),
-                    alt: "Girl with dark, straight hair. Simple, wonderful.",
-                    message: "Simple, wonderful. Or simply wonderful!",
-                },
-                {
-                    image: require("../assets/img/service_examples/hair/6.webp"),
-                    alt: "Girl with dark, straight hair. Simple, wonderful.",
-                    message: "Simple, wonderful. Or simply wonderful!",
-                },
-                {
-                    image: require("../assets/img/service_examples/hair/6.webp"),
-                    alt: "Girl with dark, straight hair. Simple, wonderful.",
-                    message: "Simple, wonderful. Or simply wonderful!",
+                    image: require("../assets/img/service_examples/facial/4.webp"),
+                    alt: "Woman during face treatment - with face mask on.",
+                    message: "Moisturizing and Refreshing!",
                 },
             ]
             // wsFacial END
@@ -195,7 +185,7 @@ export const serviceImagesMixin = {
                 return this.wsAesthetic
             } else if (this.$router.currentRoute.name === "Biotricologia") {
                 return this.wsBiotricologia
-            } else if (this.$router.currentRoute.name === "BrowsNLashes") {
+            } else if (this.$router.currentRoute.name === "Brows & LVL Lashes") {
                 return this.wsBrowLash
             } else if (this.$router.currentRoute.name === "Nails") {
                 return this.wsNail

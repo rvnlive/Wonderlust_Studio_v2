@@ -13,11 +13,28 @@ export default {
       meta: [
         {
           name: "description",
-          content: "Aesthetic treatment at Wonderlust Studio.",
+          content: "At Wonderlust Studio every aesthetic procedure / treatment is non-surgical and doctor-led, using only the very best certified products to get the results you’re looking for..",
+        },
+        // OpenGraph
+        {
+          property: "og:title",
+          content: "Aesthetics",
         },
         {
           property: "og:description",
-          content: "Aesthetic treatment at Wonderlust Studio.",
+          content: "At Wonderlust Studio every aesthetic procedure / treatment is non-surgical and doctor-led, using only the very best certified products to get the results you’re looking for.",
+        },
+        {
+          property: "og:image",
+          content: require("../assets/img/ws_brand/social_preview.webp"),
+        },
+        {
+          property: "og:url",
+          content: "https://wonderluststudio.co.uk/Aesthetic",
+        },
+        {
+          property: "og:type",
+          content: "website",
         },
       ],
     };

@@ -18,6 +18,7 @@
       z-index: 999;
       padding-top: 0.5em;
       transition: all 250ms ease;
+      cursor: pointer;
       &--active {
         display: flex;
         overflow-x: visible;
@@ -110,4 +111,5 @@
   margin-top: 0vh;
   color: #989898;
   transition: padding 250ms ease;
+  cursor: pointer;
 }

@@ -1,7 +1,7 @@
 <template>
   <div>
     <b-list-group
-      class="slideFromBottom bg-transparent pt-3 pl-4 pr-4 pb-4"
+      class="slideFromBottom bg-transparent pt-1 pt-sm-3 pl-4 pr-4 pb-4"
       v-for="(treatments, index) in this.relevantPrices"
       :key="index"
     >

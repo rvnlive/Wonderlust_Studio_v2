@@ -19,11 +19,30 @@ export default {
       meta: [
         {
           name: "description",
-          content: "Welcome to Wonderlust Studio. We are a hair and beauty salon, located in the heart of Warrington, UK.",
+          content:
+            "Welcome to Wonderlust Studio. We are located in the heart of Warrington. Whether you want to get a simple, classic hair cut or you want to get your own personalized look, We are here for you. We do offer a range of services starting from hair styling, hair coloring, permanent eyebrows, brow tint/henna, eyelash lifting, nail extentions to skincare, mesotherapy, aesthetic treatments, hair and scalp treatments, but the list still goes on. Visit our salon because the greatest gift you can give yourself is a little bit of your own attention. Be-You-tiful!",
+        },
+        // OpenGraph
+        {
+          property: "og:title",
+          content: "Homepage",
         },
         {
           property: "og:description",
-          content: "Welcome to Wonderlust Studio. We are a hair and beauty salon, located in the heart of Warrington, UK.",
+          content:
+            "Welcome to Wonderlust Studio. We are located in the heart of Warrington. Whether you want to get a simple, classic hair cut or you want to get your own personalized look, We are here for you. We do offer a range of services starting from hair styling, hair coloring, permanent eyebrows, brow tint/henna, eyelash lifting, nail extentions to skincare, mesotherapy, aesthetic treatments, hair and scalp treatments, but the list still goes on. Visit our salon because the greatest gift you can give yourself is a little bit of your own attention. Be-You-tiful!",
+        },
+        {
+          property: "og:image",
+          content: require("../assets/img/ws_brand/social_preview.webp"),
+        },
+        {
+          property: "og:url",
+          content: "https://wonderluststudio.co.uk/Home",
+        },
+        {
+          property: "og:type",
+          content: "website",
         },
       ],
     };
