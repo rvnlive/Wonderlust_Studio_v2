@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build && purgecss --config ./purgecss.config.js",
-    "build-report": "vue-cli-service build --report",
+    "serve": "vue-cli-service --openssl-legacy-provider serve",
+    "build": "vue-cli-service --openssl-legacy-provider build && purgecss --config ./purgecss.config.js",
+    "build-report": "vue-cli-service --openssl-legacy-provider build --report",
     "lint": "vue-cli-service lint",
     "start": "node server.js"
   },
